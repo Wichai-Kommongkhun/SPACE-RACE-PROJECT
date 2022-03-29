@@ -7,4 +7,5 @@
 # 4. Nut
 # 5. MOS
 # 6. TleTleTleTle
-# 7. Jeff
+# 7. Jef
+# 8. Tan
