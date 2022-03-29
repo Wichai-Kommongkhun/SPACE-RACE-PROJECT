@@ -2,7 +2,7 @@
 # ให้ทุกคนเช็คชื่อกันในนี้เเล้ว push ก่อน git push อย่าลืม git pull กันก่อนนะ
 
 # 1. BIG 
-# 2. Valen
+# 2. VALEN
 # 3. Maily
 # 4. Nut
 # 5. Mos
