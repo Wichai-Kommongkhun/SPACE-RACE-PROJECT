@@ -1,1 +1,6 @@
+<<<<<<< HEAD
 # SPACE-RACE-PROJECT-BIG
+=======
+# SPACE-RACE-PROJECT
+# This name
+>>>>>>> 39355f1b564d51b52154d5c223535a7fdcaf19b9
