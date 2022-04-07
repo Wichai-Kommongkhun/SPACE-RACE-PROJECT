@@ -4,13 +4,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="script_1.js"></script>
+    <link  rel="stylesheet" type="text/css" href="file_css.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lakki+Reddy&display=swap" rel="stylesheet">
     <title>Sapce Race Timeline</title>
+    <style>
+        body {
+            background-color: #0A1A3B;
+            margin:2.5em;
+            margin-left: 4em;
+        }
+        /* .block-Title{
+            width: 100px;
+            background-color: pink;
+            padding: 10px;
+        }
+        .block-Desc{
+            width: 400px;
+            background-color: white;
+            padding: 10px;
+        }
+        .layout{
+            width: 100%;
+            margin-bottom: 50px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        } */
+        .back{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        img{
+            width: 30px;
+            height: 30px;
+        }
+        h1{
+            padding: 10px 10px 0 10px;
+            font-family: 'Lakki Reddy', cursive; 
+            color: white;
+        }
+        /* .layout-grid{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-self: center;
+        } */
+    </style>
 </head>
 <body>
-    <a href="../main.html">back</a>
-    <p>This infographic presents a timeline of space-related achievements by the U.S.S.R. and the U.S. between 1957 and 1969. A description of the timeline is below.</p><br>
-    <a href="./Deatils/1_sovietFirstSatellite.html">first artificial satellite</a><br>
-    <a href="./Deatils/2_sovietFirstAnimal.html">first animal in a spacecraft</a><br>
+    <div class="back" onclick="window.location.href=('../main.html')">
+        <img src="../static/left-arrow.png"/>
+        <h1>Back</h1>
+    </div>
+
+    <!-- <div class="layout-grid">
+        <div class="layout">
+            <div class="block-Title" onclick="window.location.href=('./Deatils/1_sovietFirstSatellite.html')">
+                <h3>October 4, 1957</h3>
+            </div>
+            <div class="block-Desc" onclick="window.location.href=('./Deatils/1_sovietFirstSatellite.html')">
+                <h3>The U.S.S.R. launched Sputnik 1, the first artificial satellite</h3>
+            </div>
+    </div> -->
+    
+
+    <!-- <a href="./Deatils/2_sovietFirstAnimal.html">first animal in a spacecraft</a><br>
     <a href="./Deatils/3_usFirstSatellite.html">the first U.S. satellite</a><br>
     <a href="./Deatils/4_usNASA.html">NASA announced the first astronaut group</a><br>
     <a href="./Deatils/5_sovietFirstCosmonauts.html">first cosmonauts were selected</a><br>
@@ -34,6 +97,9 @@
     <a href="./Deatils/23_sovietN1Rocket.html">the Soviet N1 Moon rocket</a><br>
     <a href="./Deatils/24_usHumanOnMoon.html">the first humans landed on the Moon</a><br>
 
-    
+     -->
 </body>
 </html>
+
+
+

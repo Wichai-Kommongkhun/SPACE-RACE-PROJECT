@@ -5,17 +5,108 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <script type="text/javascript" src="script_1.js"></script>
     <link  rel="stylesheet" type="text/css" href="file_css.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lakki+Reddy&display=swap" rel="stylesheet">
+    <title>Space Race</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        html {
+            width: 100%;
+            height: 100%;
+        }
+        body{
+            background-image: url("./static/background.jpg");
+            height: 100%;
+            width: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: 'Lakki Reddy', cursive;        
+        }
+        h1{
+            font-size: 150px;
+            color: white;
+            text-align: center;
+            cursor: default;
+            padding-top: 180px;
+            margin-bottom: -40px;
+        }
+        .button{
+            background-color: #ebad0f;
+            border: none;
+            border-radius: 20px;
+            color: black;
+            padding: 25px 25px 0 25px;
+            text-decoration: none;
+            display: block;
+            font-size: 45px;
+            font-family: 'Lakki Reddy', cursive; 
+            margin: 50px auto;
+            width: 40%;
+            position: relative;
+            cursor: pointer;
+            box-shadow: 4px 4px 4px rgba(187, 157, 35, 0.624);
+            transition: all .2s;
+        }
 
-    <title>Space_Race</title>
+        button:hover {
+            background-color: #e89700;
+            transform: translateY(-5px);
+            box-shadow: 8px 8px 6px rgba(190, 183, 102, 0.44);
+        }
+
+        button:active {
+            background-color: #e89700;
+            transform: translateY(-3px);
+            box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.752);
+        }
+    </style>
 
 </head>
 <body>
-    <h1>Space Race Game</h1>
-    <a href="./containers/mainGame.html">เริ่มเกม</a><br>
-    <a href="./containers/timelinePage.html">รายละเอียด Space race</a>
-
+    <h1>Space Race</h1>
+    <button class="button" onClick="page(1)" onmouseover="sound()">Play Now</button>
+    <button class="button" onClick="page(2)" onmouseover="sound()">Space Race Timeline</button>
 </body>
+
 </html>
+
+<script>
+    // function home(a) {
+    //     mySound = new sound();
+    //     myMusic = new page(a);
+    // }
+
+    function sound(){
+        audio = new (window.AudioContext || window.webkitAudioContext)()
+        osci = audio.createOscillator()
+        gain = audio.createGain()
+        osci.connect(gain)
+        gain.connect(audio.destination)
+        let time = audio.currentTime
+        let note_osci = audio.createOscillator()
+        let note_gain = audio.createGain()
+        note_osci.connect(note_gain)
+        note_gain.connect(audio.destination)
+        note_osci.frequency.value = 698
+        note_osci.start()
+        note_gain.gain.setValueCurveAtTime([0.3,0],time,.1)
+    }
+
+    function page(a){
+        if (a==1){ 
+            window.location.href = './containers/mainGame.html'
+        }else{ 
+            window.location.href = './containers/timelinePage.html'
+        }
+    }
+
+</script>
+
+
