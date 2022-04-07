@@ -75,6 +75,11 @@
     <button class="button" onClick="page(2)" onmouseover="sound()">Space Race Timeline</button>
 </body>
 <script>
+    // function home(a) {
+    //     mySound = new sound();
+    //     myMusic = new page(a);
+    // }
+
     function sound(){
         audio = new (window.AudioContext || window.webkitAudioContext)()
         osci = audio.createOscillator()
@@ -90,6 +95,7 @@
         note_osci.start()
         note_gain.gain.setValueCurveAtTime([0.3,0],time,.1)
     }
+    
     function page(a){
         if (a==1){ 
             window.location.href = './containers/mainGame.html'
