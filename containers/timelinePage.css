@@ -34,14 +34,23 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    
+}
+h3{
     cursor: pointer;
 }
 .back{
     display: flex;
     flex-direction: row;
     align-items: center;
+    
+}
+.back:hover{
+    box-shadow: inset 130px 0px 0px 0 #6666CC;
     cursor: pointer;
 }
+
+
 img{
     width: 30px;
     height: 30px;
