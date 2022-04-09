@@ -1,284 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="script_1.js"></script>
-    <link  rel="stylesheet" type="text/css" href="file_css.css">
+    <link rel="stylesheet" type="text/css" href="file_css.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lakki+Reddy&display=swap" rel="stylesheet">
     <title>Sapce Race Timeline</title>
     <style>
         * {
-            padding: 0;
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
         html {
             width: 100%;
             height: 100%;
         }
+
         body {
-            background-color: #0A1A3B;
-            margin:2.5em;
+            background: #ffffff;
+            font-family: 'Lakki Reddy', cursive;
+            color: back;
+            margin: 2.5em;
             margin-left: 4em;
-            font-family: 'Lakki Reddy', cursive; 
         }
-        .block-soveit-date{
-            width: 170px;
-            background-color: rgb(255, 180, 126);
-            padding: 20px;
+        .title {
+            position: absolute;
+            right: 60px;
+            top: 40px;
         }
-        .block-us-date{
-            width: 170px;
-            background-color: rgb(145, 242, 251);
-            padding: 20px;
+
+        h1 {
+            padding: 10px 10px 0 10px;
+            color: black;
         }
-        .block-des{
-            width: 450px;
-            background-color: white;
-            padding: 20px;
-        }
-        .layout{
-            width: 100%;
-            margin-bottom: 50px;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-        }
-        .back{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-        }
-        img{
+
+        img {
             width: 30px;
             height: 30px;
         }
-        h1{
-            padding: 10px 10px 0 10px;
-            font-family: 'Lakki Reddy', cursive; 
-            color: white;
-        }
-        .layout-grid{
+
+        .back {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-self: center;
-            margin-top: 50px;
+            flex-direction: row;
+            align-items: center;
         }
-        .title{
-            position: absolute;
-            right: 60px;
-            top:40px;
-        }
+
+        
     </style>
 </head>
 <body>
     <div class="back" onclick="window.location.href=('../main.html')">
-        <img src="../static/left-arrow.png"/>
+        <img src="../static/previous.png" />
         <h1>Back</h1>
     </div>
     <h1 class="title">Space Race Timeline</h1>
 
-    <div class="layout-grid">
-        <div class="layout">
-            <div class="block-soveit-date" onclick="window.location.href=('./Deatils/1_sovietFirstSatellite.html')">
-                <h3>October 4, 1957</h3>
-            </div>
-            <div class="block-des" onclick="window.location.href=('./Deatils/1_sovietFirstSatellite.html')">
-                <h3>first artificial satellite</h3>
-            </div>
-        </div>
-        <div class="layout">
-            <div class="block-soveit-date" onclick="window.location.href=('./Deatils/2_sovietFirstAnimal.html')">
-                <h3>November 3, 1957</h3>
-            </div>
-            <div class="block-des" onclick="window.location.href=('./Deatils/2_sovietFirstAnimal.html')">
-                <h3>The animal on spacecraft</h3>
-            </div>
-        </div>
-        <div class="layout">
-            <div class="block-des" onclick="window.location.href=('./Deatils/3_usFirstSatellite.html')">
-                <h3>First U.S. satellite</h3>
-            </div>
-            <div class="block-us-date" onclick="window.location.href=('./Deatils/3_usFirstSatellite.html')">
-                <h3>February 1, 1958</h3>
-            </div>
-        </div>
-        <div class="layout">
-            <div class="block-des" onclick="window.location.href=('./Deatils/4_usNASA.html')">
-                <h3>NASA announced the first astronaut group</h3>
-            </div>
-            <div class="block-us-date" onclick="window.location.href=('./Deatils/4_usNASA.html')">
-                <h3>April 9, 1959</h3>
-            </div>
-        </div>
-        <div class="layout">
-            <div class="block-soveit-date" onclick="window.location.href=('./Deatils/5_sovietFirstCosmonauts.html')">
-                <h3>March 1960</h3>
-            </div>
-            <div class="block-des" onclick="window.location.href=('./Deatils/5_sovietFirstCosmonauts.html')">
-                <h3>First cosmonauts were selected</h3>
-            </div>
-        </div>
-        <div class="layout">
-            <div class="block-soveit-date" onclick="window.location.href=('./Deatils/6_sovietHumanInOrbit.html')">
-                <h3>April 12, 1961</h3>
-            </div>
-            <div class="block-des" onclick="window.location.href=('./Deatils/6_sovietHumanInOrbit.html')">
-                <h3>First human into orbit</h3>
-            </div>
-        </div>
-        <div class="layout">
-            <div class="block-des" onclick="window.location.href=('./Deatils/7_usHumanInOrbit.html')">
-                <h3>First American in orbit</h3>
-            </div>
-            <div class="block-us-date" onclick="window.location.href=('./Deatils/7_usHumanInOrbit.html')">
-                <h3>February 20, 1962</h3>
-            </div>
-        </div>
-        <div class="layout">
-            <div class="block-soveit-date" onclick="window.location.href=('./Deatils/8_sovietFirstWoman.html')">
-                <h3>June 16 - 19, 1963</h3>
-            </div>
-            <div class="block-des" onclick="window.location.href=('./Deatils/8_sovietFirstWoman.html')">
-                <h3>First woman in space</h3>
-            </div>
-        </div>
-        <div class="layout">
-            <div class="block-soveit-date" onclick="window.location.href=('./Deatils/9_sovietMoonPrograms.html')">
-                <h3>August 1964</h3>
-            </div>
-            <div class="block-des" onclick="window.location.href=('./Deatils/9_sovietMoonPrograms.html')">
-                <h3>Soviet government gave the go-ahead to two Moon programs</h3>
-            </div>
-        </div>
-        <div class="layout">
-            <div class="block-soveit-date" onclick="window.location.href=('./Deatils/10_sovietMultiPerson.html')">
-                <h3>October 12, 1964</h3>
-            </div>
-            <div class="block-des" onclick="window.location.href=('./Deatils/10_sovietMultiPerson.html')">
-                <h3>First multi-person spacecraft</h3>
-            </div>
-        </div>
-        <div class="layout">
-            <div class="block-soveit-date" onclick="window.location.href=('./Deatils/11_sovietSpaceWalk.html')">
-                <h3>March 18, 1965</h3>
-            </div>
-            <div class="block-des" onclick="window.location.href=('./Deatils/11_sovietSpaceWalk.html')">
-                <h3>First space walk</h3>
-            </div>
-        </div>
-        <div class="layout">
-            <div class="block-des" onclick="window.location.href=('./Deatils/12_usMultiPerson.html')">
-                <h3>First multi-person U.S. spacecraft</h3>
-            </div>
-            <div class="block-us-date" onclick="window.location.href=('./Deatils/12_usMultiPerson.html')">
-                <h3>March 23, 1965</h3>
-            </div>
-        </div>
-        <div class="layout">
-            <div class="block-des" onclick="window.location.href=('./Deatils/13_usSpaceWalk.html')">
-                <h3>First American space walk</h3>
-            </div>
-            <div class="block-us-date" onclick="window.location.href=('./Deatils/13_usSpaceWalk.html')">
-                <h3>June 3, 1965</h3>
-            </div>
-        </div>
-        <div class="layout">
-            <div class="block-des" onclick="window.location.href=('./Deatils/14_usOrbitalRendezvous.html')">
-                <h3>First orbital rendezvous</h3>
-            </div>
-            <div class="block-us-date" onclick="window.location.href=('./Deatils/14_usOrbitalRendezvous.html')">
-                <h3>December 15, 1965</h3>
-            </div>
-        </div>
-        <div class="layout">
-            <div class="block-soveit-date" onclick="window.location.href=('./Deatils/15_sovietDeathPremier.html')">
-                <h3>January 14, 1966</h3>
-            </div>
-            <div class="block-des" onclick="window.location.href=('./Deatils/15_sovietDeathPremier.html')">
-                <h3>Death of premier Soviet spacecraft designer</h3>
-            </div>
-        </div>
-        <div class="layout">
-            <div class="block-soveit-date" onclick="window.location.href=('./Deatils/16_sovietLandingMoon.html')">
-                <h3>February 3, 1966</h3>
-            </div>
-            <div class="block-des" onclick="window.location.href=('./Deatils/16_sovietLandingMoon.html')">
-                <h3>First soft landing on the Moon</h3>
-            </div>
-        </div>
-        <div class="layout">
-            <div class="block-des" onclick="window.location.href=('./Deatils/17_usDockingSpace.html')">
-                <h3>First docking in space</h3>
-            </div>
-            <div class="block-us-date" onclick="window.location.href=('./Deatils/17_usDockingSpace.html')">
-                <h3>March 16, 1966</h3>
-            </div>
-        </div>
-        <div class="layout">
-            <div class="block-des" onclick="window.location.href=('./Deatils/18_usTestApolloProgram.html')">
-                <h3>Astronauts Virgil Grissom, Ed White, and Roger Chaffee were killed in a fire during a launchpad test</h3>
-            </div>
-            <div class="block-us-date" onclick="window.location.href=('./Deatils/18_usTestApolloProgram.html')">
-                <h3>January 27, 1967</h3>
-            </div>
-        </div>
-        <div class="layout">
-            <div class="block-soveit-date" onclick="window.location.href=('./Deatils/19_sovietSpaceflightFatality.html')">
-                <h3>April 23, 19676</h3>
-            </div>
-            <div class="block-des" onclick="window.location.href=('./Deatils/19_sovietSpaceflightFatality.html')">
-                <h3>First spaceflight fatality</h3>
-            </div>
-        </div>
-        <div class="layout">
-            <div class="block-soveit-date" onclick="window.location.href=('./Deatils/20_sovietFlyAroundMoon.html')">
-                <h3>September 14 - 21, 1968</h3>
-            </div>
-            <div class="block-des" onclick="window.location.href=('./Deatils/20_sovietFlyAroundMoon.html')">
-                <h3>First spacecraft to fly around the Moon and return Earth</h3>
-            </div>
-        </div>
-        <div class="layout">
-            <div class="block-des" onclick="window.location.href=('./Deatils/21_usApolloProgram.html')">
-                <h3>First flight of the Apollo program</h3>
-            </div>
-            <div class="block-us-date" onclick="window.location.href=('./Deatils/21_usApolloProgram.html')">
-                <h3>October 11, 1968</h3>
-            </div>
-        </div>
-        <div class="layout">
-            <div class="block-des" onclick="window.location.href=('./Deatils/22_usFlyAroundMoon.html')">
-                <h3>First crewed flight around the Moon</h3>
-            </div>
-            <div class="block-us-date" onclick="window.location.href=('./Deatils/22_usFlyAroundMoon.html')">
-                <h3>December 24, 1968</h3>
-            </div>
-        </div>
-        <div class="layout">
-            <div class="block-soveit-date" onclick="window.location.href=('./Deatils/23_sovietN1Rocket.html')">
-                <h3>July 3, 1969</h3>
-            </div>
-            <div class="block-des" onclick="window.location.href=('./Deatils/23_sovietN1Rocket.html')">
-                <h3>Explosion of N1 Moon rocket</h3>
-            </div>
-        </div>
-        <div class="layout">
-            <div class="block-des" onclick="window.location.href=('./Deatils/24_usHumanOnMoon.html')">
-                <h3>First humans landed on the Moon</h3>
-            </div>
-            <div class="block-us-date" onclick="window.location.href=('./Deatils/24_usHumanOnMoon.html')">
-                <h3>July 20, 1969</h3>
-            </div>
-        </div>
-    </div>
+    <!-- onclick="window.location.href=('./Deatils/24_usHumanOnMoon.html')" -->
 </body>
 </html>
-
-
-
