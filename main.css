@@ -95,7 +95,7 @@ button:active {
 } */
 .jet_1{
     position: absolute;
-    margin: 5.2% 0 0 70%;
+    margin: -10% 0 0 70%;
     animation: animetion_jet2 18s linear infinite;
 }
 .jet_1::before{
