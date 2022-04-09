@@ -1,5 +1,3 @@
-
-
 .star-g{
     position: absolute;
     width: 90%;
@@ -8,9 +6,7 @@
     overflow: hidden;
     display: flex;
     justify-content: start;
-  
 }
-
 
 .star-g .star{
     position: fixed;
@@ -23,48 +19,18 @@
     , movestar 16s linear infinite;
 }
 
-section .star.star1{
-    animation-delay: -3s;
-    background: url(./img-con/star1.png);
-}
-
 section .star.star2{
     animation-delay: -4s;
     background: url(./img-con/star2.png);
-}
-
-section .star.star3{
-    animation-delay: -5s;
-    background: url(./img-con/star3.png);
-}
-
-section .star.star4{
-    animation-delay: -6s;
-    background: url(./img-con/star4.png);
 }
 
 section .star.star5{
     animation-delay: -7s;
     background: url(./img-con/star5.png);
 }
-
-section .star.star6{
-    animation-delay: -8s;
-    background: url(./img-con/star6.png);
+section{
+    display: block;
 }
-
-section .star.star7{
-    animation-duration: -9s;
-    background: url(./img-con/star7.png);
-}
-
-section .star.star8{
-    animation-duration: -10s;
-    background: url(./img-con/star8.png);
-}
-
-
-
 
 /* key */
 
@@ -76,7 +42,6 @@ section .star.star8{
         opacity: 1;
     }
 }
-
 
 @keyframes movestar{
     0%{transform: scale(1);}
