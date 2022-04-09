@@ -39,6 +39,8 @@ img {
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: 120px;
+    cursor:pointer;
 }
 
 .container {
@@ -211,3 +213,5 @@ p {
 a{
     color:white;
 }
+
+
