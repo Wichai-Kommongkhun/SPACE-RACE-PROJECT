@@ -1,221 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="script_1.js"></script>
-    <link  rel="stylesheet" type="text/css" href="file_css.css">
+    <link rel="stylesheet" type="text/css" href="file_css.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lakki+Reddy&display=swap" rel="stylesheet">
     <link rel="stylesheet"  href="timelinePage.css" type="text/css">
     <title>Sapce Race Timeline</title>
-    
+    <style>
+    </style>
 </head>
 <body>
-    <div class="back" onclick="window.location.href=('../main.html')">
-        <img src="../static/left-arrow.png"/>
+    <div class="back" onclick="window.location.href=('../main.html')" onmouseover="sound()">
+        <img src="../static/left-arrow.png" />
         <h1>Back</h1>
     </div>
     <h1 class="title">Space Race Timeline</h1>
-
-    <div class="layout-grid">
-        <div class="layout">
-            <div class="block-soveit-date" onclick="window.location.href=('./Deatils/1_sovietFirstSatellite.html')">
-                <h3>October 4, 1957</h3>
-            </div>
-            <div class="block-des" onclick="window.location.href=('./Deatils/1_sovietFirstSatellite.html')">
-                <h3>first artificial satellite</h3>
+        <div class="container">
+            <div class="timeline">
+                <div class="timeline-container primary" onclick="window.location.href=('./details/1_sovietFirstSatellite.html')">
+                    <div class="timeline-icon">
+                        <i class="far fa-grin-wink"></i>
+                    </div>
+                    <div class="timeline-body">
+                        <h4 class="timeline-title"><span class="badge">October 4, 1957</span></h4>
+                        <p>The U.S.S.R. launched Sputnik 1, the first artificial satellite.</p>
+                        <a href="./details/1_sovietFirstSatellite.html">read more</a>
+                        <p class="timeline-subtitle">Soveit</p>
+                    </div>
+                </div>
+                <div class="timeline-container danger" onclick="window.location.href=('./details/2_sovietFirstAnimal.html')">
+                    <div class="timeline-icon">
+                        <i class="far fa-grin-hearts"></i>
+                    </div>
+                    <div class="timeline-body">
+                        <h4 class="timeline-title"><span class="badge">November 3, 1957</span></h4>
+                        <p>The U.S.S.R. placed the first animal in a spacecraft, the dog Laika aboard Sputnik 2.</p>
+                        <a href="./details/2_sovietFirstAnimal.html">read more</a>
+                        <p class="timeline-subtitle">Soveit</p>
+                    </div>
+                </div>
+                <div class="timeline-container success" onclick="window.location.href=('./details/3_usFirstSatellite.html')">
+                    <div class="timeline-icon">
+                        <i class="far fa-grin-tears"></i>
+                    </div>
+                    <div class="timeline-body">
+                        <h4 class="timeline-title"><span class="badge">February 1, 1958</span></h4>
+                        <p>The first U.S. satellite, Explorer 1, was launched.</p>
+                        <a href="./details/3_usFirstSatellite.html">read more</a>
+                        <p class="timeline-subtitle">USA</p>
+                    </div>
+                </div>
+                <div class="timeline-container warning" onclick="window.location.href=('./details/4_usNASA.html')">
+                    <div class="timeline-icon">
+                        <i class="far fa-grimace"></i>
+                    </div>
+                    <div class="timeline-body">
+                        <h4 class="timeline-title"><span class="badge">April 9, 1959</span></h4>
+                        <p>NASA announced the first astronaut group, the Mercury 7.</p>
+                        <a href="./details/4_usNASA.html">read more</a>
+                        <p class="timeline-subtitle">USA</p>
+                    </div>
+                </div>
+                <div class="timeline-container" onclick="window.location.href=('./details/5_sovietFirstCosmonauts.html')">
+                    <div class="timeline-icon">
+                        <i class="far fa-grin-beam-sweat"></i>
+                    </div>
+                    <div class="timeline-body">
+                        <h4 class="timeline-title"><span class="badge">March 7, 1960</span></h4>
+                        <p>The first cosmonauts were selected.</p>
+                        <a href="./details/5_sovietFirstCosmonauts.html">read more</a>
+                        <p class="timeline-subtitle">Soveit</p>
+                    </div>
+                </div>
+                <div class="timeline-container info" onclick="window.location.href=('./details/6_sovietHumanInOrbit.html')">
+                    <div class="timeline-icon">
+                        <i class="far fa-grin"></i>
+                    </div>
+                    <div class="timeline-body">
+                        <h4 class="timeline-title"><span class="badge">April 12, 1961</span></h4>
+                        <p>The U.S.S.R. launched the first human into orbit, Yuri Gagarin, on Vostok 1.</p>
+                        <a href="./details/6_sovietHumanInOrbit.html">read more</a>
+                        <p class="timeline-subtitle">Soveit</p>
+                    </div>
+                </div>
+                <div class="timeline-container primary" onclick="window.location.href=('./details/7_usHumanInOrbit.html')">
+                    <div class="timeline-icon">
+                        <i class="far fa-grin-wink"></i>
+                    </div>
+                    <div class="timeline-body">
+                        <h4 class="timeline-title"><span class="badge">February 20, 1962</span></h4>
+                        <p>John Glenn, on Mercury-Atlas 6, became the first American in orbit.</p>
+                        <a href="./details/7_usHumanInOrbit.html">read more</a>
+                        <p class="timeline-subtitle">USA</p>
+                    </div>
+                </div>
+                <div class="timeline-container danger" onclick="window.location.href=('./details/8_sovietFirstWoman.html')">
+                    <div class="timeline-icon">
+                        <i class="far fa-grin-hearts"></i>
+                    </div>
+                    <div class="timeline-body">
+                        <h4 class="timeline-title"><span class="badge">June 16 and June 19, 1963</span></h4>
+                        <p>Valentina Tereshkova, on Vostok 6, became the first woman in space.</p>
+                        <a href="./details/8_sovietFirstWoman.html">read more</a>
+                        <p class="timeline-subtitle">Soveit</p>
+                    </div>
+                </div>
+                <div class="timeline-container success" onclick="window.location.href=('./details/9_sovietMoonPrograms.html')">
+                    <div class="timeline-icon">
+                        <i class="far fa-grin-tears"></i>
+                    </div>
+                    <div class="timeline-body">
+                        <h4 class="timeline-title"><span class="badge">August 1964/span></h4>
+                        <p>The Soviet government gave the go-ahead to two Moon programs, a flyby and a landing program.</p>
+                        <a href="./details/9_sovietMoonPrograms.html">read more</a>
+                        <p class="timeline-subtitle">Soveit</p>
+                    </div>
+                </div>
+                <div class="timeline-container warning" onclick="window.location.href=('./details/10_sovietMultiPerson.html')">
+                    <div class="timeline-icon">
+                        <i class="far fa-grimace"></i>
+                    </div>
+                    <div class="timeline-body">
+                        <h4 class="timeline-title"><span class="badge">October 12, 1964</span></h4>
+                        <p>The U.S.S.R. launched the first multi-person spacecraft, Voskhod 1, with cosmonauts Vladimir Komarov, Konstantin Feoktistov, and Boris Yegorov.</p>
+                        <a href="./details/10_sovietMultiPerson.html">read more</a>
+                        <p class="timeline-subtitle">Soveit</p>
+                    </div>
+                </div>
+                <div class="timeline-container" onclick="window.location.href=('./details/11_sovietSpaceWalk.html')">
+                    <div class="timeline-icon">
+                        <i class="far fa-grin-beam-sweat"></i>
+                    </div>
+                    <div class="timeline-body">
+                        <h4 class="timeline-title"><span class="badge">March 18, 1965</span></h4>
+                        <p>The first space walk was performed, by Aleksei Leonov on Voskhod 2.</p>
+                        <a href="./details/11_sovietSpaceWalk.html">read more</a>
+                        <p class="timeline-subtitle">Soveit</p>
+                    </div>
+                </div>
+                <div class="timeline-container info" onclick="window.location.href=('./details/12_usMultiPerson.html')">
+                    <div class="timeline-icon">
+                        <i class="far fa-grin"></i>
+                    </div>
+                    <div class="timeline-body">
+                        <h4 class="timeline-title"><span class="badge">March 23, 1965</span></h4>
+                        <p>The U.S. launched the first multi-person U.S. spacecraft, Gemini 3, with Virgil Grissom and John Young.</p>
+                        <a href="./details/12_usMultiPerson.html">read more</a>
+                        <p class="timeline-subtitle">USA</p>
+                    </div>
+                </div>
+                <div class="timeline-container primary" onclick="window.location.href=('./details/13_usSpaceWalk.html')">
+                    <div class="timeline-icon">
+                        <i class="far fa-grin-wink"></i>
+                    </div>
+                    <div class="timeline-body">
+                        <h4 class="timeline-title"><span class="badge">June 3, 1965</span></h4>
+                        <p>The first American space walk was completed by Ed White on Gemini 4.</p>
+                        <a href="./details/13_usSpaceWalk.html">read more</a>
+                        <p class="timeline-subtitle">USA</p>
+                    </div>
+                </div>
+                <div class="timeline-container danger" onclick="window.location.href=('./details/14_usOrbitalRendezvous.html')">
+                    <div class="timeline-icon">
+                        <i class="far fa-grin-hearts"></i>
+                    </div>
+                    <div class="timeline-body">
+                        <h4 class="timeline-title"><span class="badge">December 15, 1965</span></h4>
+                        <p>The U.S. conducted the first orbital rendezvous: Frank Borman and James Lovell on Gemini 7 with Walter Schirra and Thomas Stafford on Gemini 6.</p>
+                        <a href="./details/14_usOrbitalRendezvous.html">read more</a>
+                        <p class="timeline-subtitle">USA</p>
+                    </div>
+                </div>
+                <div class="timeline-container success" onclick="window.location.href=('./details/15_sovietDeathPremier.html')">
+                    <div class="timeline-icon">
+                        <i class="far fa-grin-tears"></i>
+                    </div>
+                    <div class="timeline-body">
+                        <h4 class="timeline-title"><span class="badge">January 14, 1966</span></h4>
+                        <p>Marked the death of premier Soviet spacecraft designer Sergei Korolev.</p>
+                        <a href="./details/15_sovietDeathPremier.html">read more</a>
+                        <p class="timeline-subtitle">Soveit</p>
+                    </div>
+                </div>
+                <div class="timeline-container warning" onclick="window.location.href=('./details/16_sovietLandingMoon.html')">
+                    <div class="timeline-icon">
+                        <i class="far fa-grimace"></i>
+                    </div>
+                    <div class="timeline-body">
+                        <h4 class="timeline-title"><span class="badge">February 3, 1966</span></h4>
+                        <p>Luna 9 was the first spacecraft to achieve a lunar soft landing and to transmit photographic data from the Moon's surface to Earth, preceding the U.S. Surveyor 1 soft lander by about 4 months.</p>
+                        <a href="./details/16_sovietLandingMoon.html">read more</a>
+                        <p class="timeline-subtitle">Soveit</p>
+                    </div>
+                </div>
+                <div class="timeline-container" onclick="window.location.href=('./details/17_usDockingSpace.html')">
+                    <div class="timeline-icon">
+                        <i class="far fa-grin-beam-sweat"></i>
+                    </div>
+                    <div class="timeline-body">
+                        <h4 class="timeline-title"><span class="badge">March 16, 1966</span></h4>
+                        <p>The first docking in space took place. Neil Armstrong and David Scott on Gemini 8 docked with an Agena target.</p>
+                        <a href="./details/17_usDockingSpace.html">read more</a>
+                        <p class="timeline-subtitle">USA</p>
+                    </div>
+                </div>
+                <div class="timeline-container info" onclick="window.location.href=('./details/18_usTestApolloProgram.html')">
+                    <div class="timeline-icon">
+                        <i class="far fa-grin"></i>
+                    </div>
+                    <div class="timeline-body">
+                        <h4 class="timeline-title"><span class="badge">January 27, 1967</span></h4>
+                        <p>Astronauts Virgil Grissom, Ed White, and Roger Chaffee were killed in a fire during a launchpad test. The Apollo program was delayed for a year and a half.</p>
+                        <a href="./details/18_usTestApolloProgram.html">read more</a>
+                        <p class="timeline-subtitle">USA</p>
+                    </div>
+                </div>
+                <div class="timeline-container primary" onclick="window.location.href=('./details/19_sovietSpaceflightFatality.html')">
+                    <div class="timeline-icon">
+                        <i class="far fa-grin-wink"></i>
+                    </div>
+                    <div class="timeline-body">
+                        <h4 class="timeline-title"><span class="badge">April 23, 1967</span></h4>
+                        <p>Cosmonaut Vladimir Komarov, on Soyuz 1, became the first spaceflight fatality.</p>
+                        <a href="./details/19_sovietSpaceflightFatality.html">read more</a>
+                        <p class="timeline-subtitle">Soveit</p>
+                    </div>
+                </div>
+                <div class="timeline-container danger" onclick="window.location.href=('./details/20_sovietFlyAroundMoon.html')">
+                    <div class="timeline-icon">
+                        <i class="far fa-grin-hearts"></i>
+                    </div>
+                    <div class="timeline-body">
+                        <h4 class="timeline-title"><span class="badge">September 14 and 21, 1968</span></h4>
+                        <p>The uncrewed Soviet probe Zond 5 became the first spacecraft to fly around the Moon and return to Earth.</p>
+                        <a href="./details/20_sovietFlyAroundMoon.html">read more</a>
+                        <p class="timeline-subtitle">Soveit</p>
+                    </div>
+                </div>
+                <div class="timeline-container success" onclick="window.location.href=('./details/21_usApolloProgram.html')">
+                    <div class="timeline-icon">
+                        <i class="far fa-grin-tears"></i>
+                    </div>
+                    <div class="timeline-body">
+                        <h4 class="timeline-title"><span class="badge">October 11, 1968</span></h4>
+                        <p>The U.S. launched the first flight of the Apollo program: Walter Schirra, Donn Eisele, and Walter Cunningham on Apollo 7.</p>
+                        <a href="./details/21_usApolloProgram.html">read more</a>
+                        <p class="timeline-subtitle">USA</p>
+                    </div>
+                </div>
+                <div class="timeline-container warning" onclick="window.location.href=('./details/22_usFlyAroundMoon.html')">
+                    <div class="timeline-icon">
+                        <i class="far fa-grimace"></i>
+                    </div>
+                    <div class="timeline-body">
+                        <h4 class="timeline-title"><span class="badge">December 24, 1968</span></h4>
+                        <p>The first crewed flight around the Moon took place, with Frank Borman, James Lovell, and William Anders on Apollo 8.</p>
+                        <a href="./details/22_usFlyAroundMoon.html">read more</a>
+                        <p class="timeline-subtitle">USA</p>
+                    </div>
+                </div>
+                <div class="timeline-container" onclick="window.location.href=('./details/23_sovietN1Rocket.html')">
+                    <div class="timeline-icon">
+                        <i class="far fa-grin-beam-sweat"></i>
+                    </div>
+                    <div class="timeline-body">
+                        <h4 class="timeline-title"><span class="badge">July 3, 1969</span></h4>
+                        <p>Marked the explosion of the Soviet N1 Moon rocket.</p>
+                        <a href="./details/23_sovietN1Rocket.html">read more</a>
+                        <p class="timeline-subtitle">Soveit</p>
+                    </div>
+                </div>
+                <div class="timeline-container info" onclick="window.location.href=('./details/24_usHumanOnMoon.html')">
+                    <div class="timeline-icon">
+                        <i class="far fa-grin"></i>
+                    </div>
+                    <div class="timeline-body">
+                        <h4 class="timeline-title"><span class="badge">July 20, 1969</span></h4>
+                        <p>The first humans landed on the Moon: Neil Armstrong and Buzz Aldrin on Apollo 11.</p>
+                        <a href="./details/24_usHumanOnMoon.html">read more</a>
+                        <p class="timeline-subtitle">USA</p>
+                </div>
             </div>
         </div>
-        <div class="layout">
-            <div class="block-soveit-date" onclick="window.location.href=('./Deatils/2_sovietFirstAnimal.html')">
-                <h3>November 3, 1957</h3>
-            </div>
-            <div class="block-des" onclick="window.location.href=('./Deatils/2_sovietFirstAnimal.html')">
-                <h3>The animal on spacecraft</h3>
-            </div>
-        </div>
-        <div class="layout">
-            <div class="block-des" onclick="window.location.href=('./Deatils/3_usFirstSatellite.html')">
-                <h3>First U.S. satellite</h3>
-            </div>
-            <div class="block-us-date" onclick="window.location.href=('./Deatils/3_usFirstSatellite.html')">
-                <h3>February 1, 1958</h3>
-            </div>
-        </div>
-        <div class="layout">
-            <div class="block-des" onclick="window.location.href=('./Deatils/4_usNASA.html')">
-                <h3>NASA announced the first astronaut group</h3>
-            </div>
-            <div class="block-us-date" onclick="window.location.href=('./Deatils/4_usNASA.html')">
-                <h3>April 9, 1959</h3>
-            </div>
-        </div>
-        <div class="layout">
-            <div class="block-soveit-date" onclick="window.location.href=('./Deatils/5_sovietFirstCosmonauts.html')">
-                <h3>March 1960</h3>
-            </div>
-            <div class="block-des" onclick="window.location.href=('./Deatils/5_sovietFirstCosmonauts.html')">
-                <h3>First cosmonauts were selected</h3>
-            </div>
-        </div>
-        <div class="layout">
-            <div class="block-soveit-date" onclick="window.location.href=('./Deatils/6_sovietHumanInOrbit.html')">
-                <h3>April 12, 1961</h3>
-            </div>
-            <div class="block-des" onclick="window.location.href=('./Deatils/6_sovietHumanInOrbit.html')">
-                <h3>First human into orbit</h3>
-            </div>
-        </div>
-        <div class="layout">
-            <div class="block-des" onclick="window.location.href=('./Deatils/7_usHumanInOrbit.html')">
-                <h3>First American in orbit</h3>
-            </div>
-            <div class="block-us-date" onclick="window.location.href=('./Deatils/7_usHumanInOrbit.html')">
-                <h3>February 20, 1962</h3>
-            </div>
-        </div>
-        <div class="layout">
-            <div class="block-soveit-date" onclick="window.location.href=('./Deatils/8_sovietFirstWoman.html')">
-                <h3>June 16 - 19, 1963</h3>
-            </div>
-            <div class="block-des" onclick="window.location.href=('./Deatils/8_sovietFirstWoman.html')">
-                <h3>First woman in space</h3>
-            </div>
-        </div>
-        <div class="layout">
-            <div class="block-soveit-date" onclick="window.location.href=('./Deatils/9_sovietMoonPrograms.html')">
-                <h3>August 1964</h3>
-            </div>
-            <div class="block-des" onclick="window.location.href=('./Deatils/9_sovietMoonPrograms.html')">
-                <h3>Soviet government gave the go-ahead to two Moon programs</h3>
-            </div>
-        </div>
-        <div class="layout">
-            <div class="block-soveit-date" onclick="window.location.href=('./Deatils/10_sovietMultiPerson.html')">
-                <h3>October 12, 1964</h3>
-            </div>
-            <div class="block-des" onclick="window.location.href=('./Deatils/10_sovietMultiPerson.html')">
-                <h3>First multi-person spacecraft</h3>
-            </div>
-        </div>
-        <div class="layout">
-            <div class="block-soveit-date" onclick="window.location.href=('./Deatils/11_sovietSpaceWalk.html')">
-                <h3>March 18, 1965</h3>
-            </div>
-            <div class="block-des" onclick="window.location.href=('./Deatils/11_sovietSpaceWalk.html')">
-                <h3>First space walk</h3>
-            </div>
-        </div>
-        <div class="layout">
-            <div class="block-des" onclick="window.location.href=('./Deatils/12_usMultiPerson.html')">
-                <h3>First multi-person U.S. spacecraft</h3>
-            </div>
-            <div class="block-us-date" onclick="window.location.href=('./Deatils/12_usMultiPerson.html')">
-                <h3>March 23, 1965</h3>
-            </div>
-        </div>
-        <div class="layout">
-            <div class="block-des" onclick="window.location.href=('./Deatils/13_usSpaceWalk.html')">
-                <h3>First American space walk</h3>
-            </div>
-            <div class="block-us-date" onclick="window.location.href=('./Deatils/13_usSpaceWalk.html')">
-                <h3>June 3, 1965</h3>
-            </div>
-        </div>
-        <div class="layout">
-            <div class="block-des" onclick="window.location.href=('./Deatils/14_usOrbitalRendezvous.html')">
-                <h3>First orbital rendezvous</h3>
-            </div>
-            <div class="block-us-date" onclick="window.location.href=('./Deatils/14_usOrbitalRendezvous.html')">
-                <h3>December 15, 1965</h3>
-            </div>
-        </div>
-        <div class="layout">
-            <div class="block-soveit-date" onclick="window.location.href=('./Deatils/15_sovietDeathPremier.html')">
-                <h3>January 14, 1966</h3>
-            </div>
-            <div class="block-des" onclick="window.location.href=('./Deatils/15_sovietDeathPremier.html')">
-                <h3>Death of premier Soviet spacecraft designer</h3>
-            </div>
-        </div>
-        <div class="layout">
-            <div class="block-soveit-date" onclick="window.location.href=('./Deatils/16_sovietLandingMoon.html')">
-                <h3>February 3, 1966</h3>
-            </div>
-            <div class="block-des" onclick="window.location.href=('./Deatils/16_sovietLandingMoon.html')">
-                <h3>First soft landing on the Moon</h3>
-            </div>
-        </div>
-        <div class="layout">
-            <div class="block-des" onclick="window.location.href=('./Deatils/17_usDockingSpace.html')">
-                <h3>First docking in space</h3>
-            </div>
-            <div class="block-us-date" onclick="window.location.href=('./Deatils/17_usDockingSpace.html')">
-                <h3>March 16, 1966</h3>
-            </div>
-        </div>
-        <div class="layout">
-            <div class="block-des" onclick="window.location.href=('./Deatils/18_usTestApolloProgram.html')">
-                <h3>Astronauts Virgil Grissom, Ed White, and Roger Chaffee were killed in a fire during a launchpad test</h3>
-            </div>
-            <div class="block-us-date" onclick="window.location.href=('./Deatils/18_usTestApolloProgram.html')">
-                <h3>January 27, 1967</h3>
-            </div>
-        </div>
-        <div class="layout">
-            <div class="block-soveit-date" onclick="window.location.href=('./Deatils/19_sovietSpaceflightFatality.html')">
-                <h3>April 23, 19676</h3>
-            </div>
-            <div class="block-des" onclick="window.location.href=('./Deatils/19_sovietSpaceflightFatality.html')">
-                <h3>First spaceflight fatality</h3>
-            </div>
-        </div>
-        <div class="layout">
-            <div class="block-soveit-date" onclick="window.location.href=('./Deatils/20_sovietFlyAroundMoon.html')">
-                <h3>September 14 - 21, 1968</h3>
-            </div>
-            <div class="block-des" onclick="window.location.href=('./Deatils/20_sovietFlyAroundMoon.html')">
-                <h3>First spacecraft to fly around the Moon and return Earth</h3>
-            </div>
-        </div>
-        <div class="layout">
-            <div class="block-des" onclick="window.location.href=('./Deatils/21_usApolloProgram.html')">
-                <h3>First flight of the Apollo program</h3>
-            </div>
-            <div class="block-us-date" onclick="window.location.href=('./Deatils/21_usApolloProgram.html')">
-                <h3>October 11, 1968</h3>
-            </div>
-        </div>
-        <div class="layout">
-            <div class="block-des" onclick="window.location.href=('./Deatils/22_usFlyAroundMoon.html')">
-                <h3>First crewed flight around the Moon</h3>
-            </div>
-            <div class="block-us-date" onclick="window.location.href=('./Deatils/22_usFlyAroundMoon.html')">
-                <h3>December 24, 1968</h3>
-            </div>
-        </div>
-        <div class="layout">
-            <div class="block-soveit-date" onclick="window.location.href=('./Deatils/23_sovietN1Rocket.html')">
-                <h3>July 3, 1969</h3>
-            </div>
-            <div class="block-des" onclick="window.location.href=('./Deatils/23_sovietN1Rocket.html')">
-                <h3>Explosion of N1 Moon rocket</h3>
-            </div>
-        </div>
-        <div class="layout">
-            <div class="block-des" onclick="window.location.href=('./Deatils/24_usHumanOnMoon.html')">
-                <h3>First humans landed on the Moon</h3>
-            </div>
-            <div class="block-us-date" onclick="window.location.href=('./Deatils/24_usHumanOnMoon.html')">
-                <h3>July 20, 1969</h3>
-            </div>
-        </div>
-    </div>
-</body>
+    </body>
 </html>
-
-
-
+<script>
+    function sound() {
+        audio = new (window.AudioContext || window.webkitAudioContext)()
+        osci = audio.createOscillator()
+        gain = audio.createGain()
+        osci.connect(gain)
+        gain.connect(audio.destination)
+        let time = audio.currentTime
+        let note_osci = audio.createOscillator()
+        let note_gain = audio.createGain()
+        note_osci.connect(note_gain)
+        note_gain.connect(audio.destination)
+        note_osci.frequency.value = 698
+        note_osci.start()
+        note_gain.gain.setValueCurveAtTime([0.1, 0], time, .1)
+    }
+</script>
