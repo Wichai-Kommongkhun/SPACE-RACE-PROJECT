@@ -92,12 +92,18 @@ button:active {
     background-color: black;
     margin: 19% 0 0 0;
 } */
-.jet_1{
+.ast-1{
     position: absolute;
-    margin: -10% 0 0 70%;
+    margin: 2% 0 0 70%;
     animation: animetion_jet2 18s linear infinite;
 }
-.jet_1::before{
+
+
+.ast-1 img {
+    width: 150px;
+    height: 150px;
+}
+/* .jet_1::before{
     content: '';
     position: absolute;
     bottom: 185px;
@@ -106,7 +112,10 @@ button:active {
     height: 90px;
     background: linear-gradient(#37df56, transparent);
     transform: rotate(-90deg);
-}
+} */
+
+
+
 /* key animetion */
 
 @keyframes animetion_01{
@@ -118,6 +127,6 @@ button:active {
 
 @keyframes animetion_jet2{
     100%{
-        transform: translateX(-300%);
+        transform: translateX(-1000%) rotate(340deg);
     }
 }
