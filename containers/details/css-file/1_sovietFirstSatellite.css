@@ -1,0 +1,90 @@
+body {
+    background: #1E1E2F;
+    margin: 2.5rem auto;
+    margin-left: 4em;
+    padding-bottom: 4em;
+    letter-spacing: 1px;
+    font-family: 'Lakki Reddy', cursive, 'Noto Sans Thai';
+}
+
+.container{
+    width: 80%;
+    height: 680px;
+    background:white;
+    border-radius: 50px;
+    margin: 0 auto;
+    box-shadow:0px 0px 10px #0006;
+    position: relative;
+}
+
+.content{
+    padding: 1rem;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    text-indent: 2em;
+}
+.tag{
+    position: absolute;
+    background: rgb(233, 75, 75);
+    box-shadow:2px 0px 10px #0006;
+    border-radius: 10px;
+    top:-25px;
+    left:50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    padding:0 1rem;
+    text-align: center;
+}
+.tag h1{
+    margin: 0;
+    position: relative;
+    bottom: -5px;
+    color:white;
+}
+.head-img{
+    height: 400px;
+    overflow: hidden;
+    background: red;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.head-img img{
+    width: 102%;
+    transform: translateY(-100px);
+}
+.btn-back{
+    width: 120px;
+    color:white;
+    cursor: pointer;
+    transition: .5s;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.btn-back img{
+    width:30px;
+}
+
+.btn-back:hover{
+    transform: scale(1.1);
+}
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+    
+::-webkit-scrollbar-track {
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: black;  
+    border-radius: 10px;
+}
+        
+::-webkit-scrollbar-thumb:hover {
+    background: white;  
+}
