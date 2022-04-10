@@ -60,18 +60,20 @@ button:active {
 .jet {
     position: absolute;
     margin: 40% 0 0 0;
-    
-    
-    
 }
+
+.jet img{
+    width: 100px;
+    height: 100px;
+}
+
 .jet::before{
     content: '';
     position: absolute;
     bottom: -20.5px;
-    width: 10px;
-    left: 35px;
-    height: 90px;
-    
+    width: 22px;
+    left: 40px;
+    height: 35px;
     background: linear-gradient(#bf383a, transparent);
 }
 
@@ -94,7 +96,7 @@ button:active {
 } */
 .ast-1{
     position: absolute;
-    margin: 2% 0 0 70%;
+    margin: 2% 0 0 80%;
     animation: animetion_jet2 18s linear infinite;
 }
 
@@ -127,6 +129,6 @@ button:active {
 
 @keyframes animetion_jet2{
     100%{
-        transform: translateX(-1000%) rotate(340deg);
+        transform: translateX(-1100%) rotate(340deg);
     }
 }
