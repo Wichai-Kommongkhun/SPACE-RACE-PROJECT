@@ -11,6 +11,7 @@ letter-spacing: 1px;
     align-items: center;
     text-align: row;
     width: 120px;
+    position: absolute;
 }
 .btn-back h1{
     color: white;
@@ -29,7 +30,7 @@ letter-spacing: 1px;
     border-radius: 20%;
     opacity: .7;
     align-content: center;
-    
+    margin: 5% auto auto 10%;
     
 }
 .box-1 div{
@@ -40,9 +41,13 @@ letter-spacing: 1px;
     align-content: center;
     margin: 5% auto auto auto;
     color: rgb(255, 246, 246);
-    font-weight: 800;
+    
 }
 
+.box-1 div p{
+    font-size: 30px;
+    font-weight: 700;
+}
 
 .img-b1{
     margin: -20% 0 0 0%;
