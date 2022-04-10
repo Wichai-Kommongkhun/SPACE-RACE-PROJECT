@@ -14,10 +14,10 @@
         <img src="/static/left-arrow.png">
         <h1>Back</h1>
     </div>
-    <div class="container">
-        <div class="tag">
-            <h1> First artificial satellites</h1>
-        </div>
+    <div class="tag">
+        <h1> First artificial satellites</h1>
+    </div>
+    <div id="myContent" class="container" onclick="Content()">
         <div class="head-img">
             <img src="https://media3.giphy.com/media/l378aBfAd16rx5wwU/giphy.gif?cid=ecf05e471zvkrv2grhriqxtlatyujj6eoip79jj34c8tkdcz&rid=giphy.gif&ct=g" alt="">
         </div>
@@ -51,4 +51,8 @@
         note_osci.start()
         note_gain.gain.setValueCurveAtTime([0.1, 0], time, .1)
     }
+    function Content(){
+        document.getElementById('myContent').style.cssText = 'height:1080px;';
+    }
+    
 </script>
