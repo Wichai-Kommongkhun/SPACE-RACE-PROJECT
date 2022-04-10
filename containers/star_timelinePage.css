@@ -21,12 +21,12 @@
 
 section .star.star2{
     animation-delay: -4s;
-    background: url(./img-con/star2.png);
+    background: url(../static/img-con/star2.png);
 }
 
 section .star.star5{
     animation-delay: -7s;
-    background: url(./img-con/star5.png);
+    background: url(../static/img-con/star5.png);
 }
 section{
     display: block;
