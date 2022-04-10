@@ -1,0 +1,51 @@
+body{
+    background: #1E1E2F;
+    margin: 2.5em;
+margin-left: 4em;
+padding-bottom: 4em;
+letter-spacing: 1px;
+}
+.btn-back{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-align: row;
+    width: 120px;
+}
+.btn-back h1{
+    color: white;
+    
+}
+.btn-back img {
+    width: 30px;
+    height: 30px;
+}
+.box-1 {
+    background-color: rgb(21, 21, 22);
+    width: 70%;
+    height: 130%;
+    position: absolute;
+    margin: 0 0 0 20%;
+    border-radius: 20%;
+    opacity: .7;
+    align-content: center;
+    
+    
+}
+.box-1 div{
+    width: 80%;
+    opacity: 1;
+    height: 80%;
+    text-align: center;
+    align-content: center;
+    margin: 5% auto auto auto;
+    color: rgb(255, 246, 246);
+    font-weight: 800;
+}
+
+
+.img-b1{
+    margin: -20% 0 0 0%;
+    width: 100%;
+    height: 75%;
+}
