@@ -1,59 +1,44 @@
-body {
-    background: #1E1E2F;
-    margin: 2.5rem auto;
-    margin-left: 4em;
-    padding-bottom: 4em;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;900&display=swap');
+body{
+    background: linear-gradient(to bottom,#000000,#1E1E2F);
+    margin:0;
+    max-width: 100%;
     letter-spacing: 1px;
-    font-family: 'Lakki Reddy', cursive, 'Noto Sans Thai';
+    font-family: 'Inter', cursive, 'Noto Sans Thai';
+    scroll-behavior: smooth;
 }
-
-.container{
+.header{
     position: relative;
-    width: 80%;
-    height: 680px;
-    background:white;
-    border-radius: 50px;
-    margin: 0 auto;
-    box-shadow:0px 0px 10px #0006;
-    transition: 2s;
-    overflow: hidden;
+    margin:0;
+    padding: 0;
+    background-size: cover;
 }
-
-.content{
-    padding: 1rem;
-    margin:auto;
+.header img{
+    width: 100%;
+}
+.header-content{
+    position: absolute;
     display: flex;
     flex-direction: column;
+    top:90px;
+    left:5%;
+}
+.header-box{
+    max-width:800px;
+    max-height:500px;
+    font-weight: bolder;
+}
+.header-box p{
+    font-size: 1.2vw;
+    color:rgb(201, 200, 200);
     text-indent: 2em;
 }
-.tag{
-    position: absolute;
-    background: rgb(233, 75, 75);
-    box-shadow:2px 0px 10px #0006;
-    border-radius: 10px;
-    top:110px;
-    left:50%;
-    transform: translateX(-50%);
-    z-index: 1;
-    padding:0 1rem;
-    text-align: center;
-}
-.tag h1{
-    margin: 0;
-    position: relative;
-    bottom: -5px;
+.header-content h1{
     color:white;
-}
-.head-img{
-    height: 400px;
-    overflow: hidden;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-}
-
-.head-img img{
-    width: 102%;
-    transform: translateX(-20px) translateY(-100px);
+    font-size:4vw;
+    letter-spacing: 1px;
+    font-family: 'Inter';
+    line-height: 1.5;
 }
 .btn-back{
     width: 120px;
@@ -62,14 +47,110 @@ body {
     transition: .5s;
     display: flex;
     align-items: center;
-    position: relative;
+    position: absolute;
+    left:4rem;
+    top:2.5rem;
 }
 .btn-back img{
     width:30px;
+    position: relative;
+    top:-5px;
+    right:10px;
 }
 
 .btn-back:hover{
     transform: scale(1.1);
+}
+.container{
+    max-width:100%;
+    height:500vh;
+    display: grid;
+}
+.container section{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 2s;
+    border-bottom: solid white;
+}
+.progress{
+    position: fixed;
+    top:20%;
+    right:15px;
+
+}
+.progress ul{
+    list-style: none;
+    height: 400px;
+    width: 60px;
+    display:flex;
+    align-items: center;
+    flex-flow: column;
+    justify-content: space-around;
+    position: relative;
+    
+}
+.progress ul li a{
+    font-family: "Inter";
+    display: inline-block;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    background: #333;
+    text-align: center;
+    line-height: 40px;
+    color:white;
+    text-decoration: none;
+    border-radius: 50%;
+    font-weight: bolder;
+    transition: 2s;
+}
+.progress ul li a:hover{
+    background: rgb(146, 136, 136);
+}
+
+.soviet_planning{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color:white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.soviet_planning .box_1{
+    position: absolute;
+    text-align: center;
+    max-width:800px;
+    color:white;
+}
+.soviet_planning img{
+    max-width: 400px;
+    max-height: 400px;
+    box-shadow: 5px 2px 0 #121213;
+    border-radius: 10px;
+}
+.left{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left:60px  
+}
+.right{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    right:60px  
+}
+.soviet_planning .box_1 p{
+    text-indent: 2rem;
+    font-size: 1vw;
+}
+.container h1{
+    font-size: 3vw;
 }
 ::-webkit-scrollbar {
     width: 12px;
@@ -77,8 +158,7 @@ body {
 }
     
 ::-webkit-scrollbar-track {
-    border: 1px solid black;
-    border-radius: 10px;
+    border: 1px solid rgb(65, 63, 63);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -87,5 +167,5 @@ body {
 }
         
 ::-webkit-scrollbar-thumb:hover {
-    background: white;  
+    background: rgb(0, 0, 0);  
 }
