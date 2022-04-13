@@ -101,7 +101,9 @@ body{
     align-items: center;
     transition: 2s;
     border-bottom: solid white;
+    border-top: solid white;
 }
+
 .progress{
     position: fixed;
     top:20%;
@@ -183,11 +185,14 @@ body{
 .box_right h1{
     text-align: right;
     text-transform: uppercase;
+    text-decoration: underline
 }
 .box_left h1{
     text-align: left;
     text-transform: uppercase;
+    text-decoration: underline
 }
+
 .soviet_planning img{
     max-width: 600px;
     max-height: 600px;
@@ -203,11 +208,13 @@ body{
 .left img{
     transform: rotateZ(-3deg);
     box-shadow: 5px 7px 3px #121213;
+    border: 2px solid white;
     
 }
 .right img{
     transform: rotateZ(3deg);
     box-shadow: 5px 7px 3px #000000;
+    border: 2px solid white;
 }
 .right{
     position: absolute;
@@ -254,7 +261,9 @@ body{
     background: black;  
     border-radius: 10px;
 }
-        
+
+
+
 ::-webkit-scrollbar-thumb:hover {
     background: rgb(0, 0, 0);  
 }
