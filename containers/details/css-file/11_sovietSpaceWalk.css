@@ -9,6 +9,7 @@ body {
 }
 html{
     scroll-behavior: smooth;
+    
 }
 body {
     overflow: hidden; /* Hide scrollbars */
@@ -71,7 +72,7 @@ body {
      
 }
 .text-infor{
-    background-color: rgb(118, 122, 122);
+    background-color: rgb(68, 68, 74);
     border-radius: 15%;
     width: 102%;
     height: 75%;
@@ -80,7 +81,7 @@ body {
     align-content: center;
     position: absolute;
     
-    opacity: .6;
+    opacity: .3;
     
 }
 
@@ -107,5 +108,24 @@ body {
     margin: 10% 0 0 58%;
 }
 
+.arr-1{
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    margin: 56% 0 0 48%;
+}
 
+.arr-1 img{
+    width: 25%;
+    height: 25%;
+    
+}
+
+.btn-page{
+    position: absolute;
+    margin: 2% 0 0 106%;
+    cursor: pointer;
+    color: aliceblue;
+    text-decoration: none;
+}
 

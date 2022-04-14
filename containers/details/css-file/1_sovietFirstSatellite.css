@@ -6,6 +6,10 @@ body{
     letter-spacing: 1px;
     font-family: 'Poppins', cursive;
     scroll-behavior: smooth;
+    overflow: hidden;
+}
+html{
+    scroll-behavior: smooth;
 }
 .myAudio{
     position:absolute;
