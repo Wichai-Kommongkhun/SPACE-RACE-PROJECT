@@ -1,131 +1,264 @@
-body {
-    background: #1E1E2F;
-    margin: 2.5rem auto;
-    margin-left: 4em;
-    padding-bottom: 4em;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;900&family=Poppins:wght@600&display=swap');
+body{
+    background: linear-gradient(to bottom,#000000,#1E1E2F);
+    margin:0;
+    max-width: 100%;
     letter-spacing: 1px;
-    font-family: 'Lakki Reddy', cursive, 'Noto Sans Thai';
-    
+    font-family: 'Poppins', cursive;
+    scroll-behavior: smooth;
+    overflow: hidden;
 }
 html{
     scroll-behavior: smooth;
+}
+.myAudio{
+    position:absolute;
+    right: 20px;
+}
+.header{
+    position: relative;
+    margin:0;
+    padding: 0;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+.header img{
+    width: 100%;
+}
+ .header-content{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top:90px;
+    left:5%;
+}
+.header-box{
+    text-align: left;
+    width:1000px;
+    height:500px;
+    font-weight: bolder;
+    margin: 60% 0 0 25%;
+    animation: intro_animate 5s ease-in-out;
+}
+.header-box p{
+    font-size: 1.2vw;
+    color:rgb(201, 200, 200);
+    /* text-indent: 2em; */
+    
     
 }
-body {
-    overflow: hidden; /* Hide scrollbars */
-  }
+
+.head-intro{
+    width: 1200px;
+    position: absolute;
+    color:#FFF;
+    font-size: 32px;
+    margin: 46% 0 03%;
+    animation: intro_animate 4s ease-in-out;
+    /* background-color: aliceblue; */
+}
+
+.vdo-intro{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    margin: 10% 0 0 30%;
+    
+}
+
+@keyframes intro_animate{
+    from{
+        opacity: 0.1;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
+
 
 
 .btn-back{
-    width: 120px;
-  
+    width: 200px;
     color:white;
     cursor: pointer;
     transition: .5s;
     display: flex;
     align-items: center;
     position: fixed;
+    left:4rem;
+    top:2.5rem;
 }
-
-
-.img_intro{
-    margin: -5% 0 0 8%;
-    position: absolute;
-    width: 80%;
-    height: 75%;
+.btn-back img{
+    width:30px;
+    position: relative;
+    top:-5px;
+    right:10px;
 }
-
-.head-text{
-    position: absolute;
-    margin: 33% 0 0 27%;
-    color: aliceblue;
-    font-size: 96px;
-}
-
-.sect1{
-    width: 5%;
-    height: 10%;
-    position: absolute;
-    margin: 40% 0 0 43%;
-}
-.sect1 img{
-     width: 180%;
-     height: 180%;
-     cursor: pointer;
-     
-}
-.sect1 img:hover{
-    transform: scale(1.1);
-}
-
-
 
 .btn-back:hover{
     transform: scale(1.1);
 }
-
-.infor-1{
-     position: absolute;
-     width: 80%;
-     height: 100%;
-     margin: 50% -20% 0 0;
-     
+.container{
+    max-width:100%;
+    height:500vh;
+    display: grid;
 }
-.text-infor{
-    background-color: rgb(68, 68, 74);
-    border-radius: 15%;
-    width: 102%;
-    height: 75%;
-    margin: 7% auto auto 5%;
+.container section{
+    width:100%;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    align-content: center;
-    position: absolute;
-    
-    opacity: .3;
-    
+    transition: 2s;
+    border-bottom: solid white;
+    border-top: solid white;
 }
 
-.detail-infor{
-    position: absolute;
-    width: 45%;
-    height: 60%;
-    /* background-color: aquamarine; */
-    margin: 10% 0 0 10.5%;
-    text-align:justify;
-    color: aliceblue;
-    
-}
-.detail-infor h1{
-    margin: auto auto auto 25%;
-}
-.detail-infor p{
-    font-size: 20px;
-}
- .img-1{
-    width: 41%;
-    height: 61%;
-    position: absolute;
-    margin: 10% 0 0 58%;
-}
+.progress{
+    position: fixed;
+    top:20%;
+    right:10px;
 
-.arr-1{
-    width: 50%;
-    height: 50%;
-    position: absolute;
-    margin: 56% 0 0 48%;
 }
-
-.arr-1 img{
-    width: 25%;
-    height: 25%;
-    
+.progress ul{
+    list-style: none;
+    height: 400px;
+    width: 460px;
+    display:flex;
+    align-items: center;
+    flex-flow: column;
+    justify-content: center;
+    position: relative;
 }
-
-.btn-page{
-    position: absolute;
-    margin: 2% 0 0 106%;
-    cursor: pointer;
-    color: aliceblue;
+.progress ul li a{
+    display: inline-block;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    background: #333;
+    text-align: center;
+    line-height: 40px;
+    color:white;
     text-decoration: none;
+    border-radius: 50%;
+    font-weight: bolder;
+    transition: 2s;
+    box-shadow: 2px 2px 2px rgb(0, 0, 0);
 }
 
+.progress ul  a:hover{
+    background: rgb(146, 136, 136);
+}
+.bar:hover .butt{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+.inforbox{
+    
+    width: 100%;
+    height: 100%;
+    position: absolute;
+background-color: rgb(19, 20, 26);
+
+}
+.infor_text1{
+    width: 40%;
+    height: 45%;
+    position: absolute;
+    margin: 7% 0 0 10%;
+    color: rgb(215, 235, 228);
+    
+}
+
+.infor_text2{
+    width: 40%;
+    height: 30%;
+    position: absolute;
+    margin: 35% 0 0 10%;
+    color: rgb(215, 235, 228);
+    font-size: 24px;
+}
+.infor_text1 p {
+    font-size: 24px;
+}
+
+.inforbox .img-infor1{
+    position: absolute;
+    margin: 10% 0 0 55%;
+    width: 500px;
+    height: 500px;
+    transform: rotate(10deg);
+}
+
+.inforbox .img-infor2{
+    position: absolute;
+    margin: 30% 0 0 30%;
+    width: 300px;
+    height: 300px;
+    
+}
+
+.inforbox .img-infor3{
+    position: absolute;
+    margin: 38% 0 0 55%;
+    width: 150px;
+    height: 150px;
+    transform: rotate(-30deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+.bar{
+    display: flex;
+    align-items: center;
+    transform: translateX(10px);
+    padding: 15px;
+}
+
+.butt{
+    background:#333;
+    color:rgb(255, 246, 246);
+    border-radius: 25px;
+    padding: 10px;
+    margin-right: 20px;
+    font-size:20px;
+    box-shadow: 2px 2px 2px rgb(0, 0, 0);
+    opacity: 0;
+    pointer-events: none;
+    transition: 1s;
+}
+
+
+
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+    background: rgb(141, 139, 139);
+}
+    
+::-webkit-scrollbar-track {
+    border: 1px solid rgb(65, 63, 63,0.6);
+}
+
+::-webkit-scrollbar-thumb {
+    background: black;  
+    border-radius: 10px;
+}
+
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(0, 0, 0);  
+}

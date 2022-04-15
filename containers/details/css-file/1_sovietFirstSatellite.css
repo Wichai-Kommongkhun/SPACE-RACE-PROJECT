@@ -79,7 +79,7 @@ html{
     transition: .5s;
     display: flex;
     align-items: center;
-    position: absolute;
+    position: fixed;
     left:4rem;
     top:2.5rem;
 }
