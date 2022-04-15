@@ -44,7 +44,7 @@ html{
     position: absolute;
     color:#FFF;
     font-size: 64px;margin: 5% 0 0 5%;
-    animation: anime-type 2s steps(32);
+    animation: anime-type 1.5s steps(32);
     overflow: hidden;
     white-space: nowrap;
 }
@@ -153,12 +153,75 @@ html{
     transform: rotate(10deg);
 }
 
+.infor-box2{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin: 51% 0 0 0;
+    background-color: rgb(12, 8, 20);
+}
 
+.text-infor2 {
+    position: absolute;
+    width: 900px;
+    height: 350px;
+    margin: 27% 0 0 0%;
+    color: antiquewhite;
+}
 
+.text-infor2 h1{
+    position: absolute;
+    margin: 7% 0 0 30%;
+}
 
+.text-infor2 p{
+    font-size: 22px;
+    position: absolute;
+    margin: 15% 0 0 5%;
+}
 
+.text2-infor2 b{
+    font-size: 30px;
+}
 
+.img-infor2{
+    position: absolute;
+    width: 250px;
+    height: 400px;
+    margin: 8% 0 0 15%;
+}
 
+.text2-infor2{
+    width: 800px;
+    height: 200px;
+    position: absolute;
+    margin: 5% 0 0 52%;
+    color: antiquewhite;
+    font-size: 18px;
+}
+
+.img1-infor2{
+    position: absolute;
+    width: 300px;
+    height: 320px;
+    margin: 20% 0 0 55%;
+}
+
+.line{
+    position: absolute;
+    width: 10px;
+    height: 100%;
+    background-color: antiquewhite;
+    margin: 0 0 0 50%;
+}
+
+.img2-infor2{
+    position: absolute;
+    width: 300px;
+    height: 350px;
+    margin: 22% 0 0 75%;
+    transform: rotate(20deg);
+}
 
 
 
