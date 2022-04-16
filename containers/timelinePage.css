@@ -41,6 +41,14 @@ img {
     align-items: center;
     width: 120px;
     cursor:pointer;
+    transition: all .3s;
+}
+.back:hover {
+    transform: translateY(-5px);
+}
+
+.back:active {
+    transform: translateY(-3px);
 }
 
 .container {
