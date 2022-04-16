@@ -1,7 +1,6 @@
 @media only screen and (max-width: 900px) {
     .soviet_planning img{
-        max-width: 300px;
-        max-height: 300px;
+        display: none;
     }
     .left img{
         transform: rotateZ(0deg);

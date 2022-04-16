@@ -17,6 +17,10 @@ body{
     font-weight: bolder;
     left:15%;
     top:60px;
+    animation: moveright 2s linear 1;
+    animation-delay: 1s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
   }
   .waviy span {
     position: relative;
@@ -45,9 +49,9 @@ body{
     
 }
 .header .header-bg {
+    position: relative;
     width: 100%;
     max-height: 1000px;
-    border-bottom: solid white;
 }
 .header-content{
     position: absolute;
@@ -110,8 +114,13 @@ body{
 }
 .container{
     max-width:100%;
-    height:500vh;
+    height:600vh;
     display: grid;
+}
+.container .header-bg{
+    position: absolute;
+    width: 100%;
+    height: 1000px;
 }
 .container section{
     margin: 0;
@@ -120,8 +129,6 @@ body{
     justify-content: center;
     align-items: center;
     transition: 2s;
-    border-bottom: solid white;
-    border-top: solid white;
 }
 
 .progress{
@@ -185,7 +192,7 @@ body{
     text-indent: 2rem;
     font-size: 25px;
     padding: 1rem;
-    background-color: rgb(0,0,0,.4);
+    background-color: rgba(70, 56, 47, 0.4);
     border-radius: 10px;
 }
 .soviet_planning .box_left{
@@ -199,7 +206,7 @@ body{
     text-indent: 2rem;
     font-size: 25px;
     padding: 1rem;
-    background-color: rgb(0,0,0,.6);
+    background-color: rgba(70, 56, 47, 0.4);
     border-radius: 10px;
 }
 .box_right h1{
@@ -251,6 +258,12 @@ body{
     right:170px;
     margin:20px;
 }
+.box_left img{
+    max-width: 200px;
+    max-height: 200px;
+    margin-right: 30px;
+    
+}
 .box_right img{
     max-width: 200px;
     max-height: 200px;
@@ -297,4 +310,45 @@ body{
 
 ::-webkit-scrollbar-thumb:hover {
     background: rgb(0, 0, 0);  
+}
+#sec0 .header-bg{
+    opacity: 1;
+}
+.header-bg{
+    width: 100%;
+    opacity: .1;
+    height: 1000px;
+    z-index: -999;
+}   
+
+.decoration{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 900px;
+    position: fixed;
+    opacity: 1;
+    z-index: 0;
+}
+
+.num{
+    position: absolute;
+    max-width: 200px;
+    max-height: 200px;
+}
+.one{
+    animation: moveright1 15s infinite linear ;
+}
+
+@keyframes moveright1{
+    0%{transform: translateX(-1000px) translatey(450px);}
+    100%{transform: translateX(1000px) translatey(450px);}
+}
+
+@keyframes moveright{
+    0%{opacity: 0;
+    visibility: visible;}
+    100%{opacity: 1;
+        visibility: visible;}
 }
