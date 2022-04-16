@@ -164,6 +164,7 @@ body{
 
 .progress ul  a:hover{
     background: rgb(146, 136, 136);
+    transform: scale(1.2);
 }
 .bar:hover .butt{
     opacity: 1;

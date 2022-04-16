@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;900&family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;900&family=Lobster&family=Poppins:wght@600&display=swap');
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+    background: linear-gradient(to bottom,rgb(41, 36, 33),rgb(32, 28, 26));
+    margin:0;
+    padding: 0;
+    letter-spacing: 1px;
+    font-family: 'Poppins', cursive;
+}
+
+section{
+    position: relative;
+    margin: 0;
+    min-height: 100vh;
+    transition: 2s;
+}
+.bg{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.bg::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://explorer1.jpl.nasa.gov/assets/images/galleries/explorer1still.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    filter: brightness(45%);
+}
+.header{
+    position: absolute;
+    color:white;
+    right: 0;
+    padding: 2rem;
+    font-size: 2vw;
+    font-family: 'Lobster', cursive;;
+}
+.title{
+    color:white;
+    position: absolute;
+    width: 90%;
+    margin: 0 auto;
+    top:25%;
+    left:50%;
+    transform: translate(-50%,50%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.title h1{
+    font-size: 2.8vw;
+    position: absolute;
+    transform: translate(-50%,50%);
+    left:50%;
+}
+.title p{
+    font-size: 1.4vw;
+    transform: translateY(9rem);
+}
+
+  .title h1:nth-child(1) {
+    color: transparent;
+    -webkit-text-stroke: 2px #fdfdfd;
+  }
+  
+  .title h1:nth-child(2) {
+    color: #ffffff;
+    animation: animate 4s ease-in-out infinite;
+  }
+  
+  @keyframes animate {
+    0%,
+    100% {
+      clip-path: polygon(
+        0% 45%,
+        16% 44%,
+        33% 50%,
+        54% 60%,
+        70% 61%,
+        84% 59%,
+        100% 52%,
+        100% 100%,
+        0% 100%
+      );
+    }
+  
+    50% {
+      clip-path: polygon(
+        0% 60%,
+        15% 65%,
+        34% 66%,
+        51% 62%,
+        67% 50%,
+        84% 45%,
+        100% 46%,
+        100% 100%,
+        0% 100%
+      );
+    }
+  }
+
+  .myVid{
+    position: absolute;
+    transform: translateY(20vw);
+    z-index: -1;
+    min-width: 560px;
+    min-height: 315px;
+}
+
+.btn-back{
+    width: 120px;
+    color:white;
+    cursor: pointer;
+    transition: .5s;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    left:4rem;
+    top:2.5rem;
+}
+.btn-back img{
+    width:30px;
+    position: relative;
+    top:-5px;
+    right:10px;
+}
+
+.btn-back:hover{
+    transform: scale(1.1);
+}
