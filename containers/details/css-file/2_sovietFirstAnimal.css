@@ -7,6 +7,7 @@ body{
     letter-spacing: 1px;
     font-family: 'Poppins', cursive;
     scroll-behavior: smooth;
+    overflow: hidden;
 }
 
 .waviy {
@@ -45,7 +46,7 @@ body{
 }
 .header .header-bg {
     width: 100%;
-    max-height: 950px;
+    max-height: 1000px;
     border-bottom: solid white;
 }
 .header-content{
@@ -59,7 +60,7 @@ body{
 .header-content h1{
     position: relative;
     color:rgb(0, 0, 0, 0);
-    font-size:4vw;
+    font-size:60px;;
     letter-spacing: 1px;
     line-height: 1.5;
     transition: 2s;
@@ -93,7 +94,7 @@ body{
     transition: .5s;
     display: flex;
     align-items: center;
-    position: absolute;
+    position: fixed;
     left:4rem;
     top:2.5rem;
 }
@@ -126,18 +127,17 @@ body{
 .progress{
     position: fixed;
     top:20%;
-    right:10px;
+    right: -370px;
 
 }
 .progress ul{
+    position: relative;
     list-style: none;
     height: 400px;
     width: 460px;
     display:flex;
-    align-items: center;
     flex-flow: column;
     justify-content: center;
-    position: relative;
 }
 .progress ul li a{
     display: inline-block;
@@ -175,6 +175,7 @@ body{
 
 .soviet_planning .box_right{
     position: absolute;
+    padding: 1rem;
     text-align: left;
     max-width:900px;
     color:white;
@@ -182,7 +183,10 @@ body{
 }
 .soviet_planning .box_right p{
     text-indent: 2rem;
-    font-size: 1vw;
+    font-size: 25px;
+    padding: 1rem;
+    background-color: rgb(0,0,0,.4);
+    border-radius: 10px;
 }
 .soviet_planning .box_left{
     position: absolute;
@@ -193,23 +197,25 @@ body{
 }
 .soviet_planning .box_left p{
     text-indent: 2rem;
-    font-size: 1vw;
+    font-size: 25px;
+    padding: 1rem;
+    background-color: rgb(0,0,0,.6);
+    border-radius: 10px;
 }
 .box_right h1{
+    font-size: 50px;
     display:flex;
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
-    text-decoration: underline;
-    font-size: 2.5vw;
+    text-decoration: underline
 }
-.box_right h1 img{
-    max-width: 200px;
-    max-height: 200px;
-    margin-right: 30px;
-}
+
 .box_left h1{
-    text-align: left;
+    font-size: 50px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
     text-transform: uppercase;
     text-decoration: underline
 }
@@ -245,15 +251,22 @@ body{
     right:170px;
     margin:20px;
 }
+.box_right img{
+    max-width: 200px;
+    max-height: 200px;
+    margin-right: 30px;
+}
 
 .bar{
+    position: relative;
     display: flex;
     align-items: center;
-    transform: translateX(10px);
     padding: 15px;
 }
 
 .butt{
+    float: right;
+    position: absolute;
     background:#333;
     color:rgb(255, 246, 246);
     border-radius: 25px;
