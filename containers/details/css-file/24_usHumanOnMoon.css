@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    height: 500vh;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    display: grid;
+}
+.background{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.p1{
+    background: red;
+}
+.p2{
+    background: blue;
+}
+.p3{
+    background: green;
+}
+.p4{
+    background: yellow;
+}
+.page{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 20px;
+    
+}
+.d1{
+    background-color: white;
+    position: absolute;
+    right: 90px;
+}
+.d2{
+    background-color: white;
+    position: absolute;
+    left: 90px;
+}
+.d3{
+    background-color: white;
+    position: absolute;
+    right: 90px;
+}
+.d4{
+    background-color: white;
+    position: absolute;
+    left: 90px;
+}
+.picture{
+    width: 50%;
+    height: 50%;
+    background: black;
+}
+.a1{
+    background-color: black;
+    position: absolute;
+    left: 90px;
+}
+.a2{
+    background-color: black;
+    position: absolute;
+    right: 90px;
+}
+.a3{
+    background-color: black;
+    position: absolute;
+    left: 90px;
+}
+.a4{
+    background-color: black;
+    position: absolute;
+    right: 90px;
+}
+.content2 {
+    height:50%;
+    border-radius: 5em;
+    list-style: none;
+    position: fixed;
+    z-index:1;
+    top:20%;
+    right: 17px;
+    flex-flow: column;
+    display: flex;
+    justify-content: center;
+}
+.botton ul li a {
+    display: inline-block;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background: hsl(0, 50%, 65%);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    z-index: 1;
+}
+.botton{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.botton ul{
+    list-style: none;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.btn-back{
+    width: 120px;
+    color:white;
+    cursor: pointer;
+    transition: .5s;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    left:4rem;
+    top:2.5rem;
+    z-index: 1;
+    background-color: aqua;
+}
+.btn-back img{
+    width:30px;
+    position: relative;
+    top:-5px;
+    right:10px;
+}
+
+.btn-back:hover{
+    transform: scale(1.1);
+}
+
