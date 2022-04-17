@@ -1,141 +1,291 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;900&family=Poppins:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;900&family=Lobster&family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;900&family=Kanit:wght@300&family=Lobster&family=Poppins:wght@600&display=swap');
 *{
-    margin:0;
-    padding: 0;
+  margin:0;
+  padding: 0;
+}
+html{
+  scroll-behavior: smooth;
 }
 body{
-    background: linear-gradient(to bottom,rgb(41, 36, 33),rgb(32, 28, 26));
-    margin:0;
-    padding: 0;
-    letter-spacing: 1px;
-    font-family: 'Poppins', cursive;
+  background: linear-gradient(to bottom,rgb(41, 36, 33),rgb(32, 28, 26));
+  margin:0;
+  padding: 0;
+  letter-spacing: 1px;
+  font-family: 'Kanit', cursive;
+  overflow: hidden;
 }
 
 section{
-    position: relative;
-    margin: 0;
-    min-height: 100vh;
-    transition: 2s;
+  position: relative;
+  margin: 0;
+  min-height: 100vh;
 }
 .bg{
-    width: 100%;
-    height: 100%;
-    position: relative;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 .bg::after{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("https://explorer1.jpl.nasa.gov/assets/images/galleries/explorer1still.jpg");
-    background-size: cover;
-    background-position: center;
-    z-index: -1;
-    filter: brightness(45%);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://explorer1.jpl.nasa.gov/assets/images/galleries/explorer1still.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  filter: brightness(45%);
 }
+
+.bg:nth-child(2):after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://s.abcnews.com/images/Technology/WireAP_6a4548fd7302421b9bb6aba4eed367b6_16x9_1600.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  filter: brightness(45%);
+}
+
+.bg:nth-child(3):after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://thumbor.forbes.com/thumbor/trim/0x222:2231x1895/fit-in/711x533/smart/https://specials-images.forbesimg.com/imageserve/5e3491a38b6cf300071d9700/Black-and-white-photo-of-three-men-in-suits-holding-a-large-model-rocket-/0x0.jpg");
+  background-size: cover;
+  background-position-y:-2px;
+  z-index: -1;
+  filter: brightness(45%);
+  transform: scaleX(-1);
+}
+
+.bg:nth-child(4):after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://wallpaperaccess.com/full/19604.jpg");
+  background-size: cover;
+  background-position-y:-2px;
+  z-index: -1;
+  filter: brightness(45%);
+  transform: scaleX(-1);
+}
+
 .header{
-    position: absolute;
-    color:white;
-    right: 0;
-    padding: 2rem;
-    font-size: 2vw;
-    font-family: 'Lobster', cursive;;
+  position: absolute;
+  color:white;
+  right: 0;
+  padding: 2rem;
+  font-size: 2vw;
+  font-family: 'Lobster', cursive;;
 }
 .title{
-    color:white;
-    position: absolute;
-    width: 90%;
-    margin: 0 auto;
-    top:25%;
-    left:50%;
-    transform: translate(-50%,50%);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  color:white;
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  left:45%;
+  transform: translate(-50%,40%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .title h1{
-    font-size: 2.8vw;
-    position: absolute;
-    transform: translate(-50%,50%);
-    left:50%;
+  width: 100%;
+  font-size: 2.8vw;
+  position: absolute;
+  transform: translate(-50%);
+  left:50%;
 }
 .title p{
-    font-size: 1.4vw;
-    transform: translateY(9rem);
+  position: relative;
+  font-size: 1.4vw;
+  transform: translateY(16vw);
 }
 
-  .title h1:nth-child(1) {
-    color: transparent;
-    -webkit-text-stroke: 2px #fdfdfd;
-  }
+.title h1:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 2px #fdfdfd;
+}
   
-  .title h1:nth-child(2) {
-    color: #ffffff;
-    animation: animate 4s ease-in-out infinite;
-  }
+.title h1:nth-child(2) {
+  color: #ffffff;
+  animation: animate 4s ease-in-out infinite;
+}
+
+.container-right{
+  float:right;
+  z-index: 2;
+  color:white;
+  position: absolute;
+  width: 70%;
+  height: 100%;
+  right:5vw;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  background: rgb(0, 0, 0,.5);
+}
+
+
+.container-right p{
+  font-size: 1.2vw;
+  margin: 2rem;
+}
+
+.container-right h1{
+  text-decoration: underline;
+  text-align: center;
+  font-size: 2vw;
+  margin-top: 3rem;
+}
+
+#sec1 .container-right img{
+  border: #ffffff 1px solid;
+  box-shadow: 2px 2px 2px rgb(0, 0, 0);
+  left:15%;
+  margin:  0 auto;
+  position: relative;
+  width: 20vw;
+  margin-right: 4rem;
+  height: 15vw;
+}
+
+
   
-  @keyframes animate {
-    0%,
-    100% {
-      clip-path: polygon(
-        0% 45%,
-        16% 44%,
-        33% 50%,
-        54% 60%,
-        70% 61%,
-        84% 59%,
-        100% 52%,
-        100% 100%,
-        0% 100%
-      );
-    }
-  
-    50% {
-      clip-path: polygon(
-        0% 60%,
-        15% 65%,
-        34% 66%,
-        51% 62%,
-        67% 50%,
-        84% 45%,
-        100% 46%,
-        100% 100%,
-        0% 100%
-      );
-    }
+@keyframes animate {
+  0%,
+  100% {
+    clip-path: polygon(
+      0% 45%,
+      16% 44%,
+      33% 50%,
+      54% 60%,
+      70% 61%,
+      84% 59%,
+      100% 52%,
+      100% 100%,
+      0% 100%
+    );
   }
 
-  .myVid{
-    position: absolute;
-    transform: translateY(20vw);
-    z-index: -1;
-    min-width: 560px;
-    min-height: 315px;
+  50% {
+    clip-path: polygon(
+      0% 60%,
+      15% 65%,
+      34% 66%,
+      51% 62%,
+      67% 50%,
+      84% 45%,
+      100% 46%,
+      100% 100%,
+      0% 100%
+    );
+  }
+}
+
+.myVid{
+  position: relative;
+  transform: translateY(20vw);
+  z-index: -1;
+  width: 25vw;
+  height: 15vw;
+}
+iframe{
+  width: 100%;
+  height: 100%;
+}
+.progress{
+  position: fixed;
+  top:30%;
+  right: -370px;
+  z-index: 999;
+}
+
+.progress ul{
+  position: relative;
+  list-style: none;
+  height: 400px;
+  width: 460px;
+  display:flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+.progress ul li a{
+  display: inline-block;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  background: #333;
+  text-align: center;
+  line-height: 40px;
+  color:white;
+  text-decoration: none;
+  border-radius: 50%;
+  font-weight: bolder;
+  transition: 2s;
+  box-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+
+.progress ul  a:hover{
+  background: rgb(146, 136, 136);
+  transform: scale(1.2);
+}
+
+.bar{
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+
+.butt{
+  float: right;
+  position: absolute;
+  background:#333;
+  color:rgb(255, 246, 246);
+  border-radius: 25px;
+  padding: 10px;
+  margin-right: 20px;
+  font-size:20px;
+  box-shadow: 2px 2px 2px rgb(0, 0, 0);
+  opacity: 0;
+  pointer-events: none;
+  transition: 1s;
+}
+
+.bar:hover .butt{
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .btn-back{
-    width: 120px;
-    color:white;
-    cursor: pointer;
-    transition: .5s;
-    display: flex;
-    align-items: center;
-    position: fixed;
-    left:4rem;
-    top:2.5rem;
+  width: 120px;
+  color:white;
+  cursor: pointer;
+  transition: .5s;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  left:4rem;
+  top:2.5rem;
 }
 .btn-back img{
-    width:30px;
-    position: relative;
-    top:-5px;
-    right:10px;
+  width:30px;
+  position: relative;
+  top:-5px;
+  right:10px;
 }
 
 .btn-back:hover{
-    transform: scale(1.1);
+  transform: scale(1.1);
 }

@@ -1,25 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;900&family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;900&family=Kanit:wght@300&family=Lobster&family=Poppins:wght@600&display=swap');
 body{
     background: linear-gradient(to bottom,#000000,#1E1E2F);
     margin:0;
     letter-spacing: 1px;
-    font-family: 'Poppins', cursive;
+    font-family: 'Kanit', cursive;
     overflow: hidden;
 }
 html{
     scroll-behavior: smooth;
 }
-.myAudio{
-    position:absolute;
-    right: 20px;
+
+section{
+    position: relative;
+    margin: 0;
+    min-height: 100vh;
 }
+
+.myAudio{
+    width: 10vw;
+    height: 2vw;
+    position:relative;
+    display: grid;
+    justify-content: center;
+    margin: 0 auto;
+}
+
 
 .header{
     position: relative;
     margin:0;
     padding: 0;
     background-size: cover;
-    max-height:700vh;
 }
 
 .header-content{
@@ -34,8 +45,8 @@ html{
     position: relative;
     padding: 1rem;
     text-align: left;
-    max-width:800px;
-    max-height:500px;
+    max-width:50vw;
+    max-height:50vw;
     font-weight: bolder;
     top:-65px;
 }
@@ -46,7 +57,7 @@ html{
     animation-fill-mode: forwards;
 }
 .header-box p{
-    font-size: 24px;
+    font-size: 1.2vw;
     color:rgb(201, 200, 200);
     text-indent: 2em;
     padding: 1rem;
@@ -56,10 +67,10 @@ html{
 .header-content h1{
     position: relative;
     color:rgb(0, 0, 0, 0);
-    font-size:60px;
+    font-size:4vw;
     letter-spacing: 1px;
     line-height: 1.5;
-    transition: 2s;
+    
 }
 .header-content h1::before{
     content: attr(data-text);
@@ -92,14 +103,16 @@ html{
 }
 .myVid{
     position: absolute;
-    display: flex;
-    top:6%;
-    right:12%;
+    top:18vw;
+    right:12vw;
     z-index: 1;
-    width: 560px;
-    height: 315px;
+    width: 25vw;
+    height: 15vw;
 }
-
+iframe{
+    width: 100%;
+    height: 100%;
+}
 
 .btn-back{
     width: 120px;
@@ -119,10 +132,10 @@ html{
     right:10px;
 }
 
-
 .btn-back:hover{
     transform: scale(1.1);
 }
+
 .container{
     max-width:100%;
     height:500vh;
@@ -141,11 +154,14 @@ html{
 .container .header-bg{
     position: absolute;
     width: 100%;
-    height: 100vh;
+    height: 100%;
 }
+
+
+
 .progress{
     position: fixed;
-    top:20%;
+    top:30%;
     right: -370px;
     z-index: 999;
 
@@ -178,6 +194,7 @@ html{
 
 .progress ul  a:hover{
     background: rgb(146, 136, 136);
+    transform: scale(1.1);
 }
 .bar:hover .butt{
     opacity: 1;
@@ -193,23 +210,17 @@ html{
     justify-content: center;
     align-items: center;
 }
-.soviet_planning .box_1{
-    position: absolute;
-    text-align: left;
-    max-width:800px;
-    color:white;
-}
 
 .soviet_planning .box_right{
     position: absolute;
     text-align: left;
-    max-width:900px;
+    max-width:50vw;
     color:white;
     right:90px;
 }
 .soviet_planning .box_right p{
     text-indent: 2rem;
-    font-size: 25px;
+    font-size: 1.4vw;
     padding: 1rem;
     background-color: rgb(0,0,0,.6);
     border-radius: 10px;
@@ -217,40 +228,44 @@ html{
 .soviet_planning .box_left{
     position: absolute;
     text-align: left;
-    max-width:900px;
+    max-width:50vw;
     color:white;
     left:90px;
 }
 .soviet_planning .box_left p{
     text-indent: 2rem;
-    font-size: 25px;
+    font-size: 1.4vw;
     padding: 1rem;
     background-color: rgb(0,0,0,.6);
     border-radius: 10px;
 }
 .box_right h1{
-    text-align: right;
+    font-size: 2.5vw;
+    text-align: center;
     text-transform: uppercase;
-    text-decoration: underline
+    text-decoration: underline;
+
 }
 
 .box_left h1{
-    text-align: left;
+    font-size: 2.5vw;
+    text-align: center;
     text-transform: uppercase;
     text-decoration: underline
 }
 
 .soviet_planning img{
-    max-width: 600px;
-    max-height: 600px;
+    max-width: 30vw;
     box-shadow: 5px 2px 5px #121213;
 }
 .left{
+    width: 100%;
     position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    left:170px  
+    left:10vw;
+    top:18vw;
 }
 .left img{
     transform: rotateZ(-3deg);
@@ -268,8 +283,7 @@ html{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    right:170px;
-    margin:20px;
+    right:10vw;
 }
 
 .container h1{
@@ -322,10 +336,15 @@ html{
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 900px;
+    height: 95%;
     position: fixed;
     opacity: 1;
     z-index: 0;
+}
+
+.num{
+    position: absolute;
+    max-width: 4vw;
 }
 
 @keyframes one{
@@ -366,16 +385,10 @@ html{
 .header-bg{
     width: 100%;
     opacity: .1;
-    height: 1000px;
+    height: 100vh;
     z-index: -999;
-    
 }   
 
-.num{
-    position: absolute;
-    max-width: 100px;
-    max-height: 100px;
-}
 .one{
     animation: one 15s linear infinite ;
     transform-origin: center;

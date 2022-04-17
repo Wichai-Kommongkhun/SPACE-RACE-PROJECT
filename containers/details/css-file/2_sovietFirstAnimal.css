@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;900&family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;900&family=Kanit:wght@300&family=Lobster&family=Poppins:wght@600&display=swap');
 body{
     background: linear-gradient(to bottom,rgb(41, 36, 33),rgb(32, 28, 26));
     margin:0;
     padding: 0;
     max-width: 100%;
     letter-spacing: 1px;
-    font-family: 'Poppins', cursive;
+    font-family: 'Kanit', cursive;
     scroll-behavior: smooth;
     overflow: hidden;
 }
@@ -13,9 +13,9 @@ body{
 .waviy {
     position: relative;
     -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
-    font-size: 80px;
+    font-size: 4vw;
     font-weight: bolder;
-    left:15%;
+    left:25%;
     top:60px;
     animation: moveright 2s linear 1;
     animation-delay: 1s;
@@ -51,7 +51,7 @@ body{
 .header .header-bg {
     position: relative;
     width: 100%;
-    max-height: 1000px;
+   
 }
 .header-content{
     position: absolute;
@@ -64,7 +64,6 @@ body{
 .header-content h1{
     position: relative;
     color:rgb(0, 0, 0, 0);
-    font-size:60px;;
     letter-spacing: 1px;
     line-height: 1.5;
     transition: 2s;
@@ -133,7 +132,7 @@ body{
 
 .progress{
     position: fixed;
-    top:20%;
+    top:30%;
     right: -370px;
 
 }
@@ -185,13 +184,16 @@ body{
     position: absolute;
     padding: 1rem;
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     max-width:900px;
     color:white;
     right:90px;
 }
 .soviet_planning .box_right p{
     text-indent: 2rem;
-    font-size: 25px;
+    font-size: 1.4vw;
     padding: 1rem;
     background-color: rgba(70, 56, 47, 0.4);
     border-radius: 10px;
@@ -205,32 +207,33 @@ body{
 }
 .soviet_planning .box_left p{
     text-indent: 2rem;
-    font-size: 25px;
+    font-size: 1.4vw;
     padding: 1rem;
     background-color: rgba(70, 56, 47, 0.4);
     border-radius: 10px;
 }
 .box_right h1{
-    font-size: 50px;
+    width: 100%;
+    font-size: 2.5vw;
     display:flex;
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
-    text-decoration: underline
+    text-decoration: underline;
 }
 
 .box_left h1{
-    font-size: 50px;
+    width: 100%;
+    font-size: 2.5vw;
     display:flex;
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
-    text-decoration: underline
+    text-decoration: underline;
 }
 
 .soviet_planning img{
-    max-width: 600px;
-    max-height: 600px;
+    max-width: 30vw;
     box-shadow: 5px 2px 5px #121213;
 }
 .left{
@@ -238,7 +241,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    left:170px  
+    left:12vw; 
 }
 .left img{
     transform: rotateZ(-3deg);
@@ -256,18 +259,16 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    right:170px;
+    right:12vw;
     margin:20px;
 }
 .box_left img{
-    max-width: 200px;
-    max-height: 200px;
+    max-width: 8vw;
     margin-right: 30px;
     
 }
 .box_right img{
-    max-width: 200px;
-    max-height: 200px;
+    max-width: 8vw;
     margin-right: 30px;
 }
 
@@ -327,7 +328,7 @@ body{
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 900px;
+    height: 95%;
     position: fixed;
     opacity: 1;
     z-index: 0;
@@ -335,8 +336,7 @@ body{
 
 .num{
     position: absolute;
-    max-width: 200px;
-    max-height: 200px;
+    max-width: 15vw;
 }
 .one{
     animation: moveright1 15s infinite linear ;
