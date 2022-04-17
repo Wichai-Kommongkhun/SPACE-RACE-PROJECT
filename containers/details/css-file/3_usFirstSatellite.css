@@ -91,7 +91,7 @@ section{
   width: 90%;
   margin: 0 auto;
   left:45%;
-  transform: translate(-50%,40%);
+  transform: translate(-50%,5vw);
   text-align: center;
   display: flex;
   flex-direction: column;
