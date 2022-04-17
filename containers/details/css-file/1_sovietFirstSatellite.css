@@ -13,7 +13,7 @@ html{
 section{
     position: relative;
     margin: 0;
-    min-height: 100vh;
+    max-height: 100vh;
 }
 
 .myAudio{
@@ -385,7 +385,7 @@ iframe{
 .header-bg{
     width: 100%;
     opacity: .1;
-    height: 100vh;
+    height: 100%;
     z-index: -999;
 }   
 
