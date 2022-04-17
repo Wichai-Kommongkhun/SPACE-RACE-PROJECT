@@ -3,6 +3,7 @@ body{
     background: linear-gradient(to bottom,#000000,#1E1E2F);
     margin:0;
     letter-spacing: 1px;
+    min-height: 100vh;
     font-family: 'Kanit', cursive;
     overflow: hidden;
 }
@@ -13,7 +14,7 @@ html{
 section{
     position: relative;
     margin: 0;
-    max-height: 100vh;
+    min-height: 100%;
 }
 
 .myAudio{
@@ -25,12 +26,30 @@ section{
     margin: 0 auto;
 }
 
+.header-bg{
+    width: 100%;
+    opacity: .1;
+    max-height: 100%;
+    z-index: -999;
+} 
+
+.header-bg::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  
 
 .header{
     position: relative;
     margin:0;
     padding: 0;
     background-size: cover;
+    height: 100%;
 }
 
 .header-content{
@@ -148,8 +167,7 @@ iframe{
     justify-content: center;
     align-items: center;
     transition: 2s;
-    border-bottom: solid white;
-    border-top: solid white;
+    
 }
 .container .header-bg{
     position: absolute;
@@ -259,13 +277,13 @@ iframe{
     box-shadow: 5px 2px 5px #121213;
 }
 .left{
-    width: 100%;
+    width: 50%;
+    margin: 0;
     position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
     left:10vw;
-    top:18vw;
 }
 .left img{
     transform: rotateZ(-3deg);
@@ -382,12 +400,7 @@ iframe{
 }
 
 
-.header-bg{
-    width: 100%;
-    opacity: .1;
-    height: 100%;
-    z-index: -999;
-}   
+  
 
 .one{
     animation: one 15s linear infinite ;
