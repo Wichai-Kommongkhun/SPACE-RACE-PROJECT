@@ -350,21 +350,7 @@ iframe{
     background: rgb(0, 0, 0);  
 }
 
-.decoration{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 95%;
-    position: fixed;
-    opacity: 1;
-    z-index: 0;
-}
 
-.num{
-    position: absolute;
-    max-width: 4vw;
-}
 
 @keyframes one{
     0%, 100% {
@@ -401,7 +387,21 @@ iframe{
 }
 
 
-  
+.decoration{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 95%;
+    position: fixed;
+    opacity: 1;
+    z-index: 0;
+}
+
+.num{
+    position: absolute;
+    max-width: 4vw;
+}
 
 .one{
     animation: one 15s linear infinite ;
