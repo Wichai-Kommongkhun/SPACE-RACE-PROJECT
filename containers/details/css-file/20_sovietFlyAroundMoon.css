@@ -27,7 +27,7 @@ body{
     transition: .5s;
     display: flex;
     align-items: center;
-    position: absolute;
+    position: fixed;
     left:4rem;
     top:2.5rem;
 }
@@ -47,14 +47,12 @@ body{
     display: grid;
 }
 .container section{
-    margin: 0;
+
     width:100%;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 2s;
-    border-bottom: solid white;
-    border-top: solid white;
 }
 
 .progress{
@@ -161,15 +159,15 @@ body{
     left:170px  
 }
 .left img{
-    transform: rotateZ(-3deg);
     box-shadow: 5px 7px 3px #121213;
     border: 2px solid white;
+    opacity: 50%;
     
 }
 .right img{
-    transform: rotateZ(3deg);
     box-shadow: 5px 7px 3px #000000;
     border: 2px solid white;
+    opacity:50% ;
 }
 .right{
     position: absolute;
@@ -212,10 +210,4 @@ body{
 ::-webkit-scrollbar-thumb {
     background: black;  
     border-radius: 10px;
-}
-
-
-
-::-webkit-scrollbar-thumb:hover {
-    background: rgb(0, 0, 0);  
 }
