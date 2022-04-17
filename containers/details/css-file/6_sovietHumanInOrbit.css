@@ -15,71 +15,74 @@ p{
 }
 .container{
     position: relative;
-    margin: 1px 10px;
-    padding: .75em 4em;
+    padding: 2vw 12vw;
     transition: 2s;
     overflow: hidden;
     color: #fff;
-    font-size: 20px;
-    width: 75%;
+    font-size: 1.2vw;
+    width: 65%;
     height: 100vh;
 }
 #pic11{
     position:absolute;
-    top: 65%;
     left: 65%;
-    width: 300px;
+    width: 20%;
+    height: auto;
     border: #fff solid;
-    transform: rotatez(6deg);
+    transform: translateY(-3vw) rotatez(2deg);
 }
 #pc21{
     position:absolute;
-    top: 50%;
     left: 30%;
-    width: 500px;
+    height: auto;
+    width: 35%;
     border: #fff solid;
-    transform: rotatez(4deg);
 }
 #pic31{
     position:absolute;
     left: 60%;
-    width: 500px;
+    width: 30%;
+    height: auto;
     border: #fff solid;
     transform: rotatez(6deg);
 }
 #pic32{
     position:absolute;
     left: 10%;
-    width: 450px;
+    width: 30%;
+    height: auto;
     border: #fff solid;
     transform: rotatez(-5deg);
 }
 .content{
-    padding: 1rem;
+    padding: 2rem 2rem;
     display: flex;
     flex-direction: column;
     text-indent: 2em;
     background-color: rgb(48,48,48);
-    border-radius: 10%;
+    border-radius: 2%;
+
 }
 .tag{
     position: relative;
     z-index: 1;
-    padding:0 10px;
-    font-size: 24px;
+    padding:50px 10px;
+    font-size: 2vw;
     text-decoration:underline;
 }
 
 
 .btn-back{
-    margin-left: 4em;
+    margin: 0em 1em;
+    font-size: 1vw;
     width: 120px;
     color:white;
     cursor: pointer;
     transition: .5s;
     display: flex;
     align-items: center;
-    position: relative;
+    position: fixed;
+    z-index: 3;
 }
 .btn-back img{
     width:30px;
@@ -90,15 +93,11 @@ p{
 }
 .checkpoint{
     position:fixed;
-    top:0%;
     right: 5%;
-    transform: translateY(20%);
-    
+    transform: translateY(15vw);
 }
 .checkpoint ul{
     list-style: none;
-    height: 700px;
-    width: 20px;
     justify-content: space-around;
     align-items: center;
     flex-flow: column;
@@ -112,33 +111,33 @@ p{
     color: #fff;
     justify-content: center;
     text-align: center;
-    line-height: 60px;
+    line-height: 4vw;
     border-radius: 50%;
+    padding-bottom: 7vw;
     box-shadow:2px 0px 10px #0006;
 }
 .checkpoint ul li a{
     display: block;
     text-decoration: none;
-    height: 60px;
-    width: 60px;
+    height: 4vw;
+    width: 4vw;
     color: #fff;
     justify-content: center;
     text-align: center;
-    line-height: 60px;
+    line-height: 4vw;
     background-color: rgb(48,48,48);
     border-radius: 50%;
-    font-size: 20px;
+    font-size: 1.6vw;
     z-index: 4;
 }
 .head{
-    left: calc(-100% - 50px);;
+    transform: translateX(-11.5vw);
     position: absolute;
     visibility:hidden;
-    font-size: 24px;
+    font-size: 1.6vw;
     background-color: rgb(146, 136, 136);
-    width: calc(100% + 60px);
+    width: 10vw;
     border-radius: 10%;
-
 }   
 .checkpoint ul li a:hover{
     background-color: rgb(146, 136, 136);
