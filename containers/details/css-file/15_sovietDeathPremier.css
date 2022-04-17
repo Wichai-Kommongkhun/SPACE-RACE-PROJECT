@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;900&family=Poppins:wght@600&display=swap');
+body{
+    margin:0;
+    font-family: 'Lakki Reddy', cursive;
+    overflow: hidden;
+  }
+  html{
+    scroll-behavior: smooth;
+}
+  .btn-back{
+    width: 120px;
+    color:white;
+    cursor: pointer;
+    transition: .5s;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    left:4rem;
+    top:2.5rem;
+}
+.btn-back:hover{
+    transform: scale(1.1,1.1);
+}
+.header{
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    text-shadow: 2em 1em 0.3em hsl(0, 0%, 100%, 0.2);
+    padding:1em;
+    text-align:center;
+    animation:disco 3s alternate infinite;
+}
+@keyframes disco {
+  0% {color:rgb(255, 221, 221) ;}
+  20% {color: rgb(255, 241, 223);}
+  40% {color: hsl(59, 76%, 89%);}
+  60% {color: rgb(204, 252, 218);}
+  80% {color: rgb(204, 205, 247);}
+  100% {color: rgb(240, 213, 253);}
+}
+#semi{
+  animation:discosemi 3s alternate infinite;
+}
+@keyframes discosemi {
+  0% {color:rgb(231, 200, 245) ;}
+  20% {color: rgb(209, 209, 248);}
+  40% {color: rgb(214, 252, 225);}
+  60% {color: rgb(253, 252, 209);}
+  80% {color: rgb(255, 239, 219);}
+  100% {color: rgb(253, 213, 213);}
+}
+  .content{
+    text-indent: 2em;
+    position: relative;
+    background-color: hsl(0, 0%, 0%, 0.5);
+    opacity:1;
+    max-width:1000px;
+    max-height:750px;
+    left: 22.5%;
+    font-size: 20px;
+    border-radius:2em;
+    padding:1em;
+    animation: volume 1s infinite alternate;
+  }
+  @keyframes volume {
+    0% {transform: scale(1,1);}
+    50%{transform: scale(1.01,1.01);}
+    100%{transform: scale(1,1);}
+  }
+  .content p{
+    color:white;
+    opacity:1;
+  }
+  .back{
+        height:100%;
+        background-size: cover;
+        
+  }
+  .page1{
+    background-image: url("https://images-na.ssl-images-amazon.com/images/S/pv-target-images/e00b7ae1f7f408d5244c42c9c110d50ccad4a54cf322783ca8179e7d7450494f._RI_.jpg");
+  }
+  .page2{
+    background-image: url("https://images-na.ssl-images-amazon.com/images/S/pv-target-images/e00b7ae1f7f408d5244c42c9c110d50ccad4a54cf322783ca8179e7d7450494f._RI_.jpg");
+  }
+  .page3{
+    background-image: url("https://images-na.ssl-images-amazon.com/images/S/pv-target-images/e00b7ae1f7f408d5244c42c9c110d50ccad4a54cf322783ca8179e7d7450494f._RI_.jpg");
+  }
+  .p1{
+    animation-delay: 0.2s;
+  }
+  .p2{
+    animation-delay: 0.4s;
+  }
+  .p3{
+    animation-delay: 0.6s;
+  }
+  .p1 p{
+    text-shadow: 1em 1em 0.5em #fff5;
+  }
+  .p2 p{
+    text-shadow: 1em 1em 0.5em #fff5;
+  }
+  .p3 p{
+    text-shadow: 1em 1em 0.5em #fff5;
+  }
+  #image-profile-1{
+    position:relative;
+    display: block;
+    margin: auto;
+    padding:5em;
+    max-width: 10%;
+  }
+  #image-profile-2{
+    position:relative;
+    display: block;
+    margin: auto;
+    padding:9em;
+    max-width:30%;
+  }
+  #image-profile-3{
+    position:relative;
+    display: block;
+    margin: auto;
+    padding:8em;
+    max-width: 20%;
+  }
+  .progress{
+    position: fixed;
+    top:20%;
+    right: -370px;
+    z-index: 999;
+
+}
+.progress ul{
+    position: relative;
+    list-style: none;
+    height: 400px;
+    width: 460px;
+    display:flex;
+    flex-flow: column;
+    justify-content: center;
+}
+.progress ul li a{
+    display: inline-block;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    background: #333;
+    text-align: center;
+    line-height: 40px;
+    color:white;
+    text-decoration: none;
+    border-radius: 20%;
+    font-weight: bolder;
+    transition: 0.5s;
+    box-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+
+.progress ul  a:hover{
+    background: rgb(146, 136, 136);
+    transform: scale(1.3,1.3);
+}
+.bar:hover .butt{
+    opacity: 1;
+    pointer-events: auto;
+}
+.bar{
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+
+.butt{
+  float: right;
+  position: absolute;
+  background:#333;
+  color:rgb(255, 246, 246);
+  border-radius: 1em;
+  padding: 10px;
+  margin-right: 20px;
+  font-size:20px;
+  box-shadow: 2px 2px 2px rgb(0, 0, 0);
+  opacity: 0;
+  pointer-events: none;
+  transition: 1s;
+}
