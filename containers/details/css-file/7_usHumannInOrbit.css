@@ -67,19 +67,19 @@ body{
 
 .progress{
     position: fixed;
-    top:20%;
-    right:10px;
+    top:30%;
+    right: -370px;
+    z-index: 999;
 
 }
 .progress ul{
+    position: relative;
     list-style: none;
     height: 400px;
     width: 460px;
     display:flex;
-    align-items: center;
     flex-flow: column;
     justify-content: center;
-    position: relative;
 }
 .progress ul li a{
     display: inline-block;
@@ -97,8 +97,10 @@ body{
     box-shadow: 2px 2px 2px rgb(0, 0, 0);
 }
 
+
 .progress ul  a:hover{
     background: rgb(146, 136, 136);
+    transform: scale(1.1);
 }
 .bar:hover .butt{
     opacity: 1;
@@ -189,13 +191,15 @@ body{
 }
 
 .bar{
+    position: relative;
     display: flex;
     align-items: center;
-    transform: translateX(10px);
     padding: 15px;
 }
 
 .butt{
+    float: right;
+    position: absolute;
     background:#333;
     color:rgb(255, 246, 246);
     border-radius: 25px;
@@ -207,6 +211,7 @@ body{
     pointer-events: none;
     transition: 1s;
 }
+
 ::-webkit-scrollbar {
     width: 12px;
     height: 12px;
