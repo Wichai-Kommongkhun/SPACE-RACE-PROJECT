@@ -1,17 +1,5 @@
 @media only screen and (max-width: 900px) {
-    .soviet_planning img{
-        display: none;
-    }
-    .left img{
-        transform: rotateZ(0deg);
-        
-    }
-    .right img{
-        transform: rotateZ(0deg);
-    }
-    .container section{
-        flex-direction: column;
-    }
+    
   }
 
 

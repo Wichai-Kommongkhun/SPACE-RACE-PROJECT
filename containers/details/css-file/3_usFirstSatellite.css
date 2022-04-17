@@ -132,6 +132,7 @@ section{
   text-align: left;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   background: rgb(0, 0, 0,.5);
 }
 
@@ -159,7 +160,17 @@ section{
   height: 15vw;
 }
 
-
+#sec2 .container-right img{
+  border: #ffffff 1px solid;
+  box-shadow: 2px 2px 2px rgb(0, 0, 0);
+  left:25%;
+  margin:  0 auto;
+  position: relative;
+  width: 15vw;
+  margin-right: 4rem;
+  top:2vw;
+  height: 10vw;
+}
   
 @keyframes animate {
   0%,
