@@ -100,9 +100,9 @@ section{
 }
 .title h1{
   width: 100%;
-  font-size: 2.8vw;
+  font-size: 3vw;
   position: absolute;
-  transform: translate(-50%);
+  transform: translate(-50%,50%);
   left:50%;
 }
 .title p{
@@ -113,7 +113,7 @@ section{
 
 .title h1:nth-child(1) {
   color: transparent;
-  -webkit-text-stroke: 2px #fdfdfd;
+  -webkit-text-stroke: 0.1px #fdfdfd;
 }
   
 .title h1:nth-child(2) {
@@ -169,7 +169,7 @@ section{
       16% 44%,
       33% 50%,
       54% 60%,
-      70% 61%,
+      40% 61%,
       84% 59%,
       100% 52%,
       100% 100%,
