@@ -4,10 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>April 9, 1959</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai&display=swap" rel="stylesheet">
+    <link href="./css-file/4_usNASA.css" rel="stylesheet" type="text/css">
+    <title>NASA announces first astronaut group</title>
 </head>
 <body>
-    <a href="../timelinePage.html">Back</a><br>
-    <p>On April 9, 1959, NASA announced the first astronaut group, the Mercury 7.</p>
+    <div class="btn-back" onclick="location.href='../timelinePage.html';" onmouseover="sound()">
+        <img src="/static/left-arrow.png">
+        <h1>Back</h1>
+    </div>
+    <div class="checkpoint">
+        <ul>
+            <li>
+                <div class="head">Mercury Seven</div>
+                <a href="#sec1" id="1">M</a>
+            </li>
+            
+        </ul>
+    </div>
+    <section id="sec1">
+        <div class="container">
+        <div class="tag">
+            <h1>NASA announces first astronaut group</h1>
+        </div>
+        <div class="content">
+            <h3>April 9, 1959</h3>
+            <p> 
+                นาซา ได้ทำการประกาศ กลุ่มนักบินอวกาศโครงการเมอร์คิวรีเจ็ดคน (Mercury Seven)นอกจากนี้ยังเรียกว่า ออริจินัลเซเวน (Original Seven) 
+                หรือ แอสโตรนอทกรุ๊ป 1 (Astronaut Group 1) พวกเขาขับเที่ยวบินอวกาศที่มีคนขับของโครงการเมอร์คิวรีตั้งแต่เดือนพฤษภาคม ค.ศ. 1961 ถึงพฤษภาคม ค.ศ. 1963
+                นักบินอวกาศทั้งเจ็ด ได้แก่ สกอต คาร์เพนเตอร์, กอร์ดอน คูเปอร์, จอห์น เกลน, กัส กริสซอม, วัลลี เชียร์รา, อลัน เชพเพิร์ด​ และเดก สเลย์ตัน
+            </p>
+            
+        </div>
+        <img id="pic12" src="https://th-thumbnailer.cdn-si-edu.com/3jp51fARdtmL7x7ATl7lL1bGuPs=/1000x750/filters:no_upscale():focal(933x552:934x553)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/3a/86/3a869b47-c17c-40ed-8b88-58e7e8b16f89/nasm-nasm-5a00045.jpg" alt="">
+        <img id="pic11" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/The_Mercury_7_%2815258556433%29.jpg/260px-The_Mercury_7_%2815258556433%29.jpg" alt="">   
+    </div>
+    </section>
+    
 </body>
 </html>
+<script>
+    function sound() {
+        audio = new (window.AudioContext || window.webkitAudioContext)()
+        osci = audio.createOscillator()
+        gain = audio.createGain()
+        osci.connect(gain)
+        gain.connect(audio.destination)
+        let time = audio.currentTime
+        let note_osci = audio.createOscillator()
+        let note_gain = audio.createGain()
+        note_osci.connect(note_gain)
+        note_gain.connect(audio.destination)
+        note_osci.frequency.value = 698
+        note_osci.start()
+        note_gain.gain.setValueCurveAtTime([0.1, 0], time, .1)
+    }
+    
+    
+</script>
