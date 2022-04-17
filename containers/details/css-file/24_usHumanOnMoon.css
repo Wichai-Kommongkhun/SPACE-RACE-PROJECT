@@ -51,8 +51,9 @@ body{
 .d1{
     background-color: none;
     position: absolute;
-    right: 90px;
+    right: 120px;
     z-index: 2;
+    top: 250px;
 }
 .page h1{
     color: white
@@ -70,27 +71,28 @@ body{
     position: absolute;
     left: 90px;
     z-index: 2;
-    top: 150px;
+    top: 240px;
 }
 .d3{
     background-color: none;
     position: absolute;
-    right: 90px;
+    right: 150px;
     z-index: 2;
+    top: 250px;
 }
 .d4{
     background-color: none;
     position: absolute;
-    left: 90px;
+    left: 150px;
     z-index: 2;
-    top: 100px;
+    top: 220px;
 
 }
 .d5{
     background-color: none;
     position: absolute;
-    right: 90px;
-    top: 80px;
+    right: 140px;
+    top: 240px;
     z-index: 2;
 }
 .picture img{
@@ -98,7 +100,7 @@ body{
 }
 .a1 img{
     position: absolute;
-    left: 150px;
+    left: 300px;
     max-width: 600px;
     max-height: 500px;
     top: 150px;
@@ -106,10 +108,10 @@ body{
 }
 .a2 img{
     position: absolute;
-    right: 90px;
+    right: 150px;
     max-width: 500px;
     max-height: 400px;
-    top: 200px;
+    top: 300px;
     z-index:1;
 }
 .a3 img{
@@ -122,10 +124,10 @@ body{
 }
 .a4 img{
     position: absolute;
-    right: 200px;
+    right: 240px;
     max-width: 600px;
     max-height: 500px;
-    top: 150px;
+    top: 200px;
     z-index:1;
 }
 .a5 img{
@@ -133,7 +135,7 @@ body{
     left: 150px;
     max-width: 500px;
     height: 500px;
-    top: 150px;
+    top: 200px;
     z-index:1;
 }
 .content2 {
