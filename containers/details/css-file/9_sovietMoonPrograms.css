@@ -40,19 +40,21 @@ body {
 
 
 .btn-back{
-    margin: 0em 1em;
-    font-size: 1vw;
     width: 120px;
     color:white;
     cursor: pointer;
     transition: .5s;
     display: flex;
     align-items: center;
-    position: fixed;
-    z-index: 3;
+    position: absolute;
+    left:4rem;
+    top:2.5rem;
 }
 .btn-back img{
     width:30px;
+    position: relative;
+    top:-5px;
+    right:10px;
 }
 
 .btn-back:hover{
