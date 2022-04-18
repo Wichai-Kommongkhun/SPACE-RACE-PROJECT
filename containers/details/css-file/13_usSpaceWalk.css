@@ -1,33 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;900&family=Poppins:wght@600&display=swap');
 body{
     margin:0;
-    font-family: 'Lakki Reddy', cursive;
-    overflow: hidden;
-  }
-  html{
-    scroll-behavior: smooth;
+    font-family: 'Poppins', cursive;
+    background-image: url("https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/images/235794main_GPN-2006-000025_full.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /* overflow: hidden; */
 }
-  .btn-back{
-    width: 120px;
-    color:white;
-    cursor: pointer;
-    transition: .5s;
-    display: flex;
-    align-items: center;
-    position: fixed;
-    left:4rem;
-    top:2.5rem;
+html{
+  scroll-behavior: smooth;
+}
+.btn-back{
+  width: 120px;
+  color:white;
+  cursor: pointer;
+  transition: .5s;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  left:4rem;
+  top:2.5rem;
 }
 .btn-back:hover{
-    transform: scale(1.1,1.1);
+  transform: scale(1.1,1.1);
 }
 .header{
-    font-size: 24px;
-    color: rgb(255, 255, 255);
-    text-shadow: 2em 1em 0.3em hsl(0, 0%, 100%, 0.2);
-    padding:1em;
-    text-align:center;
-    animation:disco 3s alternate infinite;
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+  text-shadow: 2em 1em 0.3em hsl(0, 0%, 100%, 0.2);
+  padding:1em;
+  text-align:center;
+  animation:disco 3s alternate infinite;
 }
 @keyframes disco {
   0% {color:rgb(255, 221, 221) ;}
@@ -48,120 +51,97 @@ body{
   80% {color: rgb(255, 239, 219);}
   100% {color: rgb(253, 213, 213);}
 }
-  .content{
-    text-indent: 2em;
-    position: relative;
-    background-color: hsl(0, 0%, 0%, 0.5);
-    opacity:1;
-    max-width:1000px;
-    max-height:750px;
-    left: 22.5%;
-    font-size: 20px;
-    border-radius:2em;
-    padding:1em;
-    animation: volume 1s infinite alternate;
+.content{
+  text-indent: 2em;
+  position: relative;
+  background-color: hsl(0, 0%, 0%, 0.5);
+  box-shadow: 1em 1em 1em #000;
+  opacity:1;
+  max-width:1000px;
+  max-height:750px;
+  font-size: 20px;
+  border-radius:2em;
+  padding:1em;
+  transform: translateY(30%) translateX(10%);
+  animation: volume 1s infinite alternate;
+  
   }
-  @keyframes volume {
-    0% {transform: scale(1,1);}
-    50%{transform: scale(1.01,1.01);}
-    100%{transform: scale(1,1);}
+@keyframes volume {
+  from{transform: translateY(30%) translateX(10%);}
+  to{transform: translateY(28%) translateX(9%);}
+}
+.content p{
+  color:white;
+  opacity:1;
   }
-  .content p{
-    color:white;
-    opacity:1;
+.content p:hover{
+  transition: 0.5s;
+  transform:scale(1.1,1.1);
+}
+/* .back{   
+}
+.page1{
+} */
+.p1{
+  animation-delay: 0.2s;
   }
-  .back{
-        height:100%;
-        background-size: cover;
-        
+#image-profile-1{
+  position:relative;
+  margin-left: 65%;
+  background-color: rgb(0, 0, 0, 0.5);
+  transform: translateY(-70%);
+  border-radius: 10px;
+  padding:1em;
+  max-width: 20%;
+  animation: dukdig 4s infinite alternate linear;
+  box-shadow: 0.5em 0.5em 10em rgba(255, 255, 255, 0.2);
   }
-  .page1{
-    background-image: url("https://images-na.ssl-images-amazon.com/images/S/pv-target-images/e00b7ae1f7f408d5244c42c9c110d50ccad4a54cf322783ca8179e7d7450494f._RI_.jpg");
-  }
-  .page2{
-    background-image: url("https://images-na.ssl-images-amazon.com/images/S/pv-target-images/e00b7ae1f7f408d5244c42c9c110d50ccad4a54cf322783ca8179e7d7450494f._RI_.jpg");
-  }
-  .page3{
-    background-image: url("https://images-na.ssl-images-amazon.com/images/S/pv-target-images/e00b7ae1f7f408d5244c42c9c110d50ccad4a54cf322783ca8179e7d7450494f._RI_.jpg");
-  }
-  .p1{
-    animation-delay: 0.2s;
-  }
-  .p2{
-    animation-delay: 0.4s;
-  }
-  .p3{
-    animation-delay: 0.6s;
-  }
-  .p1 p{
-    text-shadow: 1em 1em 0.5em #fff5;
-  }
-  .p2 p{
-    text-shadow: 1em 1em 0.5em #fff5;
-  }
-  .p3 p{
-    text-shadow: 1em 1em 0.5em #fff5;
-  }
-  #image-profile-1{
-    position:relative;
-    display: block;
-    margin: auto;
-    padding:5em;
-    max-width: 10%;
-  }
-  #image-profile-2{
-    position:relative;
-    display: block;
-    margin: auto;
-    padding:9em;
-    max-width:30%;
-  }
-  #image-profile-3{
-    position:relative;
-    display: block;
-    margin: auto;
-    padding:8em;
-    max-width: 20%;
-  }
-  .progress{
-    position: fixed;
-    top:20%;
-    right: -370px;
-    z-index: 999;
+@keyframes dukdig {
+  0%{transform: translateY(-70%);}
+  25%{transform: translateY(-71%); margin-left: 64%;}
+  50%{transform: translateY(-72%); margin-left: 65%;}
+  75%{transform: translateY(-73%); margin-left: 66%;}
+  100%{transform: translateY(-74%); margin-left: 65%;}
+}
+.progress{
+  position: fixed;
+  top:20%;
+  right: -370px;
+  z-index: 999;
 
 }
 .progress ul{
-    position: relative;
-    list-style: none;
-    height: 400px;
-    width: 460px;
-    display:flex;
-    flex-flow: column;
-    justify-content: center;
+  position: relative;
+  list-style: none;
+  height: 400px;
+  width: 460px;
+  display:flex;
+  flex-flow: column;
+  justify-content: center;
 }
 .progress ul li a{
-    display: inline-block;
-    z-index: 1;
-    width: 40px;
-    height: 40px;
-    background: #333;
-    text-align: center;
-    line-height: 40px;
-    color:white;
-    text-decoration: none;
-    border-radius: 20%;
-    font-weight: bolder;
-    transition: 0.5s;
-    box-shadow: 2px 2px 2px rgb(0, 0, 0);
+  display: inline-block;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  background: #333;
+  text-align: center;
+  line-height: 40px;
+  color:white;
+  text-decoration: none;
+  border-radius: 20%;
+  font-weight: bolder;
+  transition: 0.5s;
+  box-shadow: 2px 2px 2px rgb(0, 0, 0);
 }
 
 .progress ul  a:hover{
-    background: rgb(146, 136, 136);
-    transform: scale(1.3,1.3);
+  background: rgb(146, 136, 136);
+  transform: scale(1.3,1.3);
 }
 .bar:hover .butt{
-    opacity: 1;
-    pointer-events: auto;
+  opacity: 1;
+  pointer-events: auto;
 }
 .bar{
   position: relative;
