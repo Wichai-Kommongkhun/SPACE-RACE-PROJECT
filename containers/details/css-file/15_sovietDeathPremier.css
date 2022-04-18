@@ -16,10 +16,7 @@ body{
     align-items: center;
     position: fixed;
     left:4rem;
-    top:2.5rem;
-}
-.btn-back:hover{
-    transform: scale(1.1,1.1);
+    top:1rem;
 }
 .back{
   max-width:100%;
