@@ -33,7 +33,7 @@ body {
 .tag{
     position: relative;
     z-index: 1;
-    padding:50px 200px;
+    padding:70px 20px;
     font-size: 2vw;
     text-decoration:underline;
 }
