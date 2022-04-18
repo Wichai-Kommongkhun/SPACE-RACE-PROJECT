@@ -11,7 +11,11 @@ body{
 }
 .header{
     
-    background-size: cover;
+    width: 100%;
+    opacity: .1;
+    max-height: 100%;
+    position: relative;
+    z-index: -999;
     
 }
 .header-box p{
