@@ -1,0 +1,146 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;900&family=Kanit:wght@300&family=Lobster&family=Poppins:wght@600&display=swap');
+body{
+    background: linear-gradient(to bottom,#000000,#1E1E2F);
+    margin:0;
+    letter-spacing: 1px;
+    min-height: 100vh;
+    font-family: 'Kanit', cursive;
+    /* overflow: hidden; */
+}
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+
+.header{
+    position: relative;
+    margin:0;
+    padding: 0;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+.header img{
+    width: 100%;
+}
+.header-infor{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.head-name{
+    width: 60%;
+    margin: 10% 0 0 20%;
+    color: beige;
+    /* background-color: #1E1E2F; */
+    font-size: 38px;
+ text-shadow: 0 0 0.2em #87F, 0 0 0.2em #87F,
+    0 0 0.2em #87F;
+}
+
+
+
+.head-de{
+    width: 35%;
+    margin: -1% 0 0 30%;
+    color: beige;
+    /* background-color: #1E1E2F; */
+    font-size: 18px;
+    text-shadow: 0 0 0.5em rgb(0, 0, 0), 0 0 0.5em rgb(19, 18, 29),
+       0 0 0.5em rgb(1, 17, 13);
+       text-align: center;
+}
+
+
+
+
+
+.btn-back{
+    width: 200px;
+    color:white;
+    cursor: pointer;
+    transition: .5s;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    left:4rem;
+    top:2.5rem;
+}
+.btn-back img{
+    width:30px;
+    position: relative;
+    top:-5px;
+    right:10px;
+}
+
+.btn-back:hover{
+    transform: scale(1.1);
+}
+
+.progress{
+    position: fixed;
+    top:30%;
+    right: -370px;
+    z-index: 999;
+
+}
+.progress ul{
+    position: relative;
+    list-style: none;
+    height: 400px;
+    width: 460px;
+    display:flex;
+    flex-flow: column;
+    justify-content: center;
+}
+.progress ul li a{
+    display: inline-block;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    background: #333;
+    text-align: center;
+    line-height: 40px;
+    color:white;
+    text-decoration: none;
+    border-radius: 50%;
+    font-weight: bolder;
+    transition: 2s;
+    box-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+
+
+.bar{
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+.butt{
+    float: right;
+    position: absolute;
+    background:#333;
+    color:rgb(255, 246, 246);
+    border-radius: 25px;
+    padding: 10px;
+    margin-right: 20px;
+    font-size:20px;
+    box-shadow: 2px 2px 2px rgb(0, 0, 0);
+    opacity: 0;
+    pointer-events: none;
+    transition: 1s;
+}
+
+.progress ul  a:hover{
+    background: rgb(146, 136, 136);
+    transform: scale(1.1);
+}
+.bar:hover .butt{
+    opacity: 1;
+    pointer-events: auto;
+}
