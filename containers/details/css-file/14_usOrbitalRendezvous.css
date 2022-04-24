@@ -24,19 +24,52 @@ body{
   display: grid;
 }
 .page1{
-  background: url("https://images8.alphacoders.com/101/thumb-1920-1015180.jpg");
+  background: url("https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77701814631.jpg");
   background-color: rgb(109, 109, 109);
-  background-blend-mode: multiply;
   margin-bottom: 0.1em;
 }
 .page2{
-  background: url("https://images8.alphacoders.com/101/thumb-1920-1015180.jpg");
+  background: url("https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77701815842.jpg");
   background-color: rgb(109, 109, 109);
   background-blend-mode: multiply;
   margin-bottom: 0.1em;
 }
 .page3{
-  background: url("https://images8.alphacoders.com/101/thumb-1920-1015180.jpg");
+  background: url("https://cdn.wallpapersafari.com/75/25/Vuxofs.jpg");
+  background-color: rgb(109, 109, 109);
+  background-blend-mode: multiply;
+  margin-bottom: 0.1em;
+}
+.page4{
+  background: url("https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77701814631.jpg");
+  background-color: rgb(109, 109, 109);
+  margin-bottom: 0.1em;
+}
+.page5{
+  background: url("https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77701815842.jpg");
+  background-color: rgb(109, 109, 109);
+  background-blend-mode: multiply;
+  margin-bottom: 0.1em;
+}
+.page6{
+  background: url("https://cdn.wallpapersafari.com/75/25/Vuxofs.jpg");
+  background-color: rgb(109, 109, 109);
+  background-blend-mode: multiply;
+  margin-bottom: 0.1em;
+}
+.page7{
+  background: url("https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77701814631.jpg");
+  background-color: rgb(109, 109, 109);
+  margin-bottom: 0.1em;
+}
+.page8{
+  background: url("https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77701815842.jpg");
+  background-color: rgb(109, 109, 109);
+  background-blend-mode: multiply;
+  margin-bottom: 0.1em;
+}
+.page9{
+  background: url("https://cdn.wallpapersafari.com/75/25/Vuxofs.jpg");
   background-color: rgb(109, 109, 109);
   background-blend-mode: multiply;
   margin-bottom: 0.1em;
@@ -47,7 +80,7 @@ body{
   text-shadow: 2em 1em 0.3em hsl(0, 0%, 100%, 0.2);
   padding:1em;
   text-align:center;
-  animation:disco 4s alternate infinite linear;
+  animation:disco 10s alternate infinite linear;
 }
 @keyframes disco {
   0% {color:#DF8453;}
@@ -57,28 +90,17 @@ body{
   80% {color: rgb(204, 205, 247);}
   100% {color: rgb(240, 213, 253);}
 }
-#semi{
-  animation:discosemi 4s alternate infinite linear;
-}
-@keyframes discosemi {
-  0% {color:rgb(231, 200, 245) ;}
-  20% {color:  #E4A9A8;}
-  40% {color: #DF8453;}
-  60% {color: rgb(253, 252, 209);}
-  80% {color: #17494D;}
-  100% {color: rgb(253, 213, 213);}
-}
 .content-1{
   text-indent: 2em;
-  position: relative;
-  background-color: rgba(22, 22, 22, 0.5);
+  position:absolute;
+  background-color: rgba(49, 49, 49, 0.5);
   max-width:1000px;
   max-height:750px;
   font-size: 20px;
   border-radius:2em;
   padding:1em;
-  left: 10%;
-  transform: translateY(25%);
+  left:10%;
+  top:50%;
   z-index: 1;
   transition: 0.5s;
   color:white;
@@ -86,149 +108,166 @@ body{
 }
 .content-2{
   text-indent: 2em;
-  position: relative;
-  background-color: rgba(22, 22, 22, 0.5);
+  position: absolute;
+  background-color: rgba(49, 49, 49, 0.5);
   max-width:1000px;
   max-height:750px;
   font-size: 20px;
   border-radius:2em;
   padding:1em;
-  transform: translateY(25%) translateX(60%);
+  left:35%;
+  top:130%;
+  z-index: 1;
   transition: 0.5s;
   color:white;
   opacity:1;
 }
 .content-3{
   text-indent: 2em;
-  position: relative;
-  background-color: rgba(22, 22, 22, 0.5);
+  position: absolute;
+  background-color: rgba(49, 49, 49, 0.5);
   max-width:1000px;
   max-height:750px;
   font-size: 20px;
   border-radius:2em;
   padding:1em;
-  transform: translateY(30%) translateX(70%); 
+  left:35%;
+  top:230%;
+  z-index: 1;
   transition: 0.5s;
   color:white;
   opacity:1;
 }
 .content-4{
   text-indent: 2em;
-  position: relative;
-  background-color: rgba(22, 22, 22, 0.5);
+  position: absolute;
+  background-color: rgba(49, 49, 49, 0.5);
   max-width:1000px;
   max-height:750px;
   font-size: 20px;
   border-radius:2em;
   padding:1em;
-  transform: translateY(35%) translateX(20%);
+  left:10%;
+  top:330%;
+  z-index: 1;
   transition: 0.5s;
   color:white;
   opacity:1;
 }
 .content-5{
   text-indent: 2em;
-  position: relative;
-  background-color: rgba(22, 22, 22, 0.5);
+  position: absolute;
+  background-color: rgba(49, 49, 49, 0.5);
   max-width:1000px;
   max-height:750px;
   font-size: 20px;
   border-radius:2em;
   padding:1em;
-  transform: translateY(25%) translateX(60%);
+  left:10%;
+  top:430%;
+  z-index: 1;
   transition: 0.5s;
   color:white;
   opacity:1;
 }
 .content-6{
   text-indent: 2em;
-  position: relative;
-  background-color: rgba(22, 22, 22, 0.5);
+  position: absolute;
+  background-color: rgba(49, 49, 49, 0.5);
   max-width:1000px;
   max-height:750px;
   font-size: 20px;
   border-radius:2em;
   padding:1em;
-  transform: translateY(25%) translateX(60%);
+  left:25%;
+  top:560%;
+  z-index: 1;
   transition: 0.5s;
   color:white;
   opacity:1;
 }
 .content-7{
   text-indent: 2em;
-  position: relative;
-  background-color: rgba(22, 22, 22, 0.5);
+  position: absolute;
+  background-color: rgba(49, 49, 49, 0.5);
   max-width:1000px;
   max-height:750px;
   font-size: 20px;
   border-radius:2em;
   padding:1em;
-  transform: translateY(25%) translateX(60%);
+  left:25%;
+  top:620%;
+  z-index: 1;
   transition: 0.5s;
   color:white;
   opacity:1;
 }
 .content-8{
   text-indent: 2em;
-  position: relative;
-  background-color: rgba(22, 22, 22, 0.5);
+  position: absolute;
+  background-color: rgba(49, 49, 49, 0.5);
   max-width:1000px;
   max-height:750px;
   font-size: 20px;
   border-radius:2em;
   padding:1em;
-  transform: translateY(25%) translateX(60%);
+  left:10%;
+  top:730%;
+  z-index: 1;
   transition: 0.5s;
   color:white;
   opacity:1;
 }
 .content-9{
   text-indent: 2em;
-  position: relative;
-  background-color: rgba(22, 22, 22, 0.5);
+  position: absolute;
+  background-color: rgba(49, 49, 49, 0.5);
   max-width:1000px;
   max-height:750px;
   font-size: 20px;
   border-radius:2em;
   padding:1em;
-  transform: translateY(25%) translateX(60%);
+  left:35%;
+  top:820%;
+  z-index: 1;
   transition: 0.5s;
   color:white;
   opacity:1;
 }
 .content-1:hover{
-  transform: scale(1.1,1.1) translateY(25%);
+  transform: scale(1.1,1.1);
 }
 .content-2:hover{
-  transform: scale(1.1,1.1) translateY(25%) translateX(60%);
+  transform: scale(1.1,1.1);
 }
 .content-3:hover{
-  transform: scale(1.2,1.2) translateY(30%) translateX(50%);
+  transform: scale(1.2,1.2);
 }
 .content-4:hover{
-  transform: scale(1.1,1.1) translateY(35%) translateX(20%);
+  transform: scale(1.1,1.1);
 }
 .content-5:hover{
-  transform: scale(1.1,1.1) translateY(25%) translateX(60%);
+  transform: scale(1.1,1.1);
 }
 .content-6:hover{
-  transform: scale(1.1,1.1) translateY(25%) translateX(60%);
+  transform: scale(1.1,1.1);
 }
 .content-7:hover{
-  transform: scale(1.2,1.2) translateY(25%) translateX(60%);
+  transform: scale(1.2,1.2);
 }
 .content-8:hover{
-  transform: scale(1.1,1.1) translateY(25%) translateX(60%);
+  transform: scale(1.1,1.1);
 }
 .content-9:hover{
-  transform: scale(1.1,1.1) translateY(25%) translateX(60%);
+  transform: scale(1.1,1.1);
 }
 #image-profile-1{
   background-color: aliceblue;
   box-shadow: 1em 1em 10em hsla(0, 0%, 100%, 0.4);
-  transform: translateY(-70%) rotateZ(8deg);
-  left: 70%;
-  position:relative;
+  top:50%;
+  left:70%;
+  transform: rotateZ(8deg);
+  position:absolute;
   padding:0.5em;
   max-width: 15%;
   animation: dukdig 1s infinite alternate;
@@ -237,9 +276,10 @@ body{
 #image-profile-2{
   background-color: aliceblue;
   box-shadow: 1em 1em 10em hsla(0, 0%, 100%, 0.4);
-  transform: translateY(-80%) rotateZ(10deg);
+  top:135%;
   left: 10%;
-  position:relative;
+  transform: rotateZ(8deg);
+  position:absolute;
   padding:0.5em;
   max-width: 15%;
   animation: dukdig1 1s infinite alternate;
@@ -249,14 +289,15 @@ body{
 }
 #image-profile-3{
   background-color: aliceblue;
-  position:relative;
+  position:absolute;
   box-shadow: 1em 1em 10em hsla(0, 0%, 100%, 0.4);
+  top:240%;
+  left: 10%;
+  transform: rotateZ(8deg);
   padding:0.5em;
   max-width:15%;
   bottom: auto;
   border-radius: 10px;
-  transform: translateY(-70%) rotateZ(-8deg);
-  left: 13%;
   animation: dukdig3 1s infinite alternate;
   animation-delay: 0.3s;
   z-index: 0;
@@ -264,9 +305,10 @@ body{
 #image-profile-4{
   background-color: aliceblue;
   box-shadow: 1em 1em 10em hsla(0, 0%, 100%, 0.4);
-  transform: translateY(-60%) rotateZ(8deg);
-  left: 70%;
-  position:relative;
+  top:330%;
+  left:70%;
+  transform: rotateZ(8deg);
+  position:absolute;
   padding:0.5em;
   max-width: 12%;
   animation: dukdig4 1s infinite alternate;
@@ -275,26 +317,42 @@ body{
 #image-profile-5{
   background-color: aliceblue;
   box-shadow: 1em 1em 10em hsla(0, 0%, 100%, 0.4);
-  transform: translateY(-80%) rotateZ(10deg);
-  left: 10%;
-  position:relative;
+  top:420%;
+  left:70%;
+  transform: rotateZ(8deg);
+  position:absolute;
   padding:0.5em;
-  max-width: 20 %;
-  animation: dukdig1 1s infinite alternate;
+  max-width:20%;
+  animation:dukdig1 1s infinite alternate;
+  animation-delay: 0.6s;
+  z-index:0;
+  border-radius: 10px;
+}
+#image-profile-5-1{
+  background-color: aliceblue;
+  box-shadow: 1em 1em 10em hsla(0, 0%, 100%, 0.4);
+  top:470%;
+  left:70%;
+  transform: rotateZ(8deg);
+  position:absolute;
+  padding:0.5em;
+  max-width:15%;
+  animation:dukdig1 1s infinite alternate;
   animation-delay: 0.6s;
   z-index:0;
   border-radius: 10px;
 }
 #image-profile-6{
   background-color: aliceblue;
-  position:relative;
+  position:absolute;
   box-shadow: 1em 1em 10em hsla(0, 0%, 100%, 0.4);
+  top:520%;
+  left:40%;
+  transform: rotateZ(8deg);
   padding:0.5em;
   max-width:20%;
   bottom: auto;
   border-radius: 10px;
-  transform: translateY(-60%) rotateZ(-8deg);
-  left: 10%;
   animation: dukdig6 1s infinite alternate;
   animation-delay: 0.3s;
   z-index: 0;
@@ -302,20 +360,22 @@ body{
 #image-profile-7{
   background-color: aliceblue;
   box-shadow: 1em 1em 10em hsla(0, 0%, 100%, 0.4);
-  transform: translateY(-70%) rotateZ(8deg);
-  left: 70%;
-  position:relative;
+  top:655%;
+  left:60%;
+  transform: rotateZ(8deg);
+  position:absolute;
   padding:0.5em;
-  max-width: 15%;
+  max-width: 20%;
   animation: dukdig 1s infinite alternate;
   border-radius: 10px;
 }
 #image-profile-8{
   background-color: aliceblue;
   box-shadow: 1em 1em 10em hsla(0, 0%, 100%, 0.4);
-  transform: translateY(-80%) rotateZ(10deg);
-  left: 10%;
-  position:relative;
+  top:730%;
+  left:70%;
+  transform:rotateZ(8deg);
+  position:absolute;
   padding:0.5em;
   max-width: 20%;
   animation: dukdig1 1s infinite alternate;
@@ -325,41 +385,55 @@ body{
 }
 #image-profile-9{
   background-color: aliceblue;
-  position:relative;
+  position:absolute;
   box-shadow: 1em 1em 10em hsla(0, 0%, 100%, 0.4);
+  top:840%;
+  left:10%;
+  transform: rotateZ(8deg);
   padding:0.5em;
   max-width:20%;
   bottom: auto;
   border-radius: 10px;
-  transform: translateY(-40%) rotateZ(-8deg);
-  left: 10%;
+  
   animation: dukdig2 1s infinite alternate;
   animation-delay: 0.3s;
   z-index: 0;
 }
+#image-profile-10{
+  background-color: aliceblue;
+  box-shadow: 1em 1em 10em hsla(0, 0%, 100%, 0.4);
+  top:655%;
+  left:15%;
+  transform: rotateZ(8deg);
+  position:absolute;
+  padding:0.5em;
+  max-width: 20%;
+  animation: dukdig 1s infinite alternate;
+  border-radius: 10px;
+}
 @keyframes dukdig{
-from{transform: translateY(-70%) rotateZ(8deg);}
-to{transform: translateY(-74%) rotateZ(8deg);}
+from{transform: translateY(0%) rotateZ(8deg);}
+to{transform: translateY(-5%) rotateZ(8deg);}
 }
 @keyframes dukdig1{
-  from{transform: translateY(-80%) rotateZ(8deg);}
-  to{transform: translateY(-84%) rotateZ(8deg);}
+  from{transform: translateY(0%) rotateZ(8deg);}
+  to{transform: translateY(-5%) rotateZ(8deg);}
 }
 @keyframes dukdig2{
-  from{transform: translateY(-40%) rotateZ(-8deg);}
-  to{transform: translateY(-44%) rotateZ(-8deg);}
+  from{transform: translateY(0%) rotateZ(-8deg);}
+  to{transform: translateY(-5%) rotateZ(-8deg);}
 }
 @keyframes dukdig3{
-  from{transform: translateY(-70%) rotateZ(-8deg);}
-  to{transform: translateY(-74%) rotateZ(8deg);}
+  from{transform: translateY(0%) rotateZ(-8deg);}
+  to{transform: translateY(-5%) rotateZ(8deg);}
 }
 @keyframes dukdig4{
-  from{transform: translateY(-60%) rotateZ(8deg);}
-  to{transform: translateY(-64%) rotateZ(8deg);}
+  from{transform: translateY(0%) rotateZ(8deg);}
+  to{transform: translateY(-5%) rotateZ(8deg);}
 }
 @keyframes dukdig6{
-  from{transform: translateY(-60%) rotateZ(-8deg);}
-  to{transform: translateY(-64%) rotateZ(-8deg);}
+  from{transform: translateY(0%) rotateZ(-8deg);}
+  to{transform: translateY(-5%) rotateZ(-8deg);}
 }
 .progress{
   position: fixed;
