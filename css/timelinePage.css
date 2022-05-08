@@ -215,7 +215,7 @@ a {
 }
 
 .main {
-    background-image: url('../static/Dus-fxlUcAATl2V.png');
+    background-image: url('../static/timelineBg.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -232,6 +232,14 @@ a {
     padding-top: 2em;
     padding-bottom: 4em;
     background-color: #090223;
+}
+.detail-img{
+    padding:1em;
+    display: flex;
+    text-align: center;
+    margin: 0 auto;
+    width: 300px;
+    height: auto;
 }
 
 .sol {
