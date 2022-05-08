@@ -74,7 +74,7 @@ p {
 .timeline .timeline-container .timeline-icon {
     position: absolute;
     left: -88px;
-    top: 4px;
+    top: -1px;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -235,9 +235,10 @@ a {
 }
 
 .sol {
-    padding: 4em 7em 4em 7em;
-    transition-duration: 5s;
-    transition-delay: 2s;
+    padding: 7.5em 7em 6em 7em;
+    vertical-align: middle;
+    min-height: 100vh;
+    position: relative;
 }
 
 .site-footer {
@@ -284,7 +285,6 @@ a {
     bottom: 5%;
     left: 43%;
     animation: 0.5s infinite alternate slidein;
-
 }
 @keyframes slidein {
     from {
