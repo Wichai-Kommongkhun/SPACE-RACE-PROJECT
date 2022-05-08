@@ -10,8 +10,9 @@
     <link rel="stylesheet" type="text/css" href="file_css.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lakki+Reddy&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
     <title>Space Race</title>
     <style>
 
@@ -19,12 +20,12 @@
 </head>
 
 <body>
-    <div class="star">
-        <!-- <img src="static/Star 1.svg"> -->
+    <!-- <div class="star">
+        <img src="static/Star 1.svg">
     </div>
     <div class="rol">
         <div class="jet">
-            <!-- <svg width="88" height="176" viewBox="0 0 388 476" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="88" height="176" viewBox="0 0 388 476" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M278.326 403.741L175.488 362.003L236.675 300.868L278.326 403.741Z" fill="#E80101" />
                 <path d="M79.1085 398.794L126.919 304.584L180.8 370.157L79.1085 398.794Z" fill="#E80101" />
                 <ellipse cx="180.222" cy="223.974" rx="67.1877" ry="160.692"
@@ -32,13 +33,13 @@
                 <circle cx="180.5" cy="197.537" r="43.5" fill="#9A9999" />
                 <ellipse cx="180.5" cy="197.537" rx="30.5" ry="29.5" fill="#083FCD" />
 
-            </svg> -->
+            </svg>
             <img src="/static/img-con/rocket-home.svg">
         </div>
     </div>
 
     <div class="ast-1">
-        <!-- <svg width="558" height="495" viewBox="0 0 558 495" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="558" height="495" viewBox="0 0 558 495" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M394.588 211.85L402.56 285.729L331.647 251.348L394.588 211.85Z" fill="#ED1AFF" />
             <path d="M399.472 268.002L393.799 342.094L330.369 295.324L399.472 268.002Z" fill="#ED1AFF" />
             <path d="M341.125 276.341L431.698 251.86L431.914 300.007L341.125 276.341Z" fill="#C60BB3" />
@@ -52,9 +53,9 @@
             <rect x="178" y="264" width="36" height="17" rx="8.5" fill="#C4C4C4" />
             <ellipse cx="307" cy="274.5" rx="16" ry="12.5" fill="#C4C4C4" />
             <ellipse cx="359" cy="274.5" rx="16" ry="12.5" fill="#C4C4C4" />
-        </svg> -->
+        </svg>
 
-        <img src="/static/img-con/astronaut-1.svg">
+        <img src="/static/img-con/astronaut-1.svg"> -->
 
 
         
@@ -64,7 +65,7 @@
     </div>
     <h1>Space Race</h1>
     <button class="button" onClick="page(1)" onmouseover="sound()">Play Now</button>
-    <button class="button" onClick="page(2)" onmouseover="sound()">Space Race Timeline</button>
+    <button class="button" onClick="page(2)" onmouseover="sound()">Role Of Game</button>
 </body>
 </html>
 <script>
@@ -89,8 +90,8 @@
     }
 
     function page(a) {
-        if (a == 1) {
-            window.location.href = './containers/mainGame.html'
+        if (a == 2) {
+            window.location.href = './containers/roleOfGame.html'
         } else {
             window.location.href = './containers/timelinePage.html'
         }

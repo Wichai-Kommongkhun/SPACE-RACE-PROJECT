@@ -7,32 +7,33 @@ html {
     height: 100%;
 }
 body{
-    background-image: url("./static/background.jpg");
+    background-image: url("../static/834517590d28001.png.crdownload");
     height: 100%;
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    font-family: 'Lakki Reddy', cursive;        
+    font-family: 'Press Start 2P', cursive;       
 }
 h1{
-    font-size: 150px;
+    font-size: 120px;
     color: white;
     text-align: center;
     cursor: default;
     padding-top: 180px;
     margin-bottom: -40px;
+    margin-bottom: 1em;
 }
 .button{
-    background-color: #ebad0f;
+    background-color: #FFCC01;
     border: none;
-    border-radius: 20px;
+    /* border-radius: 20px; */
     color: black;
-    padding: 25px 25px 0 25px;
+    padding: 30px 25px 30px 25px;
     text-decoration: none;
     display: block;
-    font-size: 45px;
-    font-family: 'Lakki Reddy', cursive; 
+    font-size: 35px;
+    font-family: 'Press Start 2P', cursive;  
     margin: 50px auto;
     width: 40%;
     position: relative;
