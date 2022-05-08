@@ -9,292 +9,263 @@
     <link rel="stylesheet" type="text/css" href="file_css.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lakki+Reddy&display=swap" rel="stylesheet">
-    <link rel="stylesheet"  href="timelinePage.css" type="text/css">
-    <link rel="stylesheet"  href="star_timelinePage.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="timelinePage.css" type="text/css">
+    <link rel="stylesheet" href="star_timelinePage.css" type="text/css">
     <title>Sapce Race Timeline</title>
     <style>
     </style>
 </head>
+
 <body>
-    <div class="back" onclick="window.location.href=('../main.html')" onmouseover="sound()">
-        <img src="../static/left-arrow.png" />
-        <h1>Back</h1>
-    </div>
-    <h1 class="title">Space Race Timeline</h1>
-    <section class="star-g">
-        <div class="star star2"></div>
-        <div class="star star5"></div>
+    <section class="main">
+        <h3 class="back" onmouseover="sound()">Back</h3>
+        <p class="text-title">SPACE RACE</p>
+        <a href="#sol" onmouseover="sound()">
+            <img id="next-img" src="../static/next (1).png" />
+        </a>
     </section>
-    <div class="img-g"> 
-        <div class="container">
-            <div class="timeline">
-                <div class="timeline-container primary" onclick="window.location.href=('##./details/1_sovietFirstSatellite.html')">
-                    <div class="timeline-icon">
-                        <i class="far fa-grin-wink"></i>
+    <section class="sol" id="sol">
+        <h2 class="title">Space Race</h2>
+        <div class="title-layout">
+            <p class="title-detail"> Following World War II, the Soviet Union and the United States engaged in a
+                struggle to prove their superiority. The Cold War constituted nearly fifty years of physical battles,
+                technological advancements, and diplomatic engagements. By 1960, the battles extended beyond Earth’s
+                gravity. Space became another avenue of competition because of the prospect of atmospheric control and
+                the undeniable message it sent to the international community. National leaders from both countries
+                recognized the opportunity of space exploration from a political perspective and began heavily funding
+                missions. Dominance in the skies was far more important than land battles; it was a way to prove
+                unchallenged superiority to the entire world. From the beginning, the Space Race was an extension of
+                this ideological battle between the two nations. Space became the final frontier for the United States
+                and Soviet Union to compete to prove their status as sole superpower.</p>
+            <img id="title-img" src="../static/Space_Race_images.png" />
+
+        </div>
+    </section>
+    <section class="detail" id="detail">
+        <h1 class="detail-title">Timeline</h1>
+        <div class="img-g">
+            <div class="container">
+                <div class="timeline">
+                    <div class="timeline-container primary">
+                        <div class="timeline-icon">
+                            <i class="far fa-grin-wink"></i>
+                        </div>
+                        <div class="timeline-body">
+                            <h4 class="timeline-title"><span class="badge">Sputnik 1: October 4, 1957</span></h4>
+                            <p>The Soviet Union’s first spacecraft launch changed the world overnight. Sputnik was the
+                                first artificial satellite to enter the atmosphere and passed over the United States
+                                multiple times daily. The world had never seen this technology, and the possibilities
+                                and dangers were endless, sparking fear across the globe. Sputnik is largely considered
+                                to be the “starting point” of the Space Race because of its effect on both countries’
+                                national agendas.</p>
+                            <p class="timeline-subtitle">Soviet</p>
+                        </div>
                     </div>
-                    <div class="timeline-body">
-                        <h4 class="timeline-title"><span class="badge">October 4, 1957</span></h4>
-                        <p>The U.S.S.R. launched Sputnik 1, the first artificial satellite.</p>
-                        <a href="./details/1_sovietFirstSatellite.html">read more</a>
-                        <p class="timeline-subtitle">Soveit</p>
+                    <div class="timeline-container danger">
+                        <div class="timeline-icon">
+                            <i class="far fa-grin-hearts"></i>
+                        </div>
+                        <div class="timeline-body">
+                            <h4 class="timeline-title"><span class="badge">Sputnik 2: November 3, 1957</span></h4>
+                            <p>Laika, the dog from the USSR, made history by becoming the first live organism launched
+                                into space. The Soviets launched Sputnik II less than a month after its predecessor to
+                                learn about the effects of space on animals and the conditions under which they could
+                                survive. Unfortunately, Laika’s trip was designed to be one way. She died shortly after
+                                takeoff due to the stress of the launch.</p>
+                            <p class="timeline-subtitle">Soviet</p>
+                        </div>
                     </div>
-                </div>
-                <div class="timeline-container danger" onclick="window.location.href=('#./details/2_sovietFirstAnimal.html')">
-                    <div class="timeline-icon">
-                        <i class="far fa-grin-hearts"></i>
+                    <div class="timeline-container success">
+                        <div class="timeline-icon">
+                            <i class="far fa-grin-tears"></i>
+                        </div>
+                        <div class="timeline-body">
+                            <h4 class="timeline-title"><span class="badge">Explorer 1: January 31, 1958</span></h4>
+                            <p>The United States’ response to Sputnik 1 was only 80.75-inches long, but the entire setup
+                                (a Jupiter-C rocket used to send the diminutive satellite into orbit) stood 71.25-feet
+                                tall on the launchpad. Explorer 1’s launch made international headlines but fell flat in
+                                comparison to the Soviet Union’s two satellites that were already in orbit.</p>
+                            <p class="timeline-subtitle">USA</p>
+                        </div>
                     </div>
-                    <div class="timeline-body">
-                        <h4 class="timeline-title"><span class="badge">November 3, 1957</span></h4>
-                        <p>The U.S.S.R. placed the first animal in a spacecraft, the dog Laika aboard Sputnik 2.</p>
-                        <a href="./details/2_sovietFirstAnimal.html">read more</a>
-                        <p class="timeline-subtitle">Soveit</p>
+                    <div class="timeline-container warning">
+                        <div class="timeline-icon">
+                            <i class="far fa-grimace"></i>
+                        </div>
+                        <div class="timeline-body">
+                            <h4 class="timeline-title"><span class="badge">Opening of NASA: July 29, 1958</span></h4>
+                            <p>The United States’ response to Sputnik 1 was only 80.75-inches long, but the entire setup
+                                (a Jupiter-C rocket used to send the diminutive satellite into orbit) stood 71.25-feet
+                                tall on the launchpad. Explorer 1’s launch made international headlines but fell flat in
+                                comparison to the Soviet Union’s two satellites that were already in orbit.</p>
+                            <p class="timeline-subtitle">USA</p>
+                        </div>
                     </div>
-                </div>
-                <div class="timeline-container success" onclick="window.location.href=('#./details/3_usFirstSatellite.html')">
-                    <div class="timeline-icon">
-                        <i class="far fa-grin-tears"></i>
+                    <div class="timeline-container">
+                        <div class="timeline-icon">
+                            <i class="far fa-grin-beam-sweat"></i>
+                        </div>
+                        <div class="timeline-body">
+                            <h4 class="timeline-title"><span class="badge">Luna 1: January 2, 1959</span></h4>
+                            <p>The Soviet Union sent a spacecraft over the surface of the moon. It flew approximately
+                                5,000 kilometers overhead two days after launch.</p>
+                            <p class="timeline-subtitle">Soveit</p>
+                        </div>
                     </div>
-                    <div class="timeline-body">
-                        <h4 class="timeline-title"><span class="badge">February 1, 1958</span></h4>
-                        <p>The first U.S. satellite, Explorer 1, was launched.</p>
-                        <a href="./details/3_usFirstSatellite.html">read more</a>
-                        <p class="timeline-subtitle">USA</p>
+                    <div class="timeline-container info">
+                        <div class="timeline-icon">
+                            <i class="far fa-grin"></i>
+                        </div>
+                        <div class="timeline-body">
+                            <h4 class="timeline-title"><span class="badge">Vostok 1: April 12, 1961</span></h4>
+                            <p>Yuri Gagarin simultaneously becomes the first person in space and the first person to
+                                orbit the Earth. His one hour and forty-eight-minute flight astounded millions, but his
+                                safe return was the biggest triumph. This was monumental for the Soviet’s space program,
+                                and a crushing blow for NASA scientists.</p>
+                            <p class="timeline-subtitle">Soveit</p>
+                        </div>
                     </div>
-                </div>
-                <div class="timeline-container warning" onclick="window.location.href=('#./details/4_usNASA.html')">
-                    <div class="timeline-icon">
-                        <i class="far fa-grimace"></i>
+                    <div class="timeline-container primary">
+                        <div class="timeline-icon">
+                            <i class="far fa-grin-wink"></i>
+                        </div>
+                        <div class="timeline-body">
+                            <h4 class="timeline-title"><span class="badge">Mercury Redstone 3: May 5, 1961</span></h4>
+                            <p>Alan Shepard becomes the first American in space, completing a suborbital flight in just
+                                over 15 minutes.</p>
+                            <p class="timeline-subtitle">USA</p>
+                        </div>
                     </div>
-                    <div class="timeline-body">
-                        <h4 class="timeline-title"><span class="badge">April 9, 1959</span></h4>
-                        <p>NASA announced the first astronaut group, the Mercury 7.</p>
-                        <a href="./details/4_usNASA.html">read more</a>
-                        <p class="timeline-subtitle">USA</p>
+                    <div class="timeline-container danger">
+                        <div class="timeline-icon">
+                            <i class="far fa-grin-hearts"></i>
+                        </div>
+                        <div class="timeline-body">
+                            <h4 class="timeline-title"><span class="badge">Kennedy promises a man on the moon by 1970:
+                                    May 25, 1961</span></h4>
+                            <p>Before a special joint session of Congress, President John Kennedy quells fears of a
+                                Soviet victory in space by promising to have an American astronaut on the moon by the
+                                end of the decade. Click here to watch the full speech.</p>
+                            <p class="timeline-subtitle">USA</p>
+                        </div>
                     </div>
-                </div>
-                <div class="timeline-container" onclick="window.location.href=('#./details/5_sovietFirstCosmonauts.html')">
-                    <div class="timeline-icon">
-                        <i class="far fa-grin-beam-sweat"></i>
+                    <div class="timeline-container success">
+                        <div class="timeline-icon">
+                            <i class="far fa-grin-tears"></i>
+                        </div>
+                        <div class="timeline-body">
+                            <h4 class="timeline-title"><span class="badge">Vostok 2: August 6, 1961</h4>
+                            <p>Gherman Titov, the backup pilot for Vostok 1, got his turn in space when he became the
+                                second man to orbit the Earth. He spent just over a day in space, becoming a test
+                                subject for the effect of space on humans.</p>
+                            <p class="timeline-subtitle">Soveit</p>
+                        </div>
                     </div>
-                    <div class="timeline-body">
-                        <h4 class="timeline-title"><span class="badge">March 7, 1960</span></h4>
-                        <p>The first cosmonauts were selected.</p>
-                        <a href="./details/5_sovietFirstCosmonauts.html">read more</a>
-                        <p class="timeline-subtitle">Soveit</p>
+                    <div class="timeline-container warning">
+                        <div class="timeline-icon">
+                            <i class="far fa-grimace"></i>
+                        </div>
+                        <div class="timeline-body">
+                            <h4 class="timeline-title"><span class="badge">Mercury Atlas 6: February 20, 1962 </span>
+                            </h4>
+                            <p>John Glenn becomes the first American to orbit the Earth. While this was a sigh of relief
+                                for NASA scientists, they were still severely behind the Soviets technologically.</p>
+                            <p class="timeline-subtitle">USA</p>
+                        </div>
                     </div>
-                </div>
-                <div class="timeline-container info" onclick="window.location.href=('#./details/6_sovietHumanInOrbit.html')">
-                    <div class="timeline-icon">
-                        <i class="far fa-grin"></i>
+                    <div class="timeline-container">
+                        <div class="timeline-icon">
+                            <i class="far fa-grin-beam-sweat"></i>
+                        </div>
+                        <div class="timeline-body">
+                            <h4 class="timeline-title"><span class="badge">Sergey Korolyov dies of a heart attack:
+                                    January 16, 1966</span></h4>
+                            <p>Korolyov, a Soviet rocket engineer, was largely responsible for the success of the
+                                Sputnik and Vostok programs. Without his guidance, the Soviet engineers must navigate a
+                                lunar landing on their own.</p>
+                            <p class="timeline-subtitle">Soveit</p>
+                        </div>
                     </div>
-                    <div class="timeline-body">
-                        <h4 class="timeline-title"><span class="badge">April 12, 1961</span></h4>
-                        <p>The U.S.S.R. launched the first human into orbit, Yuri Gagarin, on Vostok 1.</p>
-                        <a href="./details/6_sovietHumanInOrbit.html">read more</a>
-                        <p class="timeline-subtitle">Soveit</p>
+                    <div class="timeline-container info">
+                        <div class="timeline-icon">
+                            <i class="far fa-grin"></i>
+                        </div>
+                        <div class="timeline-body">
+                            <h4 class="timeline-title"><span class="badge">Luna 12: October 22, 1966 </span></h4>
+                            <p>This Soviet probe returned the first images of the far side of the moon. It entered lunar
+                                orbit three days after launch.</p>
+                            <p class="timeline-subtitle">Soveit</p>
+                        </div>
                     </div>
-                </div>
-                <div class="timeline-container primary" onclick="window.location.href=('#./details/7_usHumanInOrbit.html')">
-                    <div class="timeline-icon">
-                        <i class="far fa-grin-wink"></i>
+                    <div class="timeline-container primary">
+                        <div class="timeline-icon">
+                            <i class="far fa-grin-wink"></i>
+                        </div>
+                        <div class="timeline-body">
+                            <h4 class="timeline-title"><span class="badge">Apollo 1: January 27, 1967</span></h4>
+                            <p>Tragedy struck when a fire swept through the command module of the Apollo 1 spacecraft.
+                                Millions of people around the globe witnessed the deaths of Gus Grissom, Edward White,
+                                and Roger Chaffee on television. It was a real blow to those rooting for the United
+                                States to win the space race.</p>
+                            <p class="timeline-subtitle">USA</p>
+                        </div>
                     </div>
-                    <div class="timeline-body">
-                        <h4 class="timeline-title"><span class="badge">February 20, 1962</span></h4>
-                        <p>John Glenn, on Mercury-Atlas 6, became the first American in orbit.</p>
-                        <a href="./details/7_usHumanInOrbit.html">read more</a>
-                        <p class="timeline-subtitle">USA</p>
+                    <div class="timeline-container danger">
+                        <div class="timeline-icon">
+                            <i class="far fa-grin-hearts"></i>
+                        </div>
+                        <div class="timeline-body">
+                            <h4 class="timeline-title"><span class="badge">Apollo 8: December 21, 1968</span></h4>
+                            <p>This was the first successful crewed mission to orbit the moon, turning the tide of the
+                                Space Race. These astronauts took photos that were immensely helpful to the Apollo 11
+                                landing preparation.</p>
+                            <p class="timeline-subtitle">USA</p>
+                        </div>
                     </div>
-                </div>
-                <div class="timeline-container danger" onclick="window.location.href=('#./details/8_sovietFirstWoman.html')">
-                    <div class="timeline-icon">
-                        <i class="far fa-grin-hearts"></i>
+                    <div class="timeline-container success">
+                        <div class="timeline-icon">
+                            <i class="far fa-grin-tears"></i>
+                        </div>
+                        <div class="timeline-body">
+                            <h4 class="timeline-title"><span class="badge">Apollo 11: July 16, 1969-July 20, 1969
+                                </span></h4>
+                            <p>Neil Armstrong, Buzz Aldrin, and Michael Collins fulfilled the promise Kennedy made,
+                                nearly ten years prior, of a lunar landing. They touched down on the moon’s surface four
+                                days after the launch.</p>
+                            <p class="timeline-subtitle">USA</p>
+                        </div>
                     </div>
-                    <div class="timeline-body">
-                        <h4 class="timeline-title"><span class="badge">June 16 and June 19, 1963</span></h4>
-                        <p>Valentina Tereshkova, on Vostok 6, became the first woman in space.</p>
-                        <a href="./details/8_sovietFirstWoman.html">read more</a>
-                        <p class="timeline-subtitle">Soveit</p>
-                    </div>
-                </div>
-                <div class="timeline-container success" onclick="window.location.href=('#./details/9_sovietMoonPrograms.html')">
-                    <div class="timeline-icon">
-                        <i class="far fa-grin-tears"></i>
-                    </div>
-                    <div class="timeline-body">
-                        <h4 class="timeline-title"><span class="badge">August 1964/span></h4>
-                        <p>The Soviet government gave the go-ahead to two Moon programs, a flyby and a landing program.</p>
-                        <a href="./details/9_sovietMoonPrograms.html">read more</a>
-                        <p class="timeline-subtitle">Soveit</p>
-                    </div>
-                </div>
-                <div class="timeline-container warning" onclick="window.location.href=('#./details/10_sovietMultiPerson.html')">
-                    <div class="timeline-icon">
-                        <i class="far fa-grimace"></i>
-                    </div>
-                    <div class="timeline-body">
-                        <h4 class="timeline-title"><span class="badge">October 12, 1964</span></h4>
-                        <p>The U.S.S.R. launched the first multi-person spacecraft, Voskhod 1, with cosmonauts Vladimir Komarov, Konstantin Feoktistov, and Boris Yegorov.</p>
-                        <a href="./details/10_sovietMultiPerson.html">read more</a>
-                        <p class="timeline-subtitle">Soveit</p>
-                    </div>
-                </div>
-                <div class="timeline-container" onclick="window.location.href=('#./details/11_sovietSpaceWalk.html')">
-                    <div class="timeline-icon">
-                        <i class="far fa-grin-beam-sweat"></i>
-                    </div>
-                    <div class="timeline-body">
-                        <h4 class="timeline-title"><span class="badge">March 18, 1965</span></h4>
-                        <p>The first space walk was performed, by Aleksei Leonov on Voskhod 2.</p>
-                        <a href="./details/11_sovietSpaceWalk.html">read more</a>
-                        <p class="timeline-subtitle">Soveit</p>
-                    </div>
-                </div>
-                <div class="timeline-container info" onclick="window.location.href=('#./details/12_usMultiPerson.html')">
-                    <div class="timeline-icon">
-                        <i class="far fa-grin"></i>
-                    </div>
-                    <div class="timeline-body">
-                        <h4 class="timeline-title"><span class="badge">March 23, 1965</span></h4>
-                        <p>The U.S. launched the first multi-person U.S. spacecraft, Gemini 3, with Virgil Grissom and John Young.</p>
-                        <a href="./details/12_usMultiPerson.html">read more</a>
-                        <p class="timeline-subtitle">USA</p>
-                    </div>
-                </div>
-                <div class="timeline-container primary" onclick="window.location.href=('#./details/13_usSpaceWalk.html')">
-                    <div class="timeline-icon">
-                        <i class="far fa-grin-wink"></i>
-                    </div>
-                    <div class="timeline-body">
-                        <h4 class="timeline-title"><span class="badge">June 3, 1965</span></h4>
-                        <p>The first American space walk was completed by Ed White on Gemini 4.</p>
-                        <a href="./details/13_usSpaceWalk.html">read more</a>
-                        <p class="timeline-subtitle">USA</p>
-                    </div>
-                </div>
-                <div class="timeline-container danger" onclick="window.location.href=('#./details/14_usOrbitalRendezvous.html')">
-                    <div class="timeline-icon">
-                        <i class="far fa-grin-hearts"></i>
-                    </div>
-                    <div class="timeline-body">
-                        <h4 class="timeline-title"><span class="badge">December 15, 1965</span></h4>
-                        <p>The U.S. conducted the first orbital rendezvous: Frank Borman and James Lovell on Gemini 7 with Walter Schirra and Thomas Stafford on Gemini 6.</p>
-                        <a href="./details/14_usOrbitalRendezvous.html">read more</a>
-                        <p class="timeline-subtitle">USA</p>
-                    </div>
-                </div>
-                <div class="timeline-container success" onclick="window.location.href=('.#/details/15_sovietDeathPremier.html')">
-                    <div class="timeline-icon">
-                        <i class="far fa-grin-tears"></i>
-                    </div>
-                    <div class="timeline-body">
-                        <h4 class="timeline-title"><span class="badge">January 14, 1966</span></h4>
-                        <p>Marked the death of premier Soviet spacecraft designer Sergei Korolev.</p>
-                        <a href="./details/15_sovietDeathPremier.html">read more</a>
-                        <p class="timeline-subtitle">Soveit</p>
-                    </div>
-                </div>
-                <div class="timeline-container warning" onclick="window.location.href=('./details/16_sovietLandingMoon.html')">
-                    <div class="timeline-icon">
-                        <i class="far fa-grimace"></i>
-                    </div>
-                    <div class="timeline-body">
-                        <h4 class="timeline-title"><span class="badge">February 3, 1966</span></h4>
-                        <p>Luna 9 was the first spacecraft to achieve a lunar soft landing and to transmit photographic data from the Moon's surface to Earth, preceding the U.S. Surveyor 1 soft lander by about 4 months.</p>
-                        <a href="./details/16_sovietLandingMoon.html">read more</a>
-                        <p class="timeline-subtitle">Soveit</p>
-                    </div>
-                </div>
-                <div class="timeline-container" onclick="window.location.href=('#./details/17_usDockingSpace.html')">
-                    <div class="timeline-icon">
-                        <i class="far fa-grin-beam-sweat"></i>
-                    </div>
-                    <div class="timeline-body">
-                        <h4 class="timeline-title"><span class="badge">March 16, 1966</span></h4>
-                        <p>The first docking in space took place. Neil Armstrong and David Scott on Gemini 8 docked with an Agena target.</p>
-                        <a href="./details/17_usDockingSpace.html">read more</a>
-                        <p class="timeline-subtitle">USA</p>
-                    </div>
-                </div>
-                <div class="timeline-container info" onclick="window.location.href=('#./details/18_usTestApolloProgram.html')">
-                    <div class="timeline-icon">
-                        <i class="far fa-grin"></i>
-                    </div>
-                    <div class="timeline-body">
-                        <h4 class="timeline-title"><span class="badge">January 27, 1967</span></h4>
-                        <p>Astronauts Virgil Grissom, Ed White, and Roger Chaffee were killed in a fire during a launchpad test. The Apollo program was delayed for a year and a half.</p>
-                        <a href="./details/18_usTestApolloProgram.html">read more</a>
-                        <p class="timeline-subtitle">USA</p>
-                    </div>
-                </div>
-                <div class="timeline-container primary" onclick="window.location.href=('#./details/19_sovietSpaceflightFatality.html')">
-                    <div class="timeline-icon">
-                        <i class="far fa-grin-wink"></i>
-                    </div>
-                    <div class="timeline-body">
-                        <h4 class="timeline-title"><span class="badge">April 23, 1967</span></h4>
-                        <p>Cosmonaut Vladimir Komarov, on Soyuz 1, became the first spaceflight fatality.</p>
-                        <a href="./details/19_sovietSpaceflightFatality.html">read more</a>
-                        <p class="timeline-subtitle">Soveit</p>
-                    </div>
-                </div>
-                <div class="timeline-container danger" onclick="window.location.href=('#./details/20_sovietFlyAroundMoon.html')">
-                    <div class="timeline-icon">
-                        <i class="far fa-grin-hearts"></i>
-                    </div>
-                    <div class="timeline-body">
-                        <h4 class="timeline-title"><span class="badge">September 14 and 21, 1968</span></h4>
-                        <p>The uncrewed Soviet probe Zond 5 became the first spacecraft to fly around the Moon and return to Earth.</p>
-                        <a href="./details/20_sovietFlyAroundMoon.html">read more</a>
-                        <p class="timeline-subtitle">Soveit</p>
-                    </div>
-                </div>
-                <div class="timeline-container success" onclick="window.location.href=('#./details/21_usApolloProgram.html')">
-                    <div class="timeline-icon">
-                        <i class="far fa-grin-tears"></i>
-                    </div>
-                    <div class="timeline-body">
-                        <h4 class="timeline-title"><span class="badge">October 11, 1968</span></h4>
-                        <p>The U.S. launched the first flight of the Apollo program: Walter Schirra, Donn Eisele, and Walter Cunningham on Apollo 7.</p>
-                        <a href="./details/21_usApolloProgram.html">read more</a>
-                        <p class="timeline-subtitle">USA</p>
-                    </div>
-                </div>
-                <div class="timeline-container warning" onclick="window.location.href=('#./details/22_usFlyAroundMoon.html')">
-                    <div class="timeline-icon">
-                        <i class="far fa-grimace"></i>
-                    </div>
-                    <div class="timeline-body">
-                        <h4 class="timeline-title"><span class="badge">December 24, 1968</span></h4>
-                        <p>The first crewed flight around the Moon took place, with Frank Borman, James Lovell, and William Anders on Apollo 8.</p>
-                        <a href="./details/22_usFlyAroundMoon.html">read more</a>
-                        <p class="timeline-subtitle">USA</p>
-                    </div>
-                </div>
-                <div class="timeline-container" onclick="window.location.href=('#./details/23_sovietN1Rocket.html')">
-                    <div class="timeline-icon">
-                        <i class="far fa-grin-beam-sweat"></i>
-                    </div>
-                    <div class="timeline-body">
-                        <h4 class="timeline-title"><span class="badge">July 3, 1969</span></h4>
-                        <p>Marked the explosion of the Soviet N1 Moon rocket.</p>
-                        <a href="./details/23_sovietN1Rocket.html">read more</a>
-                        <p class="timeline-subtitle">Soveit</p>
-                    </div>
-                </div>
-                <div class="timeline-container info" onclick="window.location.href=('#./details/24_usHumanOnMoon.html')">
-                    <div class="timeline-icon">
-                        <i class="far fa-grin"></i>
-                    </div>
-                    <div class="timeline-body">
-                        <h4 class="timeline-title"><span class="badge">July 20, 1969</span></h4>
-                        <p>The first humans landed on the Moon: Neil Armstrong and Buzz Aldrin on Apollo 11.</p>
-                        <a href="./details/24_usHumanOnMoon.html">read more</a>
-                        <p class="timeline-subtitle">USA</p>
                 </div>
             </div>
-        </div> 
+    </section>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+
+                <!-- <div class="ml-auto col-lg-4 col-md-5">
+                    <p class="copyright-text">Copyright &copy; 2020 Gymso Fitness Co.
+
+                        <br>Design: <a href="https://www.tooplate.com">Tooplate</a>
+                    </p>
+                </div>
+
+                <div class="d-flex justify-content-center mx-auto col-lg-5 col-md-7 col-12">
+                    <p class="mr-4">
+                        <i class="fa fa-envelope-o mr-1"></i>
+                        <a href="#">hello@company.co</a>
+                    </p>
+
+                    <p><i class="fa fa-phone mr-1"></i> 010-020-0840</p>
+                </div> -->
+                <div>Multimedia Technology 2022</div>
+
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>
 <script>
     function sound() {
