@@ -6,12 +6,7 @@ function Border(x,y,width,height,type){
     this.type = type;
     
     this.draw = function(){
-        if(this.type === 1){
-            ctx.fillStyle = "blue";
-        }else if(this.type === 2){
-            ctx.fillStyle = "red";
-        }
-        ctx.fillRect(this.x,this.y,this.width,this.height,this.type);
+        drawSprite(block, 0, 0, this.width, this.height, this.x, this.y, this.width, this.height);
     }
     
 }

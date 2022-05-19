@@ -5,9 +5,13 @@ function Player(x,y) {
     this.yspeed = 0;
     this.friction = 0;
     this.maxSpeed = 10;
+    this.framex = 0;
+    this.framey = 0;
     this.width = 100;
     this.height = 200;
     this.active = true;
+    this.moving = true;
+
 
     this.step = function() {
         //movement
@@ -18,14 +22,22 @@ function Player(x,y) {
                 this.xspeed *= this.friction;
             }else if(rightKey){
                 //เดินขวา
-                this.xspeed = 5;
-                //scrolling object
-                
-                
+                this.framey = 0;
+                //วิ่ง
+                if(sprint){
+                    this.xspeed = 10;
+                }else{
+                    this.xspeed = 5;
+                }
             }else if(leftKey){
                 //เดินซ้าย
-                this.xspeed = -5;
-                //scrolling object
+                this.framey = 1;
+                //วิ่ง
+                if(sprint){
+                    this.xspeed = -10;
+                }else{
+                    this.xspeed = -5;
+                }
                 
             }
 
@@ -33,16 +45,7 @@ function Player(x,y) {
             this.yspeed += 5;
 
             //Correct speed 
-            if(this.xspeed > this.maxSpeed){
-                this.xspeed = this.maxSpeed;
-            }else if (this.xspeed < -this.maxSpeed){
-                this.xspeed = -this.maxSpeed;
-            }
-            if(this.xspeed > 0){
-                this.xspeed = Math.floor(this.xspeed);
-            }else{
-                this.xspeed = Math.ceil(this.xspeed);
-            }
+           
 
             //horizontal collision rect
             let horizontalRect = {
@@ -83,14 +86,13 @@ function Player(x,y) {
                 }
             }
 
-
+            console.log(this.x);
             this.x += this.xspeed;
             this.y += this.yspeed;
         }
     }
 
     this.draw = function() {
-        ctx.fillStyle = "green";
-        ctx.fillRect(this.x,this.y,this.width,this.height);
+        drawSprite(playerSprite, player.width * player.framex, player.height * player.framey, this.width, this.height, this.x, this.y, this.width, this.height);
     }
 }
