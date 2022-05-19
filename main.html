@@ -18,61 +18,16 @@
 
     </style>
 </head>
-
 <body>
-    <!-- <div class="star">
-        <img src="static/Star 1.svg">
-    </div>
-    <div class="rol">
-        <div class="jet">
-            <svg width="88" height="176" viewBox="0 0 388 476" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M278.326 403.741L175.488 362.003L236.675 300.868L278.326 403.741Z" fill="#E80101" />
-                <path d="M79.1085 398.794L126.919 304.584L180.8 370.157L79.1085 398.794Z" fill="#E80101" />
-                <ellipse cx="180.222" cy="223.974" rx="67.1877" ry="160.692"
-                    transform="rotate(-1.11951 180.222 223.974)" fill="#BDD23C" />
-                <circle cx="180.5" cy="197.537" r="43.5" fill="#9A9999" />
-                <ellipse cx="180.5" cy="197.537" rx="30.5" ry="29.5" fill="#083FCD" />
-
-            </svg>
-            <img src="/static/img-con/rocket-home.svg">
-        </div>
-    </div>
-
-    <div class="ast-1">
-        <svg width="558" height="495" viewBox="0 0 558 495" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M394.588 211.85L402.56 285.729L331.647 251.348L394.588 211.85Z" fill="#ED1AFF" />
-            <path d="M399.472 268.002L393.799 342.094L330.369 295.324L399.472 268.002Z" fill="#ED1AFF" />
-            <path d="M341.125 276.341L431.698 251.86L431.914 300.007L341.125 276.341Z" fill="#C60BB3" />
-            <rect x="175" y="306.822" width="62.8219" height="232.03" rx="31.4109"
-                transform="rotate(-89.9474 175 306.822)" fill="#4DAB21" />
-            <ellipse cx="256" cy="274.5" rx="20" ry="14.5" fill="#022A93" />
-            <ellipse cx="256" cy="274.5" rx="16" ry="12.5" fill="#C4C4C4" />
-            <ellipse cx="307" cy="274.5" rx="20" ry="14.5" fill="#022A93" />
-            <ellipse cx="359" cy="274.5" rx="20" ry="14.5" fill="#022A93" />
-            <rect x="175" y="261" width="44" height="24" rx="12" fill="#022A93" />
-            <rect x="178" y="264" width="36" height="17" rx="8.5" fill="#C4C4C4" />
-            <ellipse cx="307" cy="274.5" rx="16" ry="12.5" fill="#C4C4C4" />
-            <ellipse cx="359" cy="274.5" rx="16" ry="12.5" fill="#C4C4C4" />
-        </svg>
-
-        <img src="/static/img-con/astronaut-1.svg"> -->
-
-
-        
-
     </div>
     <div class="rol_1">
     </div>
     <h1>Space Race</h1>
-    <button class="button" onClick="page(1)" onmouseover="sound()">Play Now</button>
-    <button class="button" onClick="page(2)" onmouseover="sound()">Role Of Game</button>
+    <button class="button" onClick=" window.location.href='./containers/timelinePage.html'" onmouseover="sound()">Play Now</button>
+    <button class="button" onClick=" window.location.href='./containers/roleOfGame.html'" onmouseover="sound()">Role Of Game</button>
 </body>
 </html>
 <script>
-    // function home(a) {
-    //     mySound = new sound();
-    //     myMusic = new page(a);
-    // }
     function sound() {
         audio = new (window.AudioContext || window.webkitAudioContext)()
         osci = audio.createOscillator()
@@ -87,13 +42,5 @@
         note_osci.frequency.value = 698
         note_osci.start()
         note_gain.gain.setValueCurveAtTime([0.1, 0], time, .1)
-    }
-
-    function page(a) {
-        if (a == 2) {
-            window.location.href = './containers/roleOfGame.html'
-        } else {
-            window.location.href = './containers/timelinePage.html'
-        }
     }
 </script>

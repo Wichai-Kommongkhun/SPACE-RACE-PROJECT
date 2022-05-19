@@ -16,7 +16,7 @@ body {
 }
 
 
-.back {
+#back {
     color:white;
     font-size: 30px;
     cursor:pointer;
@@ -25,11 +25,11 @@ body {
     margin-top: 2em;
     font-family: 'Press Start 2P', cursive;
 }
-.back:hover {
+#back:hover {
     transform: translateY(-5px);
 }
 
-.back:active {
+#back:active {
     transform: translateY(-3px);
 }
 
@@ -251,33 +251,32 @@ a {
 
 .site-footer {
     border-top: 1px solid #090223;
-    padding: 3rem 0;
+    padding: 1.5rem ;
     background-color: white;
+    text-align: center;
+    font-family: 'Share Tech Mono', monospace;
+}
+.footer-layout{
+    display: flex;
+    flex-direction: row;
+}
+.footer{
+    margin: 3em;
 }
 
-.site-footer a {
-    color: black;
-    font-size: 36px;
+.title-footer{
+    font-family: 'Share Tech Mono', monospace;
+    display: flex;
+    flex-direction: column;
 }
-
-.site-footer p {
-    color: black;
-    font-size: 24px;
-}
-
-.contact .fa,
-.site-footer .fa {
-    color: black;
-}
-
 
 .text-title {
     cursor: default;
-    font-size: 120px;
+    font-size: 100px;
     color: white;
     position: absolute;
     top: 23%;
-    left: 10%;
+    left: 16%;
     opacity: 1;
     font-family: 'Press Start 2P', cursive;
 }

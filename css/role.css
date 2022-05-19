@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: #090224;
+    font-family: 'Share Tech Mono', monospace;
+    color: back;
+    margin:3em;
+}
+
+.back {
+    color:white;
+    font-size: 30px;
+    cursor:pointer;
+    font-family: 'Press Start 2P', cursive;
+}
+.back:hover {
+    transform: translateY(-5px);
+}
+
+.back:active {
+    transform: translateY(-3px);
+}
+.main {
+    padding-bottom: 3em;
+}
+.title{
+    font-size: 38px;
+    color: black;
+}
+.subTitle{
+    color:black;
+    margin-top: 1em;
+    font-size: 24px;
+    font-family: 'Noto Sans Thai', sans-serif;
+    text-align: center;
+}
+
+.block{
+    background-color: white; 
+    padding:2.5em;
+    margin:3em 10em 0 10em;
+}
+/* .block:hover{
+    background-color: #FFE08C;
+} */
+
+.role-img{
+    padding:1em;
+    display: flex;
+    text-align: center;
+    margin: 0 auto;
+    width: 700px;
+    height: auto;
+}
+.role-img-3{
+    padding:1em;
+    display: flex;
+    text-align: center;
+    margin: 0 auto;
+    width: 350px;
+    height: auto;
+}
