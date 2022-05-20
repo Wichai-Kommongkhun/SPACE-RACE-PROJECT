@@ -48,7 +48,7 @@ function Player(x,y) {
             }
 
             // Stamina regenaretion
-            if(this.moving == false && this.stamina < 112){
+            if(sprint == false && this.stamina < 112){
                 this.stamina += 0.5;
             }
 
