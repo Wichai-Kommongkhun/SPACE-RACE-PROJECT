@@ -11,7 +11,8 @@ function Player(x,y) {
     this.height = 200;
     this.active = true;
     this.moving = true;
-    this.stamina = 100
+    this.stamina = 100;
+    this.maxhp = 3;
 
 
     this.step = function() {
@@ -26,9 +27,8 @@ function Player(x,y) {
                 this.framey = 0;
                 //วิ่ง
                 if(sprint && this.stamina > 0){
-                    this.xspeed = 20;
-                    document.querySelector('.stamina').style.width = '20%';
-                    this.stamina -= 5;
+                    this.xspeed = 10;
+                    this.stamina -= 1;
                 }
                 else{
                     this.xspeed = 5;
@@ -38,14 +38,18 @@ function Player(x,y) {
                 this.framey = 1;
                 //วิ่ง
                 if(sprint && this.stamina > 0){
-                    this.xspeed = -20;
-                    document.querySelector('.stamina').style.width = '20%';
-                    this.stamina -= 5;
+                    this.xspeed = -10;
+                    this.stamina -= 1;
                 }
                 else{
                     this.xspeed = -5;
                 }
                 
+            }
+
+            // Stamina regenaretion
+            if(this.moving == false){
+                this.stamina += 0.5;
             }
 
             //gravity
@@ -90,15 +94,10 @@ function Player(x,y) {
                     this.yspeed = 0;
                 }
             }
-
-
-        
-
+            
             this.x += this.xspeed;
             this.y += this.yspeed;
-            if (this.x >= 1000){
-                document.querySelector('.health').style.width = '20%'
-            }
+           
         }
     }
 

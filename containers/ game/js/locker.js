@@ -10,6 +10,4 @@ function Locker(x,y,width,height,type){
         ctx.fillRect(this.x,this.y,this.width,this.height);
     }
     
-
-
 }
