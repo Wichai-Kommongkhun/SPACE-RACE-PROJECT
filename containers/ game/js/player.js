@@ -11,6 +11,7 @@ function Player(x,y) {
     this.height = 200;
     this.active = true;
     this.moving = true;
+    this.stamina = 100
 
 
     this.step = function() {
@@ -24,18 +25,24 @@ function Player(x,y) {
                 //เดินขวา
                 this.framey = 0;
                 //วิ่ง
-                if(sprint){
+                if(sprint && this.stamina > 0){
                     this.xspeed = 20;
-                }else{
+                    document.querySelector('.stamina').style.width = '20%';
+                    this.stamina -= 5;
+                }
+                else{
                     this.xspeed = 5;
                 }
             }else if(leftKey){
                 //เดินซ้าย
                 this.framey = 1;
                 //วิ่ง
-                if(sprint){
+                if(sprint && this.stamina > 0){
                     this.xspeed = -20;
-                }else{
+                    document.querySelector('.stamina').style.width = '20%';
+                    this.stamina -= 5;
+                }
+                else{
                     this.xspeed = -5;
                 }
                 
@@ -89,6 +96,9 @@ function Player(x,y) {
 
             this.x += this.xspeed;
             this.y += this.yspeed;
+            if (this.x >= 1000){
+                document.querySelector('.health').style.width = '20%'
+            }
         }
     }
 
