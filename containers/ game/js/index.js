@@ -54,7 +54,7 @@ window.onload = function() {
     //Setup key listeners
     setupInputs();
     //Create Player
-    player = new Player(640,360);
+    player = new Player(640,420);
     health = new Healths(50,50,200,35,0);
     stamina = new Staminas(60,90,200,100,0);
 
@@ -64,7 +64,7 @@ window.onload = function() {
     }
     
     //Start game loop
-    gameLoop = setInterval(step, 50);
+    gameLoop = setInterval(step, 60);
 
 }
 
@@ -91,16 +91,9 @@ function draw(){
     hpPlayer();
     imageFramePlayer();
     //Draw the border
-    for(let i = 0; i<borders.length;i++){
-        borders[i].draw();
-    }
-    
-    for(let i = 0; i<doors.length;i++){
-        doors[i].draw();
-    }
-    for(let i = 0; i<locker.length;i++){
-        locker[i].draw();
-    }
+    for(let i = 0; i<borders.length;i++){ borders[i].draw();}
+    for(let i = 0; i<doors.length;i++){doors[i].draw();}
+    for(let i = 0; i<locker.length;i++){locker[i].draw();}  
     player.draw();
     health.draw();
     stamina.draw();
@@ -157,9 +150,14 @@ function checkIntersection(r1,r2){
 }
 
 function imageFramePlayer(){
-    if(player.framex < 2 && player.moving) player.framex++;
+    if(player.framex < 2 && player.moving) {
+        player.framex++;
+    }
     else player.framex = 0;
-}
+    requestAnimationFrame(imageFramePlayer);
+};
+
+
 
 function countStage(){
     if(player.x < -100){

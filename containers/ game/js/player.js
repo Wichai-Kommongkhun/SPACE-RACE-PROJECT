@@ -10,7 +10,7 @@ function Player(x,y) {
     this.width = 100;
     this.height = 200;
     this.active = true;
-    this.moving = true;
+    this.moving = false;
     this.stamina = 122;
     this.maxhp = 3;
 
@@ -31,7 +31,7 @@ function Player(x,y) {
                     this.stamina -= 1;
                 }
                 else{
-                    this.xspeed = 5;
+                    this.xspeed = 7;
                 }
             }else if(leftKey){
                 //เดินซ้าย
@@ -42,7 +42,7 @@ function Player(x,y) {
                     this.stamina -= 1;
                 }
                 else{
-                    this.xspeed = -5;
+                    this.xspeed = -7;
                 }
                 
             }
@@ -52,8 +52,7 @@ function Player(x,y) {
                 this.stamina += 0.5;
             }
 
-            //gravity
-            this.yspeed += 5;
+           
            
 
             //horizontal collision rect
