@@ -24,6 +24,7 @@ var stage = 0;
 var locker = [];
 var borders = [];
 var health;
+var stamina;
 var doors = [];
 var locker = [];
 
@@ -35,7 +36,8 @@ const playerSprite = new Image();
     playerSprite.src = 'https://cdn.discordapp.com/attachments/936169548019826688/976903143940034631/playersprite.png';
 const healthbar = new Image();
     healthbar.src = 'https://cdn.discordapp.com/attachments/936169548019826688/977264896972582932/DisplayHpV.1.png';
-
+const staminabar = new Image();
+    staminabar.src = 'https://cdn.discordapp.com/attachments/936169548019826688/977279066711425094/DisplayStaminaV.1.png';
 
 
 
@@ -54,7 +56,8 @@ window.onload = function() {
     //Create Player
     player = new Player(640,360);
     health = new Healths(50,50,200,35,0);
-    
+    stamina = new Staminas(50,90,200,40,0);
+
     //Create Borders for each stage
     for(let i = 0; i < 100; i++){
         borders.push(new Border(-5000 + 100*i,620,100,100,1));
@@ -100,7 +103,7 @@ function draw(){
     }
     player.draw();
     health.draw();
-    
+    stamina.draw();
 
 }
 
