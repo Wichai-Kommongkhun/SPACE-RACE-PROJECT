@@ -37,7 +37,7 @@ const playerSprite = new Image();
 const healthbar = new Image();
     healthbar.src = 'https://cdn.discordapp.com/attachments/936169548019826688/977264896972582932/DisplayHpV.1.png';
 const staminabar = new Image();
-    staminabar.src = 'https://cdn.discordapp.com/attachments/936169548019826688/977322427380031508/DisplayStaminaV.1.png';
+    staminabar.src = 'https://cdn.discordapp.com/attachments/936169548019826688/977323501709037628/DisplayStaminaV.1.png';
 
 
 

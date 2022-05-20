@@ -94,7 +94,6 @@ function Player(x,y) {
                     this.yspeed = 0;
                 }
             }
-            console.log(this.stamina)
             this.x += this.xspeed;
             this.y += this.yspeed;
            
