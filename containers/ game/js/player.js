@@ -25,7 +25,7 @@ function Player(x,y) {
                 this.framey = 0;
                 //วิ่ง
                 if(sprint){
-                    this.xspeed = 10;
+                    this.xspeed = 20;
                 }else{
                     this.xspeed = 5;
                 }
@@ -34,7 +34,7 @@ function Player(x,y) {
                 this.framey = 1;
                 //วิ่ง
                 if(sprint){
-                    this.xspeed = -10;
+                    this.xspeed = -20;
                 }else{
                     this.xspeed = -5;
                 }
@@ -43,8 +43,6 @@ function Player(x,y) {
 
             //gravity
             this.yspeed += 5;
-
-            //Correct speed 
            
 
             //horizontal collision rect
@@ -86,7 +84,9 @@ function Player(x,y) {
                 }
             }
 
-            console.log(this.x);
+
+        
+
             this.x += this.xspeed;
             this.y += this.yspeed;
         }

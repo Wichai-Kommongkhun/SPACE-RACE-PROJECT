@@ -1,4 +1,4 @@
-function Border(x,y,width,height,type){
+function Door(x,y,width,height,type){
     this.x = x;
     this.y = y;
     this.width = width;
@@ -6,7 +6,7 @@ function Border(x,y,width,height,type){
     this.type = type;
     
     this.draw = function(){
-        ctx.fillStyle = "transparent";
+        ctx.fillStyle = "black";
         ctx.fillRect(this.x,this.y,this.width,this.height);
     }
 

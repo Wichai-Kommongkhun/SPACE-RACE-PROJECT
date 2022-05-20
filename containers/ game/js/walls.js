@@ -1,4 +1,4 @@
-function Border(x,y,width,height,type){
+function Wall(x,y,width,height,type){
     this.x = x;
     this.y = y;
     this.width = width;
@@ -6,9 +6,7 @@ function Border(x,y,width,height,type){
     this.type = type;
     
     this.draw = function(){
-        ctx.fillStyle = "transparent";
-        ctx.fillRect(this.x,this.y,this.width,this.height);
+        drawSprite(block, 0, 0, this.width, this.height, this.x, this.y, this.width, this.height);
     }
-
-
+    
 }
