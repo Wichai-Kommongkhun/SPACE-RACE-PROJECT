@@ -13,7 +13,7 @@ var upKey;
 var rightKey;
 var downKey;
 var leftKey;
-var sprint;
+var sprint; 
 var interact;
 
 
@@ -56,7 +56,7 @@ window.onload = function() {
     //Create Player
     player = new Player(640,360);
     health = new Healths(50,50,200,35,0);
-    stamina = new Staminas(50,90,200,40,0);
+    stamina = new Staminas(50,90,200,100,0);
 
     //Create Borders for each stage
     for(let i = 0; i < 100; i++){
