@@ -37,7 +37,7 @@ const playerSprite = new Image();
 const healthbar = new Image();
     healthbar.src = 'https://cdn.discordapp.com/attachments/936169548019826688/977264896972582932/DisplayHpV.1.png';
 const staminabar = new Image();
-    staminabar.src = 'https://cdn.discordapp.com/attachments/936169548019826688/977279066711425094/DisplayStaminaV.1.png';
+    staminabar.src = 'https://cdn.discordapp.com/attachments/936169548019826688/977322427380031508/DisplayStaminaV.1.png';
 
 
 
@@ -56,7 +56,7 @@ window.onload = function() {
     //Create Player
     player = new Player(640,360);
     health = new Healths(50,50,200,35,0);
-    stamina = new Staminas(50,90,200,100,0);
+    stamina = new Staminas(60,90,200,100,0);
 
     //Create Borders for each stage
     for(let i = 0; i < 100; i++){
@@ -179,9 +179,7 @@ function editMap(){
     if(stage == 0){
         locker.push(new Locker(1070,370,160,250,1));
     
-        if(player.x + player.width > 1280){
-            player.x = 1280 - player.width;
-        }
+        collisionRight();
     }
     else if(stage === 1){
        
@@ -194,9 +192,7 @@ function editMap(){
     }else if(stage === 3){
        
         doors.push(new Door(185,370,160,250,1));
-        if(player.x < 0){
-            player.x = 0;
-        }
+        collisionLeft();
     }
 }
 
@@ -221,5 +217,16 @@ function hpPlayer(){
         health.framey = 2;
     }else if(player.maxhp == 0){
         health.framey = 3;
+    }
+}
+
+function collisionRight(){
+    if(player.x + player.width > 1280){
+        player.x = 1280 - player.width;
+    }
+}
+function collisionLeft(){
+    if(player.x < 0){
+        player.x = 0;
     }
 }

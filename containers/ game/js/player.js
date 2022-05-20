@@ -11,7 +11,7 @@ function Player(x,y) {
     this.height = 200;
     this.active = true;
     this.moving = true;
-    this.stamina = 112;
+    this.stamina = 122;
     this.maxhp = 3;
 
 
@@ -48,7 +48,7 @@ function Player(x,y) {
             }
 
             // Stamina regenaretion
-            if(sprint == false && this.stamina < 112){
+            if(sprint == false && this.stamina < 122){
                 this.stamina += 0.5;
             }
 

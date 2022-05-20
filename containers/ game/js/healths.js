@@ -23,7 +23,7 @@ function Staminas (x,y,width,height,type){
 
         this.draw = function(){
             ctx.fillStyle = 'yellow';
-            ctx.fillRect(65,117,player.stamina,5);
+            ctx.fillRect(65,110,player.stamina,13);
             drawSprite(staminabar, this.width * this.framex, this.height * this.framey, this.width, this.height , this.x, this.y, this.width, this.height);
     }
         
