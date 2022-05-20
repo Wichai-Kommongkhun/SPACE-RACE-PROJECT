@@ -247,6 +247,7 @@ a {
     vertical-align: middle;
     min-height: 100vh;
     position: relative;
+
 }
 
 .site-footer {
@@ -276,13 +277,14 @@ a {
     color: white;
     position: absolute;
     top: 23%;
-    left: 16%;
+    left: 25%;
     opacity: 1;
     font-family: 'Press Start 2P', cursive;
 }
 
 .title {
-    font-size: 50px;
+    font-size: 100px;
+    margin: 0% 0 0 30%;
 }
 
 #next-img {
@@ -306,6 +308,8 @@ a {
 .title-detail {
     padding-top: 1.5em;
     text-align: center;
+    width: 60%;
+    margin: 0 0 0 17%;
 
 }
 
@@ -314,7 +318,7 @@ a {
     width: 400px;
     height: 400px;
     border-radius: 8px;
-    margin: 30px 0 0 100px;
+    margin: 2% 0 0 35%;
 }
 
 .title-layout {
