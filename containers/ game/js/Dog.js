@@ -27,10 +27,10 @@ function huntPlayer(){
         if(dog.x > player.x){
             dog.moving = true
             dog.framey = 1;
-            dog.x -= 7;
+            dog.x -= 8;
         }else{
             dog.framey = 0;
-            dog.x += 7;
+            dog.x += 8;
         }
 
         if(checkIntersection(player,dog)){
