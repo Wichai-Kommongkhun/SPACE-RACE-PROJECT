@@ -20,7 +20,7 @@ var interact;
 //Create game variables
 var gameLoop;
 var player;
-var stage = 3;
+var stage = 23;
 var locker = [];
 var borders = [];
 var health;
@@ -31,7 +31,7 @@ var ladders = [];
 
 
 const backgroundlayer1 = new Image();
-backgroundlayer1.src = 'https://cdn.discordapp.com/attachments/936169548019826688/977216175064879174/START_1_1.png';
+
 const playerSprite = new Image();
     playerSprite.src = 'img/playersprite.png';
 const healthbar = new Image();
@@ -48,7 +48,7 @@ window.onload = function() {
     //Assign canvas and context varriables
     canvas = document.getElementById("game-canvas");
     ctx = canvas.getContext("2d");
-
+    changRoomBG = document.querySelector("#ChangeBG");
    
 
     //Setup key listeners
@@ -64,7 +64,7 @@ window.onload = function() {
     }
     
     //Start game loop
-    gameLoop = setInterval(step, 60);
+    gameLoop = setInterval(step, 50);
 
 }
 
@@ -100,7 +100,6 @@ function draw(){
     stamina.draw();
 
 }
-
 function setupInputs(){
     document.addEventListener("keydown", function(event){
         if(event.key === "w" || event.key === "ArrowUp") {
@@ -152,11 +151,18 @@ function checkIntersection(r1,r2){
 }
 
 function imageFramePlayer(){
-    if(player.framex < 2 && player.moving) {
-        player.framex++;
+    if(player.moving){
+        if(player.framex < 2) {
+            player.framex++;
+        }
+        else player.framex = 0;
+    }else{
+        if(player.framey == 2 || player.framey == 3){
+            if(player.framex < 5) {
+                player.framex++;
+            }else player.framex = 0;
+        }
     }
-    else player.framex = 0;
-    requestAnimationFrame(imageFramePlayer);
 };
 
 function hpPlayer(){

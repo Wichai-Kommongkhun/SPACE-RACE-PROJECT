@@ -19,7 +19,7 @@ function Ladder(x,y,width,height,type){
     this.type = type;
     
     this.draw = function(){
-        ctx.fillStyle = "green";
+        ctx.fillStyle = "transparent";
         ctx.fillRect(this.x,this.y,this.width,this.height);
     }
 }
