@@ -243,7 +243,7 @@ a {
 }
 
 .sol {
-    padding: 7.5em 7em 6em 7em;
+    padding: 6em 7em 6em 7em;
     vertical-align: middle;
     min-height: 100vh;
     position: relative;
@@ -278,14 +278,14 @@ a {
     color: white;
     position: absolute;
     top: 23%;
-    left: 25%;
+    left: 15%;
     opacity: 1;
     font-family: 'Press Start 2P', cursive;
     width: 70%;
 }
 
 .title {
-    font-size: 100px;
+    font-size: 60px;
     margin: 0% 0 0 0%;
 }
 
@@ -316,8 +316,8 @@ a {
 
 #title-img {
     /* padding-top: 2em; */
-    width: 35%;
-    height: 35%;
+    width: 40%;
+    height: 40%;
     border-radius: 8px;
     margin: 3% 0 0 15%;
 }
@@ -327,7 +327,7 @@ a {
     flex-direction: row;
 }
 .detail-title{
-    font-size: 100px;
+    font-size: 60px;
     color: white;
     padding-left: 2.3em;
     padding-top: 1em;
