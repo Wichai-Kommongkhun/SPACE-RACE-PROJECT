@@ -20,7 +20,7 @@ var interact;
 //Create game variables
 var gameLoop;
 var player;
-var stage = 23;
+var stage = 0;
 var locker = [];
 var borders = [];
 var health;
@@ -28,7 +28,7 @@ var stamina;
 var doors = [];
 var locker = [];
 var ladders = [];
-
+var item = [];
 
 const backgroundlayer1 = new Image();
 
@@ -38,7 +38,8 @@ const healthbar = new Image();
     healthbar.src = 'img/DisplayHPV.1.png';
 const staminabar = new Image();
     staminabar.src = 'img/DisplayStaminaV.1.png';
-
+const blueprint = new Image();
+    blueprint.src = 'img/blueprint.png';
 
 
 
@@ -51,12 +52,12 @@ window.onload = function() {
     changRoomBG = document.querySelector("#ChangeBG");
    
 
-    //Setup key listeners
     setupInputs();
     //Create Player
     player = new Player(640,470);
     health = new Healths(50,50,200,35,0);
     stamina = new Staminas(60,90,200,100,0);
+    item[0] = new Item(630,460,100,100,0);
 
     //Create Borders for each stage
     for(let i = 0; i < 100; i++){
@@ -90,7 +91,6 @@ function draw(){
     changeStage();
     hpPlayer();
     imageFramePlayer();
-    //Draw the border
     for(let i = 0; i<borders.length;i++){ borders[i].draw();}
     for(let i = 0; i<doors.length;i++){doors[i].draw();}
     for(let i = 0; i<locker.length;i++){locker[i].draw();}  
@@ -98,7 +98,7 @@ function draw(){
     player.draw();
     health.draw();
     stamina.draw();
-
+    MovingItem();
 }
 function setupInputs(){
     document.addEventListener("keydown", function(event){
@@ -129,6 +129,7 @@ function setupInputs(){
         }else if(event.key === "s" || event.key === "ArrowDown") {
             downKey = false;
         }else if(event.key === "Shift") {
+            
             sprint = false;
         }else if(event.key === "e") {
             interact = false;

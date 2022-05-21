@@ -10,7 +10,7 @@ function countStage(){
     }
 }
 
-var previous_pos;
+var previous_pos = 620;
 
 function editMap(){
     doors = [];
@@ -55,6 +55,7 @@ function editMap(){
         ChangeRoom();
         collisionLeft();
         collisionRight();
+        item[0].draw();
     }else if(stage === 12){
         doors.push(new Door(30,370,160,250,12.1));
         doors.push(new Door(1090,370,160,250,12.2));
@@ -86,6 +87,7 @@ function editMap(){
         ChangeFloor();
         collisionLeft();
     }else if(stage === 31){
+        collisionRight();
     }else if(stage === 32){
     }else if(stage === 33){
         ladders.push(new Ladder(0,370,160,250,1));
@@ -127,6 +129,8 @@ function changeStage(){
         backgroundlayer1.src = 'img/F3-2.png';
     }else if(stage === 23){
         backgroundlayer1.src = 'img/F3-3.png';
+    }else if(stage === 31){
+        backgroundlayer1.src = 'img/F4-1.png';
     }else if(stage === 32){
         backgroundlayer1.src = 'img/F4-2.png';
     }else if(stage === 33){
