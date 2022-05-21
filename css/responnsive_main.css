@@ -17,7 +17,7 @@
         font-family: 'Press Start 2P', cursive;       
     }
     h1{
-        font-size: 70px;
+        font-size: 120px;
         color: white;
         text-align: center;
         cursor: default;
@@ -33,7 +33,7 @@
         padding: 30px 25px 30px 25px;
         text-decoration: none;
         display: block;
-        font-size: 25px;
+        font-size: 35px;
         font-family: 'Press Start 2P', cursive;  
         margin: 50px auto;
         width: 40%;
@@ -153,7 +153,7 @@
         font-family: 'Press Start 2P', cursive;       
     }
     h1{
-        font-size: 70px;
+        font-size: 80px;
         color: white;
         text-align: center;
         cursor: default;
@@ -169,7 +169,7 @@
         padding: 30px 25px 30px 25px;
         text-decoration: none;
         display: block;
-        font-size: 25px;
+        font-size: 30px;
         font-family: 'Press Start 2P', cursive;  
         margin: 50px auto;
         width: 50%;
