@@ -2,14 +2,21 @@ canvas {
     border: 5px solid black;
     position: relative;
     z-index: 0;
-    animation: ChangeBG 1s linear infinite;
 }
 
-@keyframes ChangeBG{
-    0%{filter: brightness(1)};
-    50%{filter: brightness(0)}
-    100%{filter: brightness(1)};
+#ChangeBG{
+    width:1280px;
+    height:720px;
+    position: absolute;
+    z-index: 1;
+    background:black;
+    opacity: 0;
 }
+@keyframes wipwup{
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+}
+
 
 body{
     margin: 0;

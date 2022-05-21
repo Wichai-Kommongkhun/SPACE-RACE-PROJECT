@@ -20,7 +20,7 @@ var interact;
 //Create game variables
 var gameLoop;
 var player;
-var stage = 1;
+var stage = 23;
 var locker = [];
 var borders = [];
 var health;
@@ -48,7 +48,7 @@ window.onload = function() {
     //Assign canvas and context varriables
     canvas = document.getElementById("game-canvas");
     ctx = canvas.getContext("2d");
-
+    changRoomBG = document.querySelector("#ChangeBG");
    
 
     //Setup key listeners
