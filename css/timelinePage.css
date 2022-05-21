@@ -41,7 +41,7 @@ body {
 p {
     font-weight: 300;
     line-height: 1.5;
-    font-size: 20px;
+    font-size: 18px;
     opacity: 0.8;
 }
 
@@ -281,11 +281,12 @@ a {
     left: 25%;
     opacity: 1;
     font-family: 'Press Start 2P', cursive;
+    width: 70%;
 }
 
 .title {
     font-size: 100px;
-    margin: 0% 0 0 30%;
+    margin: 0% 0 0 0%;
 }
 
 #next-img {
@@ -309,17 +310,16 @@ a {
 .title-detail {
     padding-top: 1.5em;
     text-align: center;
-    width: 60%;
-    margin: 0 0 0 17%;
+    margin: 0 0 0 -0%;
 
 }
 
 #title-img {
     /* padding-top: 2em; */
-    width: 400px;
-    height: 400px;
+    width: 35%;
+    height: 35%;
     border-radius: 8px;
-    margin: 2% 0 0 35%;
+    margin: 3% 0 0 15%;
 }
 
 .title-layout {
