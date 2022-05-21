@@ -34,21 +34,21 @@ body {
 }
 
 .container {
-    max-width: 650px;
+    max-width: 50%;
     margin: 50px auto;
 }
 
 p {
     font-weight: 300;
     line-height: 1.5;
-    font-size: 18px;
+    font-size: 20px;
     opacity: 0.8;
 }
 
 .timeline {
     position: relative;
     padding-left: 4rem;
-    margin: 0 0 0 30px;
+    margin: 0 0 0 -10;
     color: black;
 }
 
@@ -327,7 +327,7 @@ a {
     flex-direction: row;
 }
 .detail-title{
-    font-size: 50px;
+    font-size: 100px;
     color: white;
     padding-left: 2.3em;
     padding-top: 1em;
