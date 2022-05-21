@@ -47,6 +47,12 @@ function Player(x,y) {
                 
             }
 
+            if(this.framey == 0 && rightKey == false){
+                this.framey = 2
+            }else if(this.framey == 1 && leftKey == false){
+                this.framey = 3
+            }
+
             // Stamina regenaretion
             if(sprint == false && this.stamina < 122){
                 this.stamina += 0.5;
