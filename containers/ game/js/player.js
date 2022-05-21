@@ -14,7 +14,6 @@ function Player(x,y) {
     this.stamina = 122;
     this.maxhp = 3;
 
-
     this.step = function() {
         //movement
         if(this.active){
@@ -101,7 +100,6 @@ function Player(x,y) {
             }
             this.x += this.xspeed;
             this.y += this.yspeed;
-           
         }
     }
 

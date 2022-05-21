@@ -21,7 +21,7 @@ var interact;
 var gameLoop;
 var player;
 var dog;
-var stage = 0;
+var stage = 21;
 var locker = [];
 var borders = [];
 var health;
@@ -29,19 +29,23 @@ var stamina;
 var doors = [];
 var locker = [];
 var ladders = [];
-var item = [];
+var item1;
+var item2;
 
 const backgroundlayer1 = new Image();
 
 const playerSprite = new Image();
     playerSprite.src = 'img/playersprite.png';
+const dogSprite = new Image();
+    dogSprite.src = 'img/dogsprite.png';
 const healthbar = new Image();
     healthbar.src = 'img/DisplayHPV.1.png';
 const staminabar = new Image();
     staminabar.src = 'img/DisplayStaminaV.1.png';
 const blueprint = new Image();
     blueprint.src = 'img/blueprint.png';
-
+const blueprint2 = new Image();
+    blueprint2.src = 'img/blueprint2.png';
 
 
 
@@ -56,10 +60,11 @@ window.onload = function() {
     setupInputs();
     //Create Player
     player = new Player(640,470);
-    dog = new dogwalk(700, 470);
+    dog = new Dog(900, 420);
     health = new Healths(50,50,200,35,0);
     stamina = new Staminas(60,90,200,100,0);
-    item[0] = new Item(630,460,100,100,0);
+    item1 = new Item(630,460,100,100,0);
+    item2 = new Item(1160,420,100,100,0);
 
     //Create Borders for each stage
     for(let i = 0; i < 100; i++){
@@ -102,6 +107,9 @@ function draw(){
     health.draw();
     stamina.draw();
     MovingItem();
+    huntPlayer();
+    console.log(stage);
+    
 }
 function setupInputs(){
     document.addEventListener("keydown", function(event){
@@ -156,10 +164,26 @@ function checkIntersection(r1,r2){
 
 function imageFramePlayer(){
     if(player.moving){
-        if(player.framex < 2) {
+        if(player.framex < 5) {
             player.framex++;
         }
-        else player.framex = 0;
+        else {
+            player.framex = 0;
+        }
+    }else{
+        if(player.framey == 2 || player.framey == 3){
+            if(player.framex < 5) {
+                player.framex++;
+            }else player.framex = 0;
+        }
+    }
+    if(dog.moving){
+        if(dog.framex < 5) {
+            dog.framex++;
+        }
+        else {
+            dog.framex = 0;
+        }
     }else{
         if(player.framey == 2 || player.framey == 3){
             if(player.framex < 5) {

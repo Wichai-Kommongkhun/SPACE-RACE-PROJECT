@@ -2,11 +2,11 @@ function countStage(){
     if(player.x < -100){
         stage++;
         player.x = 1280;
-        console.log(stage);
+        dog.x = 1280 + distance;
     }else if (player.x > 1280){
         stage--;
         player.x = -50;
-        console.log(stage);
+        dog.x = 0 - distance;
     }
 }
 
@@ -55,7 +55,7 @@ function editMap(){
         ChangeRoom();
         collisionLeft();
         collisionRight();
-        item[0].draw();
+        item1.draw();
     }else if(stage === 12){
         doors.push(new Door(30,370,160,250,12.1));
         doors.push(new Door(1090,370,160,250,12.2));
@@ -75,13 +75,29 @@ function editMap(){
         ChangeFloor();
         collisionLeft();
     }else if(stage === 21){
-        doors.push(new Door(1070,370,160,250,12.2));
+        doors.push(new Door(1070,370,160,250,21.1));
         collisionRight();
         ChangeRoom();
-    }else if(stage === 22){
-        doors.push(new Door(30,370,160,250,12.1));
-        doors.push(new Door(1090,370,160,250,12.2));
+    }else if(stage === 21.1){
+        doors.push(new Door(440,370,160,250,21));
         ChangeRoom();
+        collisionLeft();
+        collisionRight();
+    }else if(stage === 22){
+        doors.push(new Door(30,370,160,250,22.1));
+        doors.push(new Door(1090,370,160,250,22.2));
+        ChangeRoom();
+    }else if(stage === 22.1){
+        doors.push(new Door(30,370,160,250,22.1));
+        ChangeRoom();
+        collisionRight();
+        collisionLeft();
+    }else if(stage === 22.2){
+        doors.push(new Door(80,370,160,250,22.22));
+        ChangeRoom();
+        collisionRight();
+        collisionLeft();
+        item2.draw2();
     }else if(stage === 23){
         ladders.push(new Ladder(0,370,160,250,1));
         ChangeFloor();
@@ -125,8 +141,14 @@ function changeStage(){
         backgroundlayer1.src = 'img/F2-3.png';
     }else if(stage === 21){
         backgroundlayer1.src = 'img/F3-1.png';
+    }else if(stage === 21.1){
+        backgroundlayer1.src = 'img/3-3.png';
     }else if(stage === 22){
         backgroundlayer1.src = 'img/F3-2.png';
+    }else if(stage === 22.1){
+        backgroundlayer1.src = 'img/3-1.png';
+    }else if(stage === 22.2){
+        backgroundlayer1.src = 'img/3-2.png';
     }else if(stage === 23){
         backgroundlayer1.src = 'img/F3-3.png';
     }else if(stage === 31){
@@ -153,9 +175,11 @@ function ChangeFloor(){
     for(let i = 0; i<ladders.length;i++){
         if(checkIntersection(player,ladders[i])){
             if(upKey && stage < 33){
+                dog.x = 0 - distance
                 player.x = 40;
                 stage += 10;
             }else if(downKey && stage >= 13){
+                dog.x = 0 - distance
                 player.x = 40;
                 stage -= 10;
             }
@@ -168,6 +192,11 @@ function ChangeRoom(){
             if(upKey && stage == Math.floor(stage)){
                 changRoomBG.style.animation = 'wipwup 3s';
                 previous_pos = player.x;
+
+                //หมา
+                dog.x = 1300;
+                dog.active = false;
+
                 if(doors[i].type == 2.1){
                     stage += 0.1;
                     player.x = 90;
@@ -183,6 +212,12 @@ function ChangeRoom(){
                 }else if(doors[i].type == 12.2){
                     stage += 0.2
                     player.x = 120;
+                }else if(doors[i].type == 22.2){
+                    stage += 0.2
+                    player.x = 120;
+                }else if(doors[i].type == 21.1){
+                    stage += 0.1
+                    player.x = 470;
                 }else{
                     stage += 0.1;
                 }
@@ -190,11 +225,18 @@ function ChangeRoom(){
             }else if(downKey && stage != Math.floor(stage)){
                 changRoomBG.style.animation = 'wipwup 3s';
                 player.x = previous_pos;
+
+                //หมา
+                dog.active = true;
+
+
                 if(doors[i].type == 2){
                     stage -= 0.1;
                 }else if(doors[i].type == 2.22){
                     stage -= 0.2;
                 }else if(doors[i].type == 12.22){
+                    stage -= 0.2;
+                }else if(doors[i].type == 22.22){
                     stage -= 0.2;
                 }else{
                     stage -= 0.1;

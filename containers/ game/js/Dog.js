@@ -1,4 +1,6 @@
-function dogwalk(x,y) {
+var distance = 1280;
+
+function Dog(x,y) {
     this.x = x;
     this.y = y;
     this.xspeed = 1;
@@ -7,14 +9,41 @@ function dogwalk(x,y) {
     this.maxSpeed = 10;
     this.framex = 0;
     this.framey = 0;
-    this.width = 100;
-    this.height = 200;
+    this.width = 150;
+    this.height = 250;
     this.active = true;
     this.moving = false;
     this.maxhp = 3;
     
     this.draw = function() {
-        console.log(this.x)
-        drawSprite(playerSprite, player.width , player.height ,this.width, this.height, this.x--, this.y, this.width, this.height);
+        drawSprite(dogSprite, this.width * this.framex, this.height * this.framey,this.width, this.height, this.x, this.y, this.width, this.height);
     } 
 }
+
+
+function huntPlayer(){
+    if(dog.active){
+        distance = Math.abs(player.x - dog.x);
+        if(dog.x > player.x){
+            dog.moving = true
+            dog.framey = 1;
+            dog.x -= 7;
+        }else{
+            dog.framey = 0;
+            dog.x += 7;
+        }
+
+        if(checkIntersection(player,dog)){
+            if(dog.x > player.x){
+                player.x -= 200;
+            }else{
+                player.x += 200;
+            }
+            player.maxhp--;
+        }
+    }
+}
+
+
+
+
