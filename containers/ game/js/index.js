@@ -20,6 +20,7 @@ var interact;
 //Create game variables
 var gameLoop;
 var player;
+var dog;
 var stage = 0;
 var locker = [];
 var borders = [];
@@ -55,6 +56,7 @@ window.onload = function() {
     setupInputs();
     //Create Player
     player = new Player(640,470);
+    dog = new dogwalk(700, 470);
     health = new Healths(50,50,200,35,0);
     stamina = new Staminas(60,90,200,100,0);
     item[0] = new Item(630,460,100,100,0);
@@ -96,6 +98,7 @@ function draw(){
     for(let i = 0; i<locker.length;i++){locker[i].draw();}  
     for(let i = 0; i<ladders.length;i++){ladders[i].draw();}  
     player.draw();
+    dog.draw();
     health.draw();
     stamina.draw();
     MovingItem();

@@ -1,4 +1,4 @@
-function Dogwalk(x,y) {
+function dogwalk(x,y) {
     this.x = x;
     this.y = y;
     this.xspeed = 1;
@@ -13,8 +13,8 @@ function Dogwalk(x,y) {
     this.moving = false;
     this.maxhp = 3;
     
-    this.draw2 = function() {
+    this.draw = function() {
         console.log(this.x)
-        drawSprite(playerSprite, player.width , player.height   , this.width, this.height, this.x, this.y, this.width, this.height);
+        drawSprite(playerSprite, player.width , player.height ,this.width, this.height, this.x--, this.y, this.width, this.height);
     } 
 }
