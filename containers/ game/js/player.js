@@ -53,7 +53,7 @@ function Player(x,y) {
             }
 
            
-           
+           this.yspeed += 5;
 
             //horizontal collision rect
             let horizontalRect = {
