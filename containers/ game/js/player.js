@@ -15,6 +15,9 @@ function Player(x,y) {
     this.maxhp = 3;
 
     this.step = function() {
+        if(paused || player.maxhp == 0){//add
+            return
+        }
         //movement
         if(this.active){
             //Horizontal Movement

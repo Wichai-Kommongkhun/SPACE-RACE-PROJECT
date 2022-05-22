@@ -15,7 +15,7 @@ var downKey;
 var leftKey;
 var sprint; 
 var interact;
-
+var paused = false;
 
 //Create game variables
 var gameLoop;
@@ -46,7 +46,10 @@ const blueprint = new Image();
     blueprint.src = 'img/blueprint.png';
 const blueprint2 = new Image();
     blueprint2.src = 'img/blueprint2.png';
-
+const pause = new Image();
+    pause.src = 'img/p.png';
+const gameover = new Image();
+    gameover.src = 'img/gameover.png'
 
 
 //Runs once page has loaded
@@ -65,7 +68,9 @@ window.onload = function() {
     stamina = new Staminas(60,90,200,100,0);
     item1 = new Item(630,460,100,100,0);
     item2 = new Item(1160,420,100,100,0);
-
+    displayPaused = new Paused(380,150,500,500,0) //add
+    displayGameover = new Gameover(380,150,800,800,0)
+   
     //Create Borders for each stage
     for(let i = 0; i < 100; i++){
         borders.push(new Border(-5000 + 100*i,670,100,100,1));
@@ -106,10 +111,16 @@ function draw(){
     dog.draw();
     health.draw();
     stamina.draw();
+    if(paused){ //add
+        displayPaused.draw();
+    }
+    if(player.maxhp == 0){
+        displayGameover.draw();
+    }
     MovingItem();
     huntPlayer();
     console.log(stage);
-    
+
 }
 function setupInputs(){
     document.addEventListener("keydown", function(event){
@@ -127,6 +138,16 @@ function setupInputs(){
             sprint = true;
         }else if(event.key === "e") {
             interact = true;
+        }else if(event.key === "r" && player.maxhp == 0){
+            this.location.reload();
+        }
+        else if(event.key === "p"){//add
+            if(paused){
+                paused = false
+            }
+            else{
+                paused = true
+            }
         }
     });
     document.addEventListener("keyup", function(event){
@@ -140,7 +161,6 @@ function setupInputs(){
         }else if(event.key === "s" || event.key === "ArrowDown") {
             downKey = false;
         }else if(event.key === "Shift") {
-            
             sprint = false;
         }else if(event.key === "e") {
             interact = false;

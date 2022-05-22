@@ -22,6 +22,9 @@ function Dog(x,y) {
 
 
 function huntPlayer(){
+    if(paused || player.maxhp == 0){//add
+        return
+    }
     if(dog.active){
         distance = Math.abs(player.x - dog.x);
         if(dog.x > player.x){
