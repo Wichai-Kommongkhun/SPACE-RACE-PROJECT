@@ -23,7 +23,7 @@ var paused = false;
 var gameLoop;
 var player;
 var dog;
-var stage = 21.1;
+var stage = 0;
 var locker = [];
 var borders = [];
 var health;
@@ -74,7 +74,7 @@ window.onload = function() {
     setupInputs();
     //Create Player
     player = new Player(640,470);
-    dog = new Dog(900, 420);
+    dog = new Dog(1400, 420);
     health = new Healths(50,50,200,35,0);
     stamina = new Staminas(60,90,200,100,0);
     item1 = new Item(630,460,100,100,0);
@@ -116,6 +116,7 @@ function draw(){
     hpPlayer();
     imageFramePlayer();
     Tiktok();
+    spawnDog();
     for(let i = 0; i<borders.length;i++){ borders[i].draw();}
     for(let i = 0; i<doors.length;i++){doors[i].draw();}
     for(let i = 0; i<locker.length;i++){locker[i].draw();}  
@@ -143,9 +144,7 @@ function draw(){
     }
     MovingItem();
     huntPlayer();
-    console.log(stage);
-    console.log(player.x)
-    console.log(player.active)
+    
     console.log(countTimmer)
 }
 function setupInputs(){

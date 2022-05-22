@@ -1,4 +1,3 @@
-var distance = 1280;
 
 function Dog(x,y) {
     this.x = x;
@@ -14,6 +13,8 @@ function Dog(x,y) {
     this.active = true;
     this.moving = false;
     this.maxhp = 3;
+    this.left = false;
+    this.right = false;
     
     this.draw = function() {
         drawSprite(dogSprite, this.width * this.framex, this.height * this.framey,this.width, this.height, this.x, this.y, this.width, this.height);
@@ -22,18 +23,22 @@ function Dog(x,y) {
 
 
 function huntPlayer(){
+    dog.moving = true
     if(paused || player.maxhp == 0 || showmap){//add
         return
     }
     if(dog.active && player.active){//add player.active
         distance = Math.abs(player.x - dog.x);
         if(dog.x > player.x){
-            dog.moving = true
             dog.framey = 1;
             dog.x -= 4;
+            dog.right = false;
+            dog.left = true;
         }else{
             dog.framey = 0;
             dog.x += 4;
+            dog.right = true;
+            dog.left = false;
         }
 
         if(checkIntersection(player,dog) && player.active){//add player.active
@@ -45,15 +50,35 @@ function huntPlayer(){
             player.maxhp--;
         }
     }
-    else{//add ai
-        if(Math.round(Math.random())){
-            dog.x += Math.floor(Math.random() * 10);
-            dog.framey = 0;
-        }else{
-            dog.x -= Math.floor(Math.random() * 10);
-            dog.framey = 1;
+    else if(player.active == false && dog.active){ 
+        if(dog.left){
+            if(dog.x >= -200){
+                dog.x -= 4
+            }else{
+                dog.left = false
+                dog.active = false;
+            }
+        }else if(dog.right){
+            if(dog.x <= 1480){
+                dog.x += 4
+            }else {
+                dog.right = false;
+                dog.active = false;
+            }
         }
+    }
 
+}
+
+function spawnDog(){
+    if(stage == Math.floor(stage)){
+        dog.active = true;
+        if(stage == 0){
+            dog.active = false;
+
+        }
+    }else{
+        dog.active = false;
     }
 }
 

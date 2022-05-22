@@ -1,5 +1,7 @@
 var timmer = false;
 var countTimmer = 0;
+var distance = 1280;
+
 
 function countStage(){
     if(player.x < -100){
@@ -14,6 +16,7 @@ function countStage(){
 }
 
 var previous_pos = 620;
+var previous_pos_dog = 620;
 
 function editMap(){
     doors = [];
@@ -222,10 +225,11 @@ function ChangeRoom(){
             if(upKey && stage == Math.floor(stage)){
                 changRoomBG.style.animation = 'running';
                 previous_pos = player.x;
+                previous_pos_dog = dog.x;
                 timmer = true;
                 //หมา
                 dog.x = 1500;
-
+                countTimmer++;
                 if(doors[i].type == 2.1){
                     stage += 0.1;
                     player.x = 90;
@@ -254,15 +258,13 @@ function ChangeRoom(){
             }else if(downKey && stage != Math.floor(stage)){
                 changRoomBG.style.animation = 'running';
                 player.x = previous_pos;
-                timmer = false
-                countTimmer = 0;
                 //หมา
-                if(countTimmer >= 200)
-                    dog.x = -100;
-                else{
-                    dog.x = Math.floor((Math.random() * 1400) + 1);
+                if(previous_pos_dog < previous_pos){
+                    dog.x = previous_pos_dog + countTimmer;
+                }else{
+                    dog.x = previous_pos_dog - countTimmer;
                 }
-
+                timmer = false
                 if(doors[i].type == 2){
                     stage -= 0.1;
                 }else if(doors[i].type == 2.22){
@@ -286,13 +288,14 @@ function Hide(){//add funct
         }
         if(checkIntersection(player,locker[i]) && downKey){
             player.active = true
+            dog.active = true;
         }
     }
 }
 
 function Tiktok(){
     if(timmer){
-        countTimmer++;
+        countTimmer += 15;
     }else   
         countTimmer = 0;
     

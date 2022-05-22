@@ -32,7 +32,7 @@ function Locker(x,y,width,height,type){
     this.type = type;
     
     this.draw = function(){
-        ctx.fillStyle = "red";
+        ctx.fillStyle = "transparent";
         ctx.fillRect(this.x,this.y,this.width,this.height);
     }
 }
