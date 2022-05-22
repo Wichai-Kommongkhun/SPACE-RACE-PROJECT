@@ -21,10 +21,13 @@ function editMap(){
     ladders = [];
     if(stage == 0){
         locker.push(new Locker(1070,370,160,250,1));
+        Hide();
         collisionRight();
     }
     else if(stage === 1){
         doors.push(new Door(1065,370,160,250,1));
+        locker.push(new Locker(850,370,160,250,12));
+        Hide();
         ChangeRoom();
     }else if(stage === 1.1){
         doors.push(new Door(1065,370,160,250,1));
@@ -34,6 +37,8 @@ function editMap(){
     }else if(stage === 2){
         doors.push(new Door(30,370,160,250,2.2));
         doors.push(new Door(1090,370,160,250,2.1));
+        locker.push(new Locker(680,370,160,250,2));
+        Hide();
         ChangeRoom();
     }else if(stage === 2.1){
         doors.push(new Door(55,370,160,250,2));
@@ -62,9 +67,14 @@ function editMap(){
     }else if(stage === 12){
         doors.push(new Door(30,370,160,250,12.1));
         doors.push(new Door(1090,370,160,250,12.2));
+        locker.push(new Locker(280,370,160,250,12));
+        locker.push(new Locker(870,370,160,250,12));
+        Hide();
         ChangeRoom();
     }else if(stage === 12.1){
         doors.push(new Door(1060,370,160,250,12));
+        locker.push(new Locker(570,370,160,250,12.1));
+        Hide();
         collisionRight();
         collisionLeft();
         ChangeRoom();
@@ -79,6 +89,11 @@ function editMap(){
         collisionLeft();
     }else if(stage === 21){
         doors.push(new Door(1070,370,160,250,21.1));
+        locker.push(new Locker(624,370,160,250,21)); //add locker
+        locker.push(new Locker(435,370,160,250,21));
+        locker.push(new Locker(246,370,160,250,21));
+        locker.push(new Locker(57,370,160,250,21));
+        Hide()
         collisionRight();
         ChangeRoom();
     }else if(stage === 21.1){
@@ -90,6 +105,10 @@ function editMap(){
     }else if(stage === 22){
         doors.push(new Door(30,370,160,250,22.1));
         doors.push(new Door(1090,370,160,250,22.2));
+        locker.push(new Locker(763,370,160,250,22));
+        locker.push(new Locker(575,370,160,250,22));
+        locker.push(new Locker(386,370,160,250,22));
+        Hide();
         ChangeRoom();
     }else if(stage === 22.1){
         doors.push(new Door(30,370,160,250,22.1));
@@ -104,11 +123,17 @@ function editMap(){
         item2.draw2();
     }else if(stage === 23){
         ladders.push(new Ladder(0,370,160,250,1));
+        locker.push(new Locker(600,370,160,250,23));
+        Hide();
         ChangeFloor();
         collisionLeft();
     }else if(stage === 31){
+        locker.push(new Locker(160,370,160,250,31));
+        Hide();
         collisionRight();
     }else if(stage === 32){
+        locker.push(new Locker(630,370,160,250,32));
+        Hide();
     }else if(stage === 33){
         ladders.push(new Ladder(0,370,160,250,1));
         ChangeFloor();
@@ -191,7 +216,7 @@ function ChangeFloor(){
     }
 }
 function ChangeRoom(){
-    changRoomBG.style.animation = 'wipwup 3s';
+    changRoomBG.style.animation = 'wipwup 4s';
     for(let i = 0; i<doors.length;i++){
         if(checkIntersection(player,doors[i])){
             if(upKey && stage == Math.floor(stage)){
@@ -250,6 +275,17 @@ function ChangeRoom(){
                     stage -= 0.1;
                 }
             }
+        }
+    }
+}
+
+function Hide(){//add funct
+    for(let i = 0; i<locker.length;i++){
+        if(checkIntersection(player,locker[i]) && upKey){
+            player.active = false
+        }
+        if(checkIntersection(player,locker[i]) && downKey){
+            player.active = true
         }
     }
 }

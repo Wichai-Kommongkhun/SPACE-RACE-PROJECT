@@ -33,7 +33,7 @@ function Player(x,y) {
                     this.stamina -= 1;
                 }
                 else{
-                    this.xspeed = 7;
+                    this.xspeed = 70;
                 }
             }else if(leftKey){
                 //เดินซ้าย
@@ -44,7 +44,7 @@ function Player(x,y) {
                     this.stamina -= 1;
                 }
                 else{
-                    this.xspeed = -7;
+                    this.xspeed = -70;
                 }
                 
             }
