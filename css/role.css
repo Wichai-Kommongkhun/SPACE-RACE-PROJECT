@@ -61,6 +61,14 @@ body {
     width: 700px;
     height: auto;
 }
+.role-img-1{
+    padding:1em;
+    display: flex;
+    text-align: center;
+    margin: 0 auto;
+    width: auto;
+    height: 320px;
+}
 .role-img-3{
     padding:1em;
     display: flex;
