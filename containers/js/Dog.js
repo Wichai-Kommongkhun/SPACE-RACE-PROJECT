@@ -24,7 +24,7 @@ function Dog(x,y) {
 
 function huntPlayer(){
     dog.moving = true
-    if(paused || player.maxhp == 0 || showmap){//add
+    if(paused || player.maxhp == 0){//add
         return
     }
     if(dog.active && player.active){//add player.active

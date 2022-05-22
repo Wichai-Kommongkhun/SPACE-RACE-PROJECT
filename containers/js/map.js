@@ -23,21 +23,24 @@ function editMap(){
     locker = [];
     ladders = [];
     if(stage == 0){
-        locker.push(new Locker(1070,370,160,250,1));
+        locker.push(new Locker(1070,370,160,250,0));
         locker.push(new Locker(90,370,160,250,0));
         locker.push(new Locker(800,370,160,250,0));
+        
         if(fullrocket.type){
             fullrocket.draw7()
             fullrocket.y -= 10
-            console.log(fullrocket.y)
         }
         panel.draw()
+        left.draw1();
         Hide();
+        
         collisionRight();
     }
     else if(stage === 1){
         doors.push(new Door(1065,370,160,250,1));
-        locker.push(new Locker(850,370,160,250,12));
+        locker.push(new Locker(850,370,160,250,0));
+        
         Hide();
         ChangeRoom();
     }else if(stage === 1.1){
@@ -51,7 +54,7 @@ function editMap(){
     }else if(stage === 2){
         doors.push(new Door(30,370,160,250,2.2));
         doors.push(new Door(1090,370,160,250,2.1));
-        locker.push(new Locker(680,370,160,250,2));
+        locker.push(new Locker(680,370,160,250,0));
         Hide();
         ChangeRoom();
     }else if(stage === 2.1){
@@ -89,13 +92,13 @@ function editMap(){
     }else if(stage === 12){
         doors.push(new Door(30,370,160,250,12.1));
         doors.push(new Door(1090,370,160,250,12.2));
-        locker.push(new Locker(280,370,160,250,12));
-        locker.push(new Locker(870,370,160,250,12));
+        locker.push(new Locker(280,370,160,250,0));
+        locker.push(new Locker(870,370,160,250,0));
         Hide();
         ChangeRoom();
     }else if(stage === 12.1){
         doors.push(new Door(1060,370,160,250,12));
-        locker.push(new Locker(570,370,160,250,12.1));
+        locker.push(new Locker(570,370,160,250,0));
         if(rocket3.type){
             rocket3.draw6();
         }
@@ -117,10 +120,10 @@ function editMap(){
         collisionLeft();
     }else if(stage === 21){
         doors.push(new Door(1070,370,160,250,21.1));
-        locker.push(new Locker(624,370,160,250,21)); //add locker
-        locker.push(new Locker(435,370,160,250,21));
-        locker.push(new Locker(246,370,160,250,21));
-        locker.push(new Locker(57,370,160,250,21));
+        locker.push(new Locker(624,370,160,250,0)); //add locker
+        locker.push(new Locker(435,370,160,250,0));
+        locker.push(new Locker(246,370,160,250,0));
+        locker.push(new Locker(57,370,160,250,0));
         Hide()
         collisionRight();
         ChangeRoom();
@@ -135,9 +138,9 @@ function editMap(){
     }else if(stage === 22){
         doors.push(new Door(30,370,160,250,22.1));
         doors.push(new Door(1090,370,160,250,22.2));
-        locker.push(new Locker(763,370,160,250,22));
-        locker.push(new Locker(575,370,160,250,22));
-        locker.push(new Locker(386,370,160,250,22));
+        locker.push(new Locker(763,370,160,250,0));
+        locker.push(new Locker(575,370,160,250,0));
+        locker.push(new Locker(386,370,160,250,0));
         Hide();
         ChangeRoom();
     }else if(stage === 22.1){
@@ -158,19 +161,8 @@ function editMap(){
         }
     }else if(stage === 23){
         ladders.push(new Ladder(0,370,160,250,1));
-        locker.push(new Locker(600,370,160,250,23));
+        locker.push(new Locker(600,370,160,250,0));
         Hide();
-        ChangeFloor();
-        collisionLeft();
-    }else if(stage === 31){
-        locker.push(new Locker(160,370,160,250,31));
-        Hide();
-        collisionRight();
-    }else if(stage === 32){
-        locker.push(new Locker(630,370,160,250,32));
-        Hide();
-    }else if(stage === 33){
-        ladders.push(new Ladder(0,370,160,250,1));
         ChangeFloor();
         collisionLeft();
     }
@@ -215,12 +207,6 @@ function changeStage(){
         backgroundlayer1.src = 'img/3-2.png';
     }else if(stage === 23){
         backgroundlayer1.src = 'img/F3-3.png';
-    }else if(stage === 31){
-        backgroundlayer1.src = 'img/F4-1.png';
-    }else if(stage === 32){
-        backgroundlayer1.src = 'img/F4-2.png';
-    }else if(stage === 33){
-        backgroundlayer1.src = 'img/F4-3.png';
     }
 }
 
@@ -238,7 +224,7 @@ function collisionLeft(){
 function ChangeFloor(){
     for(let i = 0; i<ladders.length;i++){
         if(checkIntersection(player,ladders[i])){
-            if(upKey && stage < 33){
+            if(upKey && stage < 23){
                 dog.x = 0 - distance
                 player.x = 40;
                 stage += 10;
@@ -334,3 +320,5 @@ function Tiktok(){
         countTimmer = 0;
     
 }
+
+

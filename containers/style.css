@@ -50,8 +50,8 @@ body{
 .back {
     color:white;
     position: absolute;
-    bottom:5vw;
-    left:9vw;
+    bottom:6vw;
+    left:8vw;
     font-size: 30px;
     cursor:pointer;
     font-family: 'Press Start 2P', cursive;
@@ -65,6 +65,28 @@ body{
 }
 
 .back:active {
+    transform: translateY(-3px);
+}
+
+.skip{
+    color:white;
+    position: absolute;
+    bottom:6vw;
+    right:8vw;
+    font-size: 30px;
+    cursor:pointer;
+    font-family: 'Press Start 2P', cursive;
+    z-index: 100;
+    background-color: black;
+    padding: 0.4em;
+    border-radius: 10px;
+}
+
+.skip:hover {
+    transform: translateY(-5px);
+}
+
+.skip:active {
     transform: translateY(-3px);
 }
 
