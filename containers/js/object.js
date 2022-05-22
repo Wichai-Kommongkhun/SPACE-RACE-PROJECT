@@ -85,6 +85,9 @@ function Rocket(x,y,width,height,type){
     this.draw6 = function(){
         drawSprite(picrocket3, 0, 0, this.width, this.height , this.x, this.y, 100, 100);
     }
+    this.draw7 = function(){
+        drawSprite(picfullrocket, 0, 0, this.width, this.height , this.x, this.y, 425, 425);
+    }
 }
 function Med(x,y,width,height,type){
     this.x = x;
@@ -95,6 +98,18 @@ function Med(x,y,width,height,type){
     this.color = "rgba(0,0,0,0.8)";
     this.draw = function(){
         drawSprite(medi, 0, 0, this.width, this.height , this.x, this.y, 100, 100);
+    }
+}
+function Panel(x,y,width,height,type){
+    this.x = x;
+    this.y = y;
+    this.width = width;
+    this.height = height;
+    this.type = type;
+    
+    this.draw = function(){
+        ctx.fillStyle = "transparent";
+        ctx.fillRect(this.x,this.y,this.width,this.height);
     }
 }
 
@@ -137,6 +152,9 @@ function Used(){
         pick.play();
         player.maxhp++
         med3.type = 0;
+    }
+    if(checkIntersection(player,panel) && interact && stage == 0){
+        fullrocket.type = 1;
     }
 }
 
