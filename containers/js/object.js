@@ -174,7 +174,7 @@ function Used(){
         player.active = false;
     }
     if(fullrocket.y == -500){
-        window.location.href='./containers/game/timelinePage.html'
+        window.location.href='./timelinePage.html'
     }
 }
 
