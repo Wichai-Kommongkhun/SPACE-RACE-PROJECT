@@ -39,7 +39,9 @@ var doors = [];
 var locker = [];
 var ladders = [];
 var item1,item2,item3;
-
+var Esign;
+var leftarrow;
+var rightarrow;
 var panel;
 var fullrocket
 
@@ -84,6 +86,13 @@ const medi = new Image();
     medi.src = 'img/hp.png';
 const map = new Image();
     map.src = 'img/Displaymap.png'
+const interactbar = new Image()
+    interactbar.src = 'img/w.png'
+const leftbar = new Image()
+    leftbar.src = 'img/leftarrow.png'
+const rightbar = new Image()
+    rightbar.src = 'img/rightarrow.png'
+
 
 let QuestBP = document.querySelector("#QBP");
 let QuestPart = document.querySelector("#QPART");
@@ -124,8 +133,9 @@ window.onload = function() {
     med1 = new Med(1030,420,1000,1000,1) // 12.2
     med2 = new Med(510,400,1000,1000,1) //1.1
     med3 = new Med(650,400,1000,1000,1) //22.1
-
     panel = new Panel(370,370,160,250,0);
+    left = new Arrow(30,320,100,100,0);
+    right = new Arrow(1200,320,100,100,0);
     fullrocket = new Rocket(460,150,1000,1000,0);
     //Create Borders for each stage
     for(let i = 0; i < 100; i++){

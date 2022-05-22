@@ -116,6 +116,22 @@ function Panel(x,y,width,height,type){
 }
 
 
+function Arrow(x,y,width,height,type){
+    this.x = x;
+    this.y = y;
+    this.width = width;
+    this.height = height;
+    this.type = type;
+    
+    this.draw1 = function(){
+        drawSprite(leftbar, 0, 0, this.width, this.height , player.x, 320, 100, 100);
+    }
+    this.draw2 = function(){
+        drawSprite(rightbar, 0, 0, this.width, this.height ,1200, 3200, 100, 100);
+    }
+}
+
+
 
 function Used(){
     if(checkIntersection(player,item1) && interact && item1.type && stage == 11.1){
@@ -158,23 +174,23 @@ function Used(){
     }
     if(checkIntersection(player,med1) && interact && med1.type && stage == 12.2 && player.maxhp < 3){
         pick.play();
-        player.maxhp++
+        player.maxhp = 3;
         med1.type = 0;
     }else if(checkIntersection(player,med2) && interact && med2.type && stage == 1.1 && player.maxhp < 3){
         pick.play();
-        player.maxhp++
+        player.maxhp = 3;
         med2.type = 0;
     }else if(checkIntersection(player,med3) && interact && med3.type && stage == 22.1 && player.maxhp < 3){
         pick.play();
-        player.maxhp++
+        player.maxhp = 3;
         med3.type = 0;
     }
-    if(checkIntersection(player,panel) && interact && stage == 0 && fullrocket.type == 0 && allPart == 3){//  
+    if(checkIntersection(player,panel) && interact && stage == 0 && fullrocket.type == 0 ){//  
         fullrocket.type = 1;
         player.active = false;
     }
     if(fullrocket.y == -500){
-        window.location.href='./containers/game/timelinePage.html'
+        window.location.href='./timelinePage.html'
     }
 }
 
@@ -214,6 +230,6 @@ function MovingItem(){
                 up = true;
             }
         }
+    }
         
-        
-}
+
