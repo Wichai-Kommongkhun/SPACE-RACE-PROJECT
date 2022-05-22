@@ -32,6 +32,10 @@ var ladders = [];
 var item1;
 var item2;
 
+
+var showmap = false;
+var havemap = false; 
+
 const backgroundlayer1 = new Image();
 
 const playerSprite = new Image();
@@ -51,6 +55,8 @@ const pause = new Image();
 const gameover = new Image();
     gameover.src = 'img/gameover.png'
 
+const map = new Image();
+    map.src = 'img/Displaymap.png'
 
 //Runs once page has loaded
 window.onload = function() {
@@ -70,7 +76,7 @@ window.onload = function() {
     item2 = new Item(1160,420,100,100,0);
     displayPaused = new Paused(380,150,500,500,0) //add
     displayGameover = new Gameover(380,150,800,800,0)
-   
+    displayMap = new Minimap(200,-100,800,800,0);//add
     //Create Borders for each stage
     for(let i = 0; i < 100; i++){
         borders.push(new Border(-5000 + 100*i,670,100,100,1));
@@ -117,6 +123,9 @@ function draw(){
     if(player.maxhp == 0){
         displayGameover.draw();
     }
+    if(showmap && havemap){// add
+        displayMap.draw()
+    }
     MovingItem();
     huntPlayer();
     console.log(stage);
@@ -147,6 +156,13 @@ function setupInputs(){
             }
             else{
                 paused = true
+            }
+        }else if(event.key === "m"){
+            if(showmap){
+                showmap = false
+            }
+            else{
+                showmap = true
             }
         }
     });
