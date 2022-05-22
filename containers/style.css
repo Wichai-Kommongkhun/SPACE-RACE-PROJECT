@@ -50,8 +50,8 @@ body{
 .back {
     color:white;
     position: absolute;
-    bottom:5vw;
-    left:9vw;
+    bottom:6vw;
+    left:8vw;
     font-size: 30px;
     cursor:pointer;
     font-family: 'Press Start 2P', cursive;
@@ -71,8 +71,8 @@ body{
 .skip{
     color:white;
     position: absolute;
-    bottom:5vw;
-    right:9vw;
+    bottom:6vw;
+    right:8vw;
     font-size: 30px;
     cursor:pointer;
     font-family: 'Press Start 2P', cursive;
