@@ -254,22 +254,47 @@ a {
     border-top: 1px solid #090223;
     padding: 1.5rem ;
     background-color: white;
-
-    font-family: 'Share Tech Mono', monospace;
+    font-family: 'Noto Sans Thai', sans-serif;
 }
 .footer-layout{
-    display: flex;
-    flex-direction: row;
+    /* display: grid;
+    grid-template-columns: 35% 35% 30%; */
+    margin: 3em 10em 3em 10em;
+    text-align: center;
+
 }
 .footer{
-    text-align: center;
-    margin: 3em;
+    margin-bottom: 2em;
 }
-
 .title-footer{
-    font-family: 'Share Tech Mono', monospace;
     display: flex;
     flex-direction: column;
+}
+.img-footer{
+    height: 70px;
+    width: auto;
+    margin: 1em;
+}
+.layout-img-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.copyright-text{
+    font-size: 13px;
+    text-align: center;
+    color:gray;
+    margin-bottom: 2em;
+}
+
+.tea{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.stu{
+    padding: 0 3em 0 3em;
 }
 
 .text-title {
@@ -334,18 +359,3 @@ a {
 
 
 }
-/* .slow {
-  display: inline-block;
-  vertical-align: bottom;
-  max-width: 0.5rem;
-  overflow: hidden;
-  animation: slow 2s ease forwards;
-}
-@keyframes slow {
-    from {
-      max-width: 0.5rem;
-    }
-    to {
-      max-width: 3rem;
-    }
-  } */
