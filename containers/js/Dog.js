@@ -22,29 +22,39 @@ function Dog(x,y) {
 
 
 function huntPlayer(){
-    // if(paused || player.maxhp == 0){//add
-    //     return
-    // }
-    // if(dog.active){
-    //     distance = Math.abs(player.x - dog.x);
-    //     if(dog.x > player.x){
-    //         dog.moving = true
-    //         dog.framey = 1;
-    //         dog.x -= 8;
-    //     }else{
-    //         dog.framey = 0;
-    //         dog.x += 8;
-    //     }
+    if(paused || player.maxhp == 0 || showmap){//add
+        return
+    }
+    if(dog.active && player.active){//add player.active
+        distance = Math.abs(player.x - dog.x);
+        if(dog.x > player.x){
+            dog.moving = true
+            dog.framey = 1;
+            dog.x -= 4;
+        }else{
+            dog.framey = 0;
+            dog.x += 4;
+        }
 
-    //     if(checkIntersection(player,dog)){
-    //         if(dog.x > player.x){
-    //             player.x -= 200;
-    //         }else{
-    //             player.x += 200;
-    //         }
-    //         player.maxhp--;
-    //     }
-    // }
+        if(checkIntersection(player,dog) && player.active){//add player.active
+            if(dog.x > player.x){
+                player.x -= 200;
+            }else{
+                player.x += 200;
+            }
+            player.maxhp--;
+        }
+    }
+    else{//add ai
+        if(Math.round(Math.random())){
+            dog.x += Math.floor(Math.random() * 10);
+            dog.framey = 0;
+        }else{
+            dog.x -= Math.floor(Math.random() * 10);
+            dog.framey = 1;
+        }
+
+    }
 }
 
 

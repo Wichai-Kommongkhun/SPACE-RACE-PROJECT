@@ -119,8 +119,11 @@ function draw(){
     for(let i = 0; i<borders.length;i++){ borders[i].draw();}
     for(let i = 0; i<doors.length;i++){doors[i].draw();}
     for(let i = 0; i<locker.length;i++){locker[i].draw();}  
-    for(let i = 0; i<ladders.length;i++){ladders[i].draw();}  
-    player.draw();
+    for(let i = 0; i<ladders.length;i++){ladders[i].draw();}
+    if(player.active){ // add if
+        player.draw();
+
+    }
     dog.draw();
     health.draw();
     stamina.draw();
@@ -141,7 +144,8 @@ function draw(){
     MovingItem();
     huntPlayer();
     console.log(stage);
-
+    console.log(player.x)
+    console.log(player.active)
     console.log(countTimmer)
 }
 function setupInputs(){
