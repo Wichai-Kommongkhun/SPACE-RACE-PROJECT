@@ -28,6 +28,8 @@ function editMap(){
         locker.push(new Locker(800,370,160,250,0));
         if(fullrocket.type){
             fullrocket.draw7()
+            fullrocket.y -= 10
+            console.log(fullrocket.y)
         }
         panel.draw()
         Hide();

@@ -153,8 +153,12 @@ function Used(){
         player.maxhp++
         med3.type = 0;
     }
-    if(checkIntersection(player,panel) && interact && stage == 0){
+    if(checkIntersection(player,panel) && interact && stage == 0 && fullrocket.type == 0 && allPart == 3){//  
         fullrocket.type = 1;
+        player.active = false;
+    }
+    if(fullrocket.y == -500){
+        window.location.href='./containers/game/timelinePage.html'
     }
 }
 
