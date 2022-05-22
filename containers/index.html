@@ -4,11 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monkey With His Bugs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel = "icon" href = "img/ICON Game.png" type = "image/x-icon">
+    <title>ลิงน้อยกับหมาดุ</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="ChangeBG"></div>
+    <div class="main">
+        <a href="../main.html" class="back" onmouseover="sound()">Back</a>
+    </div>
+    <div id="ChangeBG">
+    </div>
+    <div id="pauseBG"></div>
     <canvas width="1280" height="720" id="game-canvas">
     </canvas>
     <script src="js/index.js"></script>
@@ -17,5 +24,6 @@
     <script src="js/healths.js"></script>
     <script src="js/object.js"></script>
     <script src="js/map.js"></script>
+    <script src="js/display.js"></script>
 </body>
 </html>

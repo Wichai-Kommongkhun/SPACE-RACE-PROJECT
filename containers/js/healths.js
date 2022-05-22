@@ -29,4 +29,3 @@ function Staminas (x,y,width,height,type){
         
 }
 
-  
