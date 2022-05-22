@@ -18,8 +18,8 @@ body{
 .back {
     color:white;
     position: absolute;
-    bottom:4vw;
-    left:7vw;
+    bottom:5vw;
+    left:9vw;
     font-size: 30px;
     cursor:pointer;
     font-family: 'Press Start 2P', cursive;
