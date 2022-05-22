@@ -11,8 +11,21 @@ canvas {
     position: absolute;
     z-index: 1;
     background:black;
+    border-radius: 52px;
     opacity: 0;
 }
+
+#pauseBG{
+    width:500px;
+    height:500px;
+    top:250px;
+    position: absolute;
+    z-index: 2;
+    background: url('img/p.png');
+    display:none;
+}
+
+
 @keyframes wipwup{
     0%{opacity: 1;}
     100%{opacity: 0;}

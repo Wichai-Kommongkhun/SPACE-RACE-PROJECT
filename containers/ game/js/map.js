@@ -1,3 +1,6 @@
+var timmer = false;
+var countTimmer = 0;
+
 function countStage(){
     if(player.x < -100){
         stage++;
@@ -83,6 +86,7 @@ function editMap(){
         ChangeRoom();
         collisionLeft();
         collisionRight();
+        item3.draw3();
     }else if(stage === 22){
         doors.push(new Door(30,370,160,250,22.1));
         doors.push(new Door(1090,370,160,250,22.2));
@@ -187,15 +191,15 @@ function ChangeFloor(){
     }
 }
 function ChangeRoom(){
+    changRoomBG.style.animation = 'wipwup 3s';
     for(let i = 0; i<doors.length;i++){
         if(checkIntersection(player,doors[i])){
             if(upKey && stage == Math.floor(stage)){
-                changRoomBG.style.animation = 'wipwup 3s';
+                changRoomBG.style.animation = 'running';
                 previous_pos = player.x;
-
+                timmer = true;
                 //หมา
-                dog.x = 1300;
-                dog.active = false;
+                dog.x = 1500;
 
                 if(doors[i].type == 2.1){
                     stage += 0.1;
@@ -223,12 +227,16 @@ function ChangeRoom(){
                 }
                 console.log(stage)
             }else if(downKey && stage != Math.floor(stage)){
-                changRoomBG.style.animation = 'wipwup 3s';
+                changRoomBG.style.animation = 'running';
                 player.x = previous_pos;
-
+                timmer = false
+                countTimmer = 0;
                 //หมา
-                dog.active = true;
-
+                if(countTimmer >= 200)
+                    dog.x = -100;
+                else{
+                    dog.x = Math.floor((Math.random() * 1400) + 1);
+                }
 
                 if(doors[i].type == 2){
                     stage -= 0.1;
@@ -241,8 +249,15 @@ function ChangeRoom(){
                 }else{
                     stage -= 0.1;
                 }
-                console.log(stage)
             }
         }
     }
+}
+
+function Tiktok(){
+    if(timmer){
+        countTimmer++;
+    }else   
+        countTimmer = 0;
+    
 }

@@ -2,9 +2,9 @@
 var canvas;
 var ctx;
 
-//audio
+
 // var audioElem = new Audio('https://cdn.discordapp.com/attachments/957761424233463818/976912853028196422/A_Theme_For_Space_8bit_music.mp3');
-// audioElem.volume = 0.05;
+// audioElem.volume = 0.5;
 // audioElem.play();
 
 
@@ -17,11 +17,13 @@ var sprint;
 var interact;
 var paused = false;
 
+
+
 //Create game variables
 var gameLoop;
 var player;
 var dog;
-var stage = 21;
+var stage = 21.1;
 var locker = [];
 var borders = [];
 var health;
@@ -29,8 +31,8 @@ var stamina;
 var doors = [];
 var locker = [];
 var ladders = [];
-var item1;
-var item2;
+var item1,item2,item3;
+
 
 
 var showmap = false;
@@ -47,9 +49,11 @@ const healthbar = new Image();
 const staminabar = new Image();
     staminabar.src = 'img/DisplayStaminaV.1.png';
 const blueprint = new Image();
-    blueprint.src = 'img/blueprint.png';
+    blueprint.src = 'img/blueprint1.png';
 const blueprint2 = new Image();
     blueprint2.src = 'img/blueprint2.png';
+const blueprint3 = new Image();
+    blueprint3.src = 'img/blueprint3.png';
 const pause = new Image();
     pause.src = 'img/p.png';
 const gameover = new Image();
@@ -58,13 +62,14 @@ const gameover = new Image();
 const map = new Image();
     map.src = 'img/Displaymap.png'
 
+
 //Runs once page has loaded
 window.onload = function() {
     //Assign canvas and context varriables
     canvas = document.getElementById("game-canvas");
     ctx = canvas.getContext("2d");
     changRoomBG = document.querySelector("#ChangeBG");
-   
+    pauseBG = document.querySelector("#pauseBG")
 
     setupInputs();
     //Create Player
@@ -74,6 +79,7 @@ window.onload = function() {
     stamina = new Staminas(60,90,200,100,0);
     item1 = new Item(630,460,100,100,0);
     item2 = new Item(1160,420,100,100,0);
+    item3 = new Item(0,440,100,100,0);
     displayPaused = new Paused(380,150,500,500,0) //add
     displayGameover = new Gameover(380,150,800,800,0)
     displayMap = new Minimap(200,-100,800,800,0);//add
@@ -109,6 +115,7 @@ function draw(){
     changeStage();
     hpPlayer();
     imageFramePlayer();
+    Tiktok();
     for(let i = 0; i<borders.length;i++){ borders[i].draw();}
     for(let i = 0; i<doors.length;i++){doors[i].draw();}
     for(let i = 0; i<locker.length;i++){locker[i].draw();}  
@@ -117,11 +124,16 @@ function draw(){
     dog.draw();
     health.draw();
     stamina.draw();
+    MovingItem();
+    huntPlayer();
     if(paused){ //add
-        displayPaused.draw();
+        player.moving = false;
+        dog.moving = false;
     }
     if(player.maxhp == 0){
         displayGameover.draw();
+        player.moving = false;
+        dog.moving = false;
     }
     if(showmap && havemap){// add
         displayMap.draw()
@@ -130,6 +142,7 @@ function draw(){
     huntPlayer();
     console.log(stage);
 
+    console.log(countTimmer)
 }
 function setupInputs(){
     document.addEventListener("keydown", function(event){
@@ -152,9 +165,13 @@ function setupInputs(){
         }
         else if(event.key === "p"){//add
             if(paused){
+                pauseBG.style.display = 'none';
+                canvas.style.filter = 'brightness(1)';
                 paused = false
             }
             else{
+                pauseBG.style.display = 'grid';
+                canvas.style.filter = 'brightness(0.2)';
                 paused = true
             }
         }else if(event.key === "m"){
@@ -199,7 +216,7 @@ function checkIntersection(r1,r2){
 }
 
 function imageFramePlayer(){
-    if(player.moving){
+    if(leftKey || rightKey){
         if(player.framex < 5) {
             player.framex++;
         }
@@ -226,6 +243,9 @@ function imageFramePlayer(){
                 player.framex++;
             }else player.framex = 0;
         }
+    }
+    if(paused || player.maxhp == 0){//add
+        player.framex = 0;
     }
 };
 
