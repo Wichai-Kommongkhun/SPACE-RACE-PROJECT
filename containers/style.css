@@ -5,6 +5,37 @@ canvas {
     z-index: 0;
 }
 
+body{
+    background-image: url("../static/gameBg.png");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Press Start 2P', cursive;       
+}
+
+.back {
+    color:white;
+    position: absolute;
+    top:2vw;
+    left:2vw;
+    font-size: 30px;
+    cursor:pointer;
+    font-family: 'Press Start 2P', cursive;
+}
+.back:hover {
+    transform: translateY(-5px);
+}
+
+.back:active {
+    transform: translateY(-3px);
+}
+
+.main {
+    padding-bottom: 3em;
+}
+
 #ChangeBG{
     width:1280px;
     height:720px;
