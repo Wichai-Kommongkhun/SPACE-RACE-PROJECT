@@ -1,7 +1,13 @@
+.canvas-warp{
+    position: relative;
+    width:1280px;
+    height:720px;
+}
+
 canvas {
     border: 5px solid black;
     border-radius: 50px;
-    position: relative;
+    position: absolute;
     z-index: 0;
 }
 
@@ -13,6 +19,23 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Press Start 2P', cursive;       
+}
+
+#quest{
+    position: absolute;
+    background: rgb(0,0,0,0.7);
+    border-radius: 10px;
+    z-index: 99;
+    width:400px;
+    height:150px;
+    right: 2vw;
+    top:2vw;
+}
+
+#quest h1{
+    color:white;
+    margin-left:10px;
+    font-size:20px;
 }
 
 .back {

@@ -107,9 +107,9 @@ window.onload = function() {
     displayPaused = new Paused(380,150,500,500,0) //add
     displayGameover = new Gameover(380,150,800,800,0)
     displayMap = new Minimap(200,-100,800,800,0);//add
-    rocket1 = new Rocket(1050,350,1000,1000,1);
-    rocket2 = new Rocket(900,350,1000,1000,1);
-    rocket3 = new Rocket(100,350,1000,1000,1);
+    rocket1 = new Rocket(1050,350,1000,1000,0);
+    rocket2 = new Rocket(900,350,1000,1000,0);
+    rocket3 = new Rocket(100,350,1000,1000,0);
     med1 = new Med(1030,420,1000,1000,1) // 12.2
     med2 = new Med(510,400,1000,1000,1) //1.1
     med3 = new Med(650,400,1000,1000,1) //22.1
@@ -331,3 +331,13 @@ function Soundplay(){
     }
 }
 
+function Questionbar(x,y,width,height){
+    this.draw = function(){
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
+        ctx.fillStyle = "black";
+        ctx.fillRect(this.x,this.y,this.width,this.height);
+    }
+}

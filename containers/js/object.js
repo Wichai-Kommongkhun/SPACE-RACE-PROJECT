@@ -1,3 +1,5 @@
+var countBlueprint = 0;
+
 function Door(x,y,width,height,type){
     this.x = x;
     this.y = y;
@@ -111,6 +113,12 @@ function Used(){
         pick.play();
         allBlueprint++;
         item3.type = 0;
+    }
+    if(allBlueprint >= 3 && countBlueprint == 0){
+        rocket1.type = 1;
+        rocket2.type = 1;
+        rocket3.type = 1;
+        countBlueprint = 1;
     }
     if(checkIntersection(player,rocket1) && interact && rocket1.type && stage == 2.2){
         pick.play();
