@@ -80,10 +80,10 @@ function Rocket(x,y,width,height,type){
         drawSprite(picrocket1, 0, 0, this.width, this.height , this.x, this.y, 200, 200);
     }
     this.draw5 = function(){
-        drawSprite(picrocket2, 0, 0, this.width, this.height , this.x, this.y, 200, 200);
+        drawSprite(picrocket2, 0, 0, this.width, this.height , this.x, this.y, 100, 100);
     }
     this.draw6 = function(){
-        drawSprite(picrocket3, 0, 0, this.width, this.height , this.x, this.y, 200, 200);
+        drawSprite(picrocket3, 0, 0, this.width, this.height , this.x, this.y, 100, 100);
     }
 }
 function Med(x,y,width,height,type){

@@ -18,11 +18,15 @@ body{
 .back {
     color:white;
     position: absolute;
-    top:2vw;
-    left:2vw;
+    bottom:5vw;
+    left:9vw;
     font-size: 30px;
     cursor:pointer;
     font-family: 'Press Start 2P', cursive;
+    z-index: 100;
+    background-color: black;
+    padding: 0.4em;
+    border-radius: 10px;
 }
 .back:hover {
     transform: translateY(-5px);
