@@ -28,7 +28,7 @@ var paused = false;
 var gameLoop;
 var player;
 var dog;
-var stage = 11.1;
+var stage = 0;
 var locker = [];
 var borders = [];
 var health;
@@ -159,6 +159,7 @@ function draw(){
     stamina.draw();
     MovingItem();
     huntPlayer();
+    Used()
     if(paused){ //add
         player.moving = false;
         dog.moving = false;
