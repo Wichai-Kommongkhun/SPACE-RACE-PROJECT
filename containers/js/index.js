@@ -43,8 +43,8 @@ var item1,item2,item3;
 var panel;
 var fullrocket
 
-var allBlueprint = 0
-var allPart = 0
+var allBlueprint = 0;
+var allPart = 0;
 
 
 var showmap = false;
@@ -84,6 +84,14 @@ const medi = new Image();
     medi.src = 'img/hp.png';
 const map = new Image();
     map.src = 'img/Displaymap.png'
+
+let QuestBP = document.querySelector("#QBP");
+let QuestPart = document.querySelector("#QPART");
+
+
+let plusTask = (value,number) => {
+    value.innerHTML = number;
+}
 
 
 
@@ -347,3 +355,6 @@ function Questionbar(x,y,width,height){
         ctx.fillRect(this.x,this.y,this.width,this.height);
     }
 }
+
+
+

@@ -26,10 +26,13 @@ body{
     background: rgb(0,0,0,0.7);
     border-radius: 10px;
     z-index: 99;
-    width:400px;
+    width:280px;
     height:150px;
     right: 2vw;
     top:2vw;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
 }
 
 #quest h1{
@@ -37,6 +40,12 @@ body{
     margin-left:10px;
     font-size:20px;
 }
+
+#quest p{
+    color:white;
+    font-size:15px;
+}
+
 
 .back {
     color:white;
