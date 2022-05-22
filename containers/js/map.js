@@ -24,6 +24,8 @@ function editMap(){
     ladders = [];
     if(stage == 0){
         locker.push(new Locker(1070,370,160,250,1));
+        locker.push(new Locker(90,370,160,250,0));
+        locker.push(new Locker(800,370,160,250,0));
         Hide();
         collisionRight();
     }
@@ -34,6 +36,9 @@ function editMap(){
         ChangeRoom();
     }else if(stage === 1.1){
         doors.push(new Door(1065,370,160,250,1));
+        if(med2.type){
+            med2.draw();
+        }
         collisionRight();
         collisionLeft();
         ChangeRoom();
@@ -45,11 +50,17 @@ function editMap(){
         ChangeRoom();
     }else if(stage === 2.1){
         doors.push(new Door(55,370,160,250,2));
+        if(rocket2.type){
+            rocket2.draw5();
+        }
         collisionRight();
         collisionLeft();
         ChangeRoom();
     }else if(stage === 2.2){
         doors.push(new Door(65,370,160,250,2.22));
+        if(rocket1.type){
+            rocket1.draw4();
+        }
         collisionRight();
         collisionLeft();
         ChangeRoom();
@@ -63,6 +74,9 @@ function editMap(){
         collisionRight();
     }else if(stage === 11.1){
         doors.push(new Door(50,370,160,250,11));
+        if(item1.type){
+            item1.draw1();
+        }
         ChangeRoom();
         collisionLeft();
         collisionRight();
@@ -77,12 +91,18 @@ function editMap(){
     }else if(stage === 12.1){
         doors.push(new Door(1060,370,160,250,12));
         locker.push(new Locker(570,370,160,250,12.1));
+        if(rocket3.type){
+            rocket3.draw6();
+        }
         Hide();
         collisionRight();
         collisionLeft();
         ChangeRoom();
     }else if(stage === 12.2){
         doors.push(new Door(90,370,160,250,12.22));
+        if(med1.type){
+            med1.draw();
+        }
         collisionRight();
         collisionLeft();
         ChangeRoom();
@@ -101,6 +121,9 @@ function editMap(){
         ChangeRoom();
     }else if(stage === 21.1){
         doors.push(new Door(440,370,160,250,21));
+        if(item3.type){
+            item3.draw3();
+        }
         ChangeRoom();
         collisionLeft();
         collisionRight();
@@ -115,11 +138,17 @@ function editMap(){
         ChangeRoom();
     }else if(stage === 22.1){
         doors.push(new Door(30,370,160,250,22.1));
+        if(med3.type){
+            med3.draw();
+        }
         ChangeRoom();
         collisionRight();
         collisionLeft();
     }else if(stage === 22.2){
         doors.push(new Door(80,370,160,250,22.22));
+        if(item2.type){
+            item2.draw2();
+        }
         ChangeRoom();
         collisionRight();
         collisionLeft();
@@ -222,6 +251,8 @@ function ChangeRoom(){
     changRoomBG.style.animation = 'wipwup 4s';
     for(let i = 0; i<doors.length;i++){
         if(checkIntersection(player,doors[i])){
+            doors[i].framex = 1;
+
             if(upKey && stage == Math.floor(stage)){
                 changRoomBG.style.animation = 'running';
                 previous_pos = player.x;
@@ -254,7 +285,6 @@ function ChangeRoom(){
                 }else{
                     stage += 0.1;
                 }
-                console.log(stage)
             }else if(downKey && stage != Math.floor(stage)){
                 changRoomBG.style.animation = 'running';
                 player.x = previous_pos;
@@ -276,6 +306,7 @@ function ChangeRoom(){
                 }else{
                     stage -= 0.1;
                 }
+                
             }
         }
     }
@@ -295,7 +326,7 @@ function Hide(){//add funct
 
 function Tiktok(){
     if(timmer){
-        countTimmer += 15;
+        countTimmer += 30;
     }else   
         countTimmer = 0;
     
