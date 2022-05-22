@@ -1,3 +1,5 @@
+var countBlueprint = 0;
+
 function Door(x,y,width,height,type){
     this.x = x;
     this.y = y;
@@ -85,6 +87,9 @@ function Rocket(x,y,width,height,type){
     this.draw6 = function(){
         drawSprite(picrocket3, 0, 0, this.width, this.height , this.x, this.y, 100, 100);
     }
+    this.draw7 = function(){
+        drawSprite(picfullrocket, 0, 0, this.width, this.height , this.x, this.y, 425, 425);
+    }
 }
 function Med(x,y,width,height,type){
     this.x = x;
@@ -97,37 +102,79 @@ function Med(x,y,width,height,type){
         drawSprite(medi, 0, 0, this.width, this.height , this.x, this.y, 100, 100);
     }
 }
+function Panel(x,y,width,height,type){
+    this.x = x;
+    this.y = y;
+    this.width = width;
+    this.height = height;
+    this.type = type;
+    
+    this.draw = function(){
+        ctx.fillStyle = "transparent";
+        ctx.fillRect(this.x,this.y,this.width,this.height);
+    }
+}
+
+
 
 function Used(){
     if(checkIntersection(player,item1) && interact && item1.type && stage == 11.1){
+        pick.play();
         allBlueprint++;
         item1.type = 0;
+        plusTask(QuestBP, allBlueprint);
     }else if(checkIntersection(player,item2) && interact && item2.type && stage == 22.2){
+        pick.play();
         allBlueprint++;
         item2.type = 0;
+        plusTask(QuestBP, allBlueprint);
     }else if(checkIntersection(player,item3) && interact && item3.type && stage == 21.1){
+        pick.play();
         allBlueprint++;
         item3.type = 0;
+        plusTask(QuestBP, allBlueprint);
+    }
+    if(allBlueprint >= 3 && countBlueprint == 0){
+        rocket1.type = 1;
+        rocket2.type = 1;
+        rocket3.type = 1;
+        countBlueprint = 1;
     }
     if(checkIntersection(player,rocket1) && interact && rocket1.type && stage == 2.2){
+        pick.play();
         allPart++;
         rocket1.type = 0;
+        plusTask(QuestPart, allPart);
     }else if(checkIntersection(player,rocket2) && interact && rocket2.type && stage == 2.1){
+        pick.play();
         allPart++;
         rocket2.type = 0;
+        plusTask(QuestPart, allPart);
     }else if(checkIntersection(player,rocket3) && interact && rocket3.type && stage == 12.1){
+        pick.play();
         allPart++;
         rocket3.type = 0;
+        plusTask(QuestPart, allPart);
     }
     if(checkIntersection(player,med1) && interact && med1.type && stage == 12.2 && player.maxhp < 3){
+        pick.play();
         player.maxhp++
         med1.type = 0;
     }else if(checkIntersection(player,med2) && interact && med2.type && stage == 1.1 && player.maxhp < 3){
+        pick.play();
         player.maxhp++
         med2.type = 0;
     }else if(checkIntersection(player,med3) && interact && med3.type && stage == 22.1 && player.maxhp < 3){
+        pick.play();
         player.maxhp++
         med3.type = 0;
+    }
+    if(checkIntersection(player,panel) && interact && stage == 0 && fullrocket.type == 0 && allPart == 3){//  
+        fullrocket.type = 1;
+        player.active = false;
+    }
+    if(fullrocket.y == -500){
+        window.location.href='./timelinePage.html'
     }
 }
 

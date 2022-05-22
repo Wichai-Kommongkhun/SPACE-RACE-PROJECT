@@ -29,22 +29,22 @@ function Player(x,y) {
                 this.framey = 0;
                 //วิ่ง
                 if(sprint && this.stamina > 0){
-                    this.xspeed = 10;
+                    this.xspeed = 12;
                     this.stamina -= 1;
                 }
                 else{
-                    this.xspeed = 7;
+                    this.xspeed = 99;
                 }
             }else if(leftKey){
                 //เดินซ้าย
                 this.framey = 1;
                 //วิ่ง
                 if(sprint && this.stamina > 0){
-                    this.xspeed = -10;
+                    this.xspeed = -12;
                     this.stamina -= 1;
                 }
                 else{
-                    this.xspeed = -7;
+                    this.xspeed = -99;
                 }
                 
             }
