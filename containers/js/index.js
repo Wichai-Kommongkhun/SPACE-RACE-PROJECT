@@ -28,7 +28,7 @@ var paused = false;
 var gameLoop;
 var player;
 var dog;
-var stage = 0;
+var stage = 11.1;
 var locker = [];
 var borders = [];
 var health;
@@ -65,7 +65,6 @@ const pause = new Image();
     pause.src = 'img/p.png';
 const gameover = new Image();
     gameover.src = 'img/gameover.png';
-
 const doorpicture = new Image();
     doorpicture.src = 'img/door.png';
 const picrocket1 = new Image();
@@ -76,10 +75,8 @@ const picrocket3 = new Image();
     picrocket3.src = 'img/rocket3.png';
 const picfullrocket = new Image();
     picfullrocket.src = 'img/rocketstart.png';
-
 const medi = new Image();
     medi.src = 'img/hp.png';
-
 const map = new Image();
     map.src = 'img/Displaymap.png'
 
@@ -102,9 +99,9 @@ window.onload = function() {
     dog = new Dog(1400, 420);
     health = new Healths(50,50,200,35,0);
     stamina = new Staminas(60,90,200,100,0);
-    item1 = new Item(630,460,100,100,0);
-    item2 = new Item(1160,420,100,100,0);
-    item3 = new Item(0,440,100,100,0);
+    item1 = new Item(630,460,100,100,1);
+    item2 = new Item(1160,420,100,100,1);
+    item3 = new Item(0,440,100,100,1);
     displayPaused = new Paused(380,150,500,500,0) //add
     displayGameover = new Gameover(380,150,800,800,0)
     displayMap = new Minimap(200,-100,800,800,0);//add

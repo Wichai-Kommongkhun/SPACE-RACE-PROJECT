@@ -74,13 +74,12 @@ function editMap(){
         collisionRight();
     }else if(stage === 11.1){
         doors.push(new Door(50,370,160,250,11));
-        if(item1.type){
-            item1.draw1();
-        }
         ChangeRoom();
         collisionLeft();
         collisionRight();
-        item1.draw();
+        if(item1.type){
+            item1.draw1();
+        }
     }else if(stage === 12){
         doors.push(new Door(30,370,160,250,12.1));
         doors.push(new Door(1090,370,160,250,12.2));
@@ -121,13 +120,12 @@ function editMap(){
         ChangeRoom();
     }else if(stage === 21.1){
         doors.push(new Door(440,370,160,250,21));
-        if(item3.type){
-            item3.draw3();
-        }
         ChangeRoom();
         collisionLeft();
         collisionRight();
-        item3.draw3();
+        if(item3.type){
+            item3.draw3();
+        }
     }else if(stage === 22){
         doors.push(new Door(30,370,160,250,22.1));
         doors.push(new Door(1090,370,160,250,22.2));
@@ -146,13 +144,12 @@ function editMap(){
         collisionLeft();
     }else if(stage === 22.2){
         doors.push(new Door(80,370,160,250,22.22));
-        if(item2.type){
-            item2.draw2();
-        }
         ChangeRoom();
         collisionRight();
         collisionLeft();
-        item2.draw2();
+        if(item2.type){
+            item2.draw2();
+        }
     }else if(stage === 23){
         ladders.push(new Ladder(0,370,160,250,1));
         locker.push(new Locker(600,370,160,250,23));

@@ -12,7 +12,7 @@ function Player(x,y) {
     this.active = true;
     this.moving = false;
     this.stamina = 122;
-    this.maxhp = 3;
+    this.maxhp = 99999;
 
     this.step = function() {
         if(paused || player.maxhp == 0){//add
@@ -33,7 +33,7 @@ function Player(x,y) {
                     this.stamina -= 1;
                 }
                 else{
-                    this.xspeed = 7;
+                    this.xspeed = 99;
                 }
             }else if(leftKey){
                 //เดินซ้าย
@@ -44,7 +44,7 @@ function Player(x,y) {
                     this.stamina -= 1;
                 }
                 else{
-                    this.xspeed = -7;
+                    this.xspeed = -99;
                 }
                 
             }
