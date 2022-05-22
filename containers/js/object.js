@@ -100,32 +100,41 @@ function Med(x,y,width,height,type){
 
 function Used(){
     if(checkIntersection(player,item1) && interact && item1.type && stage == 11.1){
+        pick.play();
         allBlueprint++;
         item1.type = 0;
     }else if(checkIntersection(player,item2) && interact && item2.type && stage == 22.2){
+        pick.play();
         allBlueprint++;
         item2.type = 0;
     }else if(checkIntersection(player,item3) && interact && item3.type && stage == 21.1){
+        pick.play();
         allBlueprint++;
         item3.type = 0;
     }
     if(checkIntersection(player,rocket1) && interact && rocket1.type && stage == 2.2){
+        pick.play();
         allPart++;
         rocket1.type = 0;
     }else if(checkIntersection(player,rocket2) && interact && rocket2.type && stage == 2.1){
+        pick.play();
         allPart++;
         rocket2.type = 0;
     }else if(checkIntersection(player,rocket3) && interact && rocket3.type && stage == 12.1){
+        pick.play();
         allPart++;
         rocket3.type = 0;
     }
     if(checkIntersection(player,med1) && interact && med1.type && stage == 12.2 && player.maxhp < 3){
+        pick.play();
         player.maxhp++
         med1.type = 0;
     }else if(checkIntersection(player,med2) && interact && med2.type && stage == 1.1 && player.maxhp < 3){
+        pick.play();
         player.maxhp++
         med2.type = 0;
     }else if(checkIntersection(player,med3) && interact && med3.type && stage == 22.1 && player.maxhp < 3){
+        pick.play();
         player.maxhp++
         med3.type = 0;
     }
