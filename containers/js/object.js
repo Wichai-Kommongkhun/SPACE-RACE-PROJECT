@@ -185,7 +185,7 @@ function Used(){
         player.maxhp = 3;
         med3.type = 0;
     }
-    if(checkIntersection(player,panel) && interact && stage == 0 && fullrocket.type == 0 ){//  
+    if(checkIntersection(player,panel) && interact && stage == 0 && fullrocket.type == 0 && allPart >= 3){//  
         fullrocket.type = 1;
         player.active = false;
     }
