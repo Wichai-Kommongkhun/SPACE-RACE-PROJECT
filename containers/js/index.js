@@ -40,6 +40,9 @@ var locker = [];
 var ladders = [];
 var item1,item2,item3;
 
+var panel;
+var fullrocket
+
 var allBlueprint = 0
 var allPart = 0
 
@@ -76,7 +79,7 @@ const picrocket2 = new Image();
 const picrocket3 = new Image();
     picrocket3.src = 'img/rocket3.png';
 const picfullrocket = new Image();
-    picfullrocket.src = 'img/rocketstart.png';
+    picfullrocket.src = 'img/rockstart.png';
 const medi = new Image();
     medi.src = 'img/hp.png';
 const map = new Image();
@@ -113,6 +116,9 @@ window.onload = function() {
     med1 = new Med(1030,420,1000,1000,1) // 12.2
     med2 = new Med(510,400,1000,1000,1) //1.1
     med3 = new Med(650,400,1000,1000,1) //22.1
+
+    panel = new Panel(370,370,160,250,0);
+    fullrocket = new Rocket(460,150,1000,1000,0);
     //Create Borders for each stage
     for(let i = 0; i < 100; i++){
         borders.push(new Border(-5000 + 100*i,670,100,100,1));
