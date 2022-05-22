@@ -191,7 +191,7 @@ function ChangeFloor(){
     }
 }
 function ChangeRoom(){
-    changRoomBG.style.animation = 'wipwup 4s';
+    changRoomBG.style.animation = 'wipwup 3s';
     for(let i = 0; i<doors.length;i++){
         if(checkIntersection(player,doors[i])){
             if(upKey && stage == Math.floor(stage)){

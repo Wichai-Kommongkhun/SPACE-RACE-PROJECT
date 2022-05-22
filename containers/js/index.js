@@ -36,7 +36,7 @@ var item1,item2,item3;
 
 
 var showmap = false;
-var havemap = false; 
+var havemap = true; 
 
 const backgroundlayer1 = new Image();
 
