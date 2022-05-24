@@ -100,7 +100,6 @@ const leftbar = new Image()
     leftbar.src = 'img/leftarrow.png'
 const rightbar = new Image()
     rightbar.src = 'img/rightarrow.png'
-
 const down = new Image();
     down.src = 'img/downarrow.png'
 
@@ -115,7 +114,7 @@ let plusTask = (value,number) => {
         changeTask(Namequest, "-Blueprints: ")
     }else if(allBlueprint <= 3 && allPart < 3){
         numbermission.innerHTML = "Missions 2/2";
-        changeTask(Namequest, "-Parts: ")
+        changeTask(Namequest, "-Rocket Parts: ")
         value.innerHTML = allPart + "/3";
 
     }else{
@@ -227,6 +226,7 @@ function draw(){
     Soundplay();
     huntPlayer();
 }
+
 function setupInputs(){
     document.addEventListener("keydown", function(event){
         if(event.key === "w" || event.key === "ArrowUp" || event.key === "W") {
@@ -343,6 +343,7 @@ function hpPlayer(){
         health.framey = 3;
     }
 }
+
 function Soundplay(){
     if((leftKey || rightKey) && player.active){
         footStep.play();
