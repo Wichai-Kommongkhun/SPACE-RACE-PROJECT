@@ -249,12 +249,12 @@ function ChangeFloor(){
             if(upKey && stage < 23){
                 dog.x = 0 - distance;
                 player.x = previous_pos;
-                player.y -= 40;
+                player.y -= 70;
                 stage += 10;
             }else if(downKey && stage >= 13){
                 dog.x = 0 - distance
                 player.x = previous_pos;
-                player.y -= 40;
+                player.y -= 70;
                 stage -= 10;
             }
         }
