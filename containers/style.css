@@ -62,13 +62,8 @@ body{
 .back {
     color:white;
     position: absolute;
-    bottom:6vw;
-    left:6vw;
-<<<<<<< Updated upstream
-    font-size: 1.5vw;
-=======
-   
->>>>>>> Stashed changes
+    bottom:3em;
+    left:6.5em;
     cursor:pointer;
     font-family: 'Press Start 2P', cursive;
     z-index: 100;
@@ -87,12 +82,8 @@ body{
 .skip{
     color:white;
     position: absolute;
-    bottom:6vw;
-    right:5vw;
-<<<<<<< Updated upstream
-    font-size: 1.5vw;
-=======
->>>>>>> Stashed changes
+    bottom:3em;
+    right:6.5vw;
     cursor:pointer;
     font-family: 'Press Start 2P', cursive;
     z-index: 100;
