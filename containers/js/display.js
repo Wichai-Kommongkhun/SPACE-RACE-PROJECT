@@ -58,6 +58,8 @@ function display(){
         controll.style.background = "url('img/tip2.png')"
         pic++
     }else{
+        openingsong.currentTime = 0;
+        openingsong.pause();
         quest.style.display = 'flex'
         controll.style.display = 'none';
         player.active = true
