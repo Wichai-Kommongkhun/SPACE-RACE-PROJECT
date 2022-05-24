@@ -24,14 +24,14 @@ function Player(x,y) {
             //Horizontal Movement
             if(rightKey){
                 this.framey = 0;
-                this.xspeed = 99;
+                this.xspeed = 9;
                 if(sprint && this.stamina > 0){
                     this.xspeed = 12;
                     this.stamina -= 1;
                 }
             }else if(leftKey){
                 this.framey = 1;
-                this.xspeed = -99;
+                this.xspeed = -9;
                 if(sprint && this.stamina > 0){
                     this.xspeed = -12;
                     this.stamina -= 1;

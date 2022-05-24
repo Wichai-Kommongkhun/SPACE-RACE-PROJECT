@@ -357,17 +357,7 @@ function Soundplay(){
     }else{
         huntSound.pause();
         huntSound.currentTime = 0;
-    }
-    for(let i = 0; i<doors.length;i++){
-        if(checkIntersection(player,doors[i])){
-            if(upKey && stage != Math.floor(stage)){
-                dooropens.play();
-            }else if(downKey && stage == Math.floor(stage)){
-                dooropens.play();
-            }
-        }
-    }
-    
+    } 
     if(player.maxhp == 0 || paused){
         footStep.pause();
         huntSound.pause();

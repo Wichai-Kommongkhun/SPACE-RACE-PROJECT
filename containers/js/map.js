@@ -308,6 +308,7 @@ function ChangeRoom(){
                 }else{
                     stage += 0.1;
                 }
+                dooropens.play();
             }else if(downKey && stage != Math.floor(stage)){
                 changRoomBG.style.animation = 'running';
                 player.x = previous_pos;
@@ -329,7 +330,7 @@ function ChangeRoom(){
                 }else{
                     stage -= 0.1;
                 }
-                
+                dooropens.play();
             }
         }
     }
