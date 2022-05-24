@@ -229,24 +229,24 @@ function draw(){
 }
 function setupInputs(){
     document.addEventListener("keydown", function(event){
-        if(event.key === "w" || event.key === "ArrowUp") {
+        if(event.key === "w" || event.key === "ArrowUp" || event.key === "W") {
             upKey = true;
-        }else if(event.key === "a" || event.key === "ArrowLeft") {
+        }else if(event.key === "a" || event.key === "ArrowLeft" || event.key === "A") {
             player.moving = true;
             leftKey = true;
-        }else if(event.key === "d" || event.key === "ArrowRight") {
+        }else if(event.key === "d" || event.key === "ArrowRight" || event.key === "D") {
             player.moving = true;
             rightKey = true;
-        }else if(event.key === "s" || event.key === "ArrowDown") {
+        }else if(event.key === "s" || event.key === "ArrowDown" || event.key === "S") {
             downKey = true;
         }else if(event.key === "Shift") {
             sprint = true;
-        }else if(event.key === "e") {
+        }else if(event.key === "e" || event.key === "E") {
             interact = true;
-        }else if(event.key === "r" && player.maxhp == 0){
+        }else if((event.key === "r" || event.key === "R") && player.maxhp == 0){
             this.location.reload();
         }
-        else if(event.key === "p"){//add
+        else if(event.key === "p" || event.key === "P"){//add
             if(paused){
                 pauseBG.style.display = 'none';
                 canvas.style.filter = 'brightness(1)';
@@ -257,7 +257,7 @@ function setupInputs(){
                 canvas.style.filter = 'brightness(0.2)';
                 paused = true
             }
-        }else if(event.key === "m"){
+        }else if(event.key === "m" || event.key === "M"){
             if(showmap){
                 showmap = false
             }
@@ -268,17 +268,17 @@ function setupInputs(){
     });
     document.addEventListener("keyup", function(event){
         player.moving = false;
-        if(event.key === "w" || event.key === "ArrowUp") {
+        if(event.key === "w" || event.key === "ArrowUp" || event.key === "W") {
             upKey = false;
-        }else if(event.key === "a" || event.key === "ArrowLeft") {
+        }else if(event.key === "a" || event.key === "ArrowLeft" || event.key === "A") {
             leftKey = false;
-        }else if(event.key === "d" || event.key === "ArrowRight") {
+        }else if(event.key === "d" || event.key === "ArrowRight" || event.key === "D") {
             rightKey = false;
-        }else if(event.key === "s" || event.key === "ArrowDown") {
+        }else if(event.key === "s" || event.key === "ArrowDown" || event.key === "S") {
             downKey = false;
         }else if(event.key === "Shift") {
             sprint = false;
-        }else if(event.key === "e") {
+        }else if(event.key === "e" || event.key === "E") {
             interact = false;
         }
     });
