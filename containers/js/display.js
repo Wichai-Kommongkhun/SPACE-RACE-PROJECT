@@ -42,10 +42,22 @@ function Minimap(x,y,width,height,type){
 }
 function display(){
     if(pic == 0){
+        controll.style.background = "url('img/2.png')"
+        pic++
+    }else if(pic == 1){
+        controll.style.background = "url('img/3.png')"
+        pic++
+    }else if(pic == 2){
+        controll.style.top = '27%'
+        controll.style.width = '1090px'
+        controll.style.height = '374px'
+        controll.style.background = "url('img/tip.png')"
+        pic++
+    }else if(pic == 3){
         controll.style.background = "url('img/tip2.png')"
         pic++
     }else{
         controll.style.display = 'none';
-
+        player.active = true
     }
 }

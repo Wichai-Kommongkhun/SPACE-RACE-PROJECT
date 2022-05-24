@@ -47,16 +47,18 @@ body{
 }
 
 #controll{
-    width:1090px;
-    height:374px;
-    top:250px;
+    z-index: 1000000;
+    width:1280px;
+    height:720px;
+    top:12%;
     position: absolute;
     border-radius: 10px;
     z-index: 4;
-    background: url('img/tip.png');
+    background: url('img/1.png');
     display:grid;
     border: black solid 5px;
 }
+
 .back {
     color:white;
     position: absolute;

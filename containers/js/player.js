@@ -10,7 +10,7 @@ function Player(x,y) {
     this.framey = 0;
     this.width = 100;
     this.height = 200;
-    this.active = true;
+    this.active = false;
     this.moving = false;
     this.stamina = 122;
     this.maxhp = 3;
