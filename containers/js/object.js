@@ -224,6 +224,7 @@ function MovingItem(){
             med3.y += 1;
             left.x += 1;
             right.x -= 1;
+            downarrow.y += 1;
             count++;
             if(count >= 20){
                 up = false;
@@ -240,6 +241,7 @@ function MovingItem(){
             med3.y -= 1;
             left.x -= 1;
             right.x += 1;
+            downarrow.y -= 1;
             count--;
             if(count <= 0){
                 up = true;

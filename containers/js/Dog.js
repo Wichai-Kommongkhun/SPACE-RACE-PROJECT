@@ -50,7 +50,7 @@ function huntPlayer(){
             player.maxhp--;
         }
     }
-    else if(player.active == false && dog.active){ 
+    else if(player.active == false && dog.active && stage == Math.floor(stage) && stage != 0){ 
         if(dog.left){
             if(dog.x >= -200){
                 dog.x -= 5

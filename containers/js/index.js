@@ -10,6 +10,9 @@ const elevatoropens = new Audio('sound/elevator.mp3');
 const pick = new Audio('sound/pickup.mp3');
 const questsound = new Audio('sound/questcomplete.mp3');
 const endingsound = new Audio('sound/endsound.mp3');
+const lockerhide = new Audio('sound/locker.mp3');
+const bushhide = new Audio('sound/bush.mp3');
+lockerhide.volume = 0.1;
 endingsound.volume = 0.1;
 questsound.volume = 0.3;
 pick.volume = 0.2;
@@ -155,7 +158,7 @@ window.onload = function() {
     med1 = new Med(1030,420,1000,1000,1) // 12.2
     med2 = new Med(510,400,1000,1000,1) //1.1
     med3 = new Med(650,400,1000,1000,1) //22.1
-    panel = new Panel(370,370,160,250,0);
+    panel = new Panel(370,470,160,150,0);
     left = new Arrow(20,520,100,100,0);
     right = new Arrow(1210,520,100,100,0);
     fullrocket = new Rocket(460,150,1000,1000,0);
@@ -163,7 +166,7 @@ window.onload = function() {
     for(let i = 0; i < 100; i++){
         borders.push(new Border(-5000 + 100*i,670,100,100,1));
     }
-    
+    downarrow = new Arrow(1000,320,70 ,70,1)
     //Start game loop
     gameLoop = setInterval(step, 50);
 
@@ -197,13 +200,7 @@ function draw(){
     for(let i = 0; i<doors.length;i++){doors[i].draw();}
     for(let i = 0; i<locker.length;i++){locker[i].draw();}  
     for(let i = 0; i<ladders.length;i++){ladders[i].draw();}
-    for(let i = 0;i<locker.length;i++){
-        if(checkIntersection(locker[i],player)){
-            downarrow = new Arrow(locker[i].x+locker[i].width/2.5,300,70 ,70,1)
-            downarrow.draw3();
-        }
-    }
-
+   
     editMap();
     dog.draw();
     health.draw();
@@ -368,15 +365,7 @@ function Soundplay(){
             }
         }
     }
-    for(let i = 0; i<ladders.length;i++){
-        if(checkIntersection(player,ladders[i])){
-            if(upKey && stage < 33){
-                elevatoropens.play();
-            }else if(downKey && stage >= 13){
-                elevatoropens.play();
-            }
-        }
-    }
+    
     if(player.maxhp == 0 || paused){
         footStep.pause();
         huntSound.pause();

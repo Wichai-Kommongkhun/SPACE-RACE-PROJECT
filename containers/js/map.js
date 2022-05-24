@@ -20,24 +20,28 @@ function editMap(){
     doors = [];
     locker = [];
     ladders = [];
+    
+
     if(stage == 0){
         locker.push(new Locker(1070,370,160,250,0));
-        locker.push(new Locker(90,370,160,250,0));
-        locker.push(new Locker(800,370,160,250,0));
+        locker.push(new Locker(90,370,160,250,1));
+        locker.push(new Locker(800,370,160,250,1));
         
         if(fullrocket.type){
             fullrocket.draw7()
             fullrocket.y -= 10
         }
+        if(checkIntersection(player,panel)){
+            downarrow.x = panel.x + 40;
+            downarrow.draw3();}
         panel.draw()
         left.draw1();
         Hide();
-        
         collisionRight();
     }
     else if(stage === 1){
         doors.push(new Door(1065,370,160,250,1));
-        locker.push(new Locker(800,370,160,250,0));
+        locker.push(new Locker(830,370,160,250,1));
         left.draw1();
         right.draw2();
         Hide();
@@ -53,7 +57,7 @@ function editMap(){
     }else if(stage === 2){
         doors.push(new Door(30,370,160,250,2.2));
         doors.push(new Door(1090,370,160,250,2.1));
-        locker.push(new Locker(680,370,160,250,0));
+        locker.push(new Locker(680,370,160,250,1));
         left.draw1();
         right.draw2();
         Hide();
@@ -95,8 +99,8 @@ function editMap(){
     }else if(stage === 12){
         doors.push(new Door(30,370,160,250,12.1));
         doors.push(new Door(1090,370,160,250,12.2));
-        locker.push(new Locker(280,370,160,250,0));
-        locker.push(new Locker(850,370,160,250,0));
+        locker.push(new Locker(280,370,160,250,1));
+        locker.push(new Locker(850,370,160,250,1));
         left.draw1();
         right.draw2();
         Hide();
@@ -170,7 +174,7 @@ function editMap(){
         }
     }else if(stage === 23){
         ladders.push(new Ladder(10,620,150,30,1));
-        locker.push(new Locker(600,370,160,250,0));
+        locker.push(new Locker(600,370,160,250,1));
         right.draw2();
         Hide();
         ChangeFloor();
@@ -243,19 +247,24 @@ function collisionLeft(){
 }
 
 function ChangeFloor(){
+    changRoomBG.style.animation = 'wipwup 4s';
     previous_pos = player.x;
     for(let i = 0; i<ladders.length;i++){
         if(checkIntersection(player,ladders[i])){
             if(upKey && stage < 23){
+                changRoomBG.style.animation = 'running';
                 dog.x = 0 - distance;
                 player.x = previous_pos;
                 player.y -= 70;
                 stage += 10;
+                elevatoropens.play();
             }else if(downKey && stage >= 13){
+                changRoomBG.style.animation = 'running';
                 dog.x = 0 - distance
                 player.x = previous_pos;
                 player.y -= 70;
                 stage -= 10;
+                elevatoropens.play();
             }
         }
     }
@@ -330,10 +339,21 @@ function Hide(){//add funct
     for(let i = 0; i<locker.length;i++){
         if(checkIntersection(player,locker[i]) && upKey){
             player.active = false
+            if(locker[i].type == 0){
+                lockerhide.play();
+            }else{
+                bushhide.play();
+            }
         }
         if(checkIntersection(player,locker[i]) && downKey){
             player.active = true
             dog.active = true;
+        }
+        if(checkIntersection(player,locker[i])){
+            downarrow.x = locker[i].x + locker[i].width/2.5;
+            downarrow.draw3();
+        }else{
+            downarrow.x = 9999;
         }
     }
 }
