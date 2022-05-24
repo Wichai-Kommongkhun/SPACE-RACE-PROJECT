@@ -46,7 +46,17 @@ body{
     font-size:13px;
 }
 
-
+#controll{
+    width:1090px;
+    height:374px;
+    top:250px;
+    position: absolute;
+    border-radius: 5%;
+    z-index: 4;
+    background: url('img/tip.png');
+    display:grid;
+    border: black solid 20px;
+}
 .back {
     color:white;
     position: absolute;
