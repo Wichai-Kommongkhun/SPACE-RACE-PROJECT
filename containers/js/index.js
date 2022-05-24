@@ -31,6 +31,7 @@ var sprint;
 var interact;
 var paused = false;
 
+var pic = 0
 
 
 //Create game variables
