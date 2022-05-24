@@ -40,3 +40,6 @@ function Minimap(x,y,width,height,type){
         }
         
 }
+function display(){
+    controll.style.display = 'none';
+}
