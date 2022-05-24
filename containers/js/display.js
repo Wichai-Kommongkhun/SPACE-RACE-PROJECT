@@ -49,6 +49,7 @@ function display(){
         pic++
     }else if(pic == 2){
         controll.style.top = '27%'
+        controll.style.left = '8%'
         controll.style.width = '1090px'
         controll.style.height = '374px'
         controll.style.background = "url('img/tip.png')"
@@ -57,6 +58,7 @@ function display(){
         controll.style.background = "url('img/tip2.png')"
         pic++
     }else{
+        quest.style.display = 'flex'
         controll.style.display = 'none';
         player.active = true
     }
