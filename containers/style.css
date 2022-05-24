@@ -64,7 +64,11 @@ body{
     position: absolute;
     bottom:6vw;
     left:6vw;
+<<<<<<< Updated upstream
     font-size: 1.5vw;
+=======
+   
+>>>>>>> Stashed changes
     cursor:pointer;
     font-family: 'Press Start 2P', cursive;
     z-index: 100;
@@ -85,7 +89,10 @@ body{
     position: absolute;
     bottom:6vw;
     right:5vw;
+<<<<<<< Updated upstream
     font-size: 1.5vw;
+=======
+>>>>>>> Stashed changes
     cursor:pointer;
     font-family: 'Press Start 2P', cursive;
     z-index: 100;
