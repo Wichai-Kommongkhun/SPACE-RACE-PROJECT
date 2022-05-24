@@ -13,6 +13,8 @@ const endingsound = new Audio('sound/endsound.mp3');
 const lockerhide = new Audio('sound/locker.mp3');
 const bushhide = new Audio('sound/bush.mp3');
 const mapopen = new Audio('sound/openmap.mp3')
+const openingsong = new Audio('sound/opmusic.mp3')
+openingsong.volume = 0.05;
 mapopen.volume = 0.5;
 lockerhide.volume = 0.1;
 endingsound.volume = 0.1;
@@ -22,7 +24,7 @@ elevatoropens.volume = 0.5;
 dooropens.volume = 0.1;
 huntSound.volume = 0.1;
 footStep.volume = 0.2;
-
+openingsong.play();
 
 //Create input variables
 var upKey;
