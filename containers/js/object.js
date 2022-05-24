@@ -129,6 +129,10 @@ function Arrow(x,y,width,height,type){
     this.draw2 = function(){
         drawSprite(rightbar, 0, 0, this.width, this.height ,this.x, this.y, 45, 45);
     }
+    this.draw3 = function(){
+        drawSprite(down, 0, 0, this.width, this.height ,this.x, this.y, 45, 45);
+
+    }
 }
 
 

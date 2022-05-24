@@ -46,6 +46,7 @@ var item1,item2,item3;
 var Esign;
 var leftarrow;
 var rightarrow;
+var downarrow;
 var panel;
 var fullrocket
 
@@ -97,6 +98,8 @@ const leftbar = new Image()
 const rightbar = new Image()
     rightbar.src = 'img/rightarrow.png'
 
+const down = new Image();
+    down.src = 'img/downarrow.png'
 
 let QuestBP = document.querySelector("#QBP");
 let Namequest = document.querySelector("#Quest-name");
@@ -194,7 +197,12 @@ function draw(){
     for(let i = 0; i<doors.length;i++){doors[i].draw();}
     for(let i = 0; i<locker.length;i++){locker[i].draw();}  
     for(let i = 0; i<ladders.length;i++){ladders[i].draw();}
-
+    for(let i = 0;i<locker.length;i++){
+        if(checkIntersection(locker[i],player)){
+            downarrow = new Arrow(locker[i].x+locker[i].width/2.5,300,70 ,70,1)
+            downarrow.draw3();
+        }
+    }
 
     editMap();
     dog.draw();
