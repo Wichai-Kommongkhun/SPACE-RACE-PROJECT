@@ -8,6 +8,10 @@ const huntSound = new Audio('sound/hunting.mp3');
 const dooropens = new Audio('sound/opendoor.mp3');
 const elevatoropens = new Audio('sound/elevator.mp3');
 const pick = new Audio('sound/pickup.mp3');
+const questsound = new Audio('sound/questcomplete.mp3');
+const endingsound = new Audio('sound/endsound.mp3');
+endingsound.volume = 0.1;
+questsound.volume = 0.3;
 pick.volume = 0.2;
 elevatoropens.volume = 0.5;
 dooropens.volume = 0.1;
@@ -47,13 +51,13 @@ var fullrocket
 
 var allBlueprint = 0;
 var allPart = 0;
+var soundstep = 0;
 
 
 var showmap = false;
 var havemap = true; 
 
 const backgroundlayer1 = new Image();
-
 const playerSprite = new Image();
     playerSprite.src = 'img/playersprite.png';
 const dogSprite = new Image();
@@ -95,13 +99,28 @@ const rightbar = new Image()
 
 
 let QuestBP = document.querySelector("#QBP");
-let QuestPart = document.querySelector("#QPART");
-
+let Namequest = document.querySelector("#Quest-name");
+let numbermission = document.querySelector("#mission")
 
 let plusTask = (value,number) => {
-    value.innerHTML = number;
-}
+    value.innerHTML = number + "/3";
+    if(allBlueprint < 3){
+        numbermission.innerHTML = "Missions 1/2";
+        changeTask(Namequest, "-Blueprints: ")
+    }else if(allBlueprint <= 3 && allPart < 3){
+        numbermission.innerHTML = "Missions 2/2";
+        changeTask(Namequest, "-Parts: ")
+        value.innerHTML = allPart + "/3";
 
+    }else{
+        changeTask(Namequest, "-Launch a rocket")
+        numbermission.innerHTML = "Missions Complete";
+        QuestBP.innerHTML = "";
+    }
+}
+let changeTask = (value,text) => {
+    value.innerHTML = text;
+}
 
 
 
@@ -126,7 +145,7 @@ window.onload = function() {
     item3 = new Item(0,440,100,100,1);
     displayPaused = new Paused(380,150,500,500,0) //add
     displayGameover = new Gameover(380,150,800,800,0)
-    displayMap = new Minimap(200,-100,800,800,0);//add
+    displayMap = new Minimap(250,150,800,800,0);//add
     rocket1 = new Rocket(1050,350,1000,1000,0);
     rocket2 = new Rocket(900,350,1000,1000,0);
     rocket3 = new Rocket(100,350,1000,1000,0);
@@ -134,8 +153,8 @@ window.onload = function() {
     med2 = new Med(510,400,1000,1000,1) //1.1
     med3 = new Med(650,400,1000,1000,1) //22.1
     panel = new Panel(370,370,160,250,0);
-    left = new Arrow(30,320,100,100,0);
-    right = new Arrow(1200,320,100,100,0);
+    left = new Arrow(20,520,100,100,0);
+    right = new Arrow(1210,520,100,100,0);
     fullrocket = new Rocket(460,150,1000,1000,0);
     //Create Borders for each stage
     for(let i = 0; i < 100; i++){
@@ -164,28 +183,29 @@ function draw(){
     //Clear the canvas
     ctx.clearRect(0,0,canvas.width,canvas.height)
     ctx.drawImage(backgroundlayer1,0,0,canvas.width,canvas.height);
-    Soundplay();
-    editMap();
     countStage();
     changeStage();
     hpPlayer();
     imageFramePlayer();
     Tiktok();
     spawnDog();
+    
     for(let i = 0; i<borders.length;i++){ borders[i].draw();}
     for(let i = 0; i<doors.length;i++){doors[i].draw();}
     for(let i = 0; i<locker.length;i++){locker[i].draw();}  
     for(let i = 0; i<ladders.length;i++){ladders[i].draw();}
-    if(player.active){ // add if
-        player.draw();
 
-    }
+
+    editMap();
     dog.draw();
     health.draw();
     stamina.draw();
     MovingItem();
-    huntPlayer();
     Used()
+    if(player.active){ // add if
+        player.draw();
+
+    }
     if(paused){ //add
         player.moving = false;
         dog.moving = false;
@@ -199,6 +219,7 @@ function draw(){
         displayMap.draw()
     }
     MovingItem();
+    Soundplay();
     huntPlayer();
 }
 function setupInputs(){
@@ -318,7 +339,7 @@ function hpPlayer(){
     }
 }
 function Soundplay(){
-    if(leftKey || rightKey){
+    if((leftKey || rightKey) && player.active){
         footStep.play();
     }else{
         footStep.pause();
@@ -332,9 +353,9 @@ function Soundplay(){
     }
     for(let i = 0; i<doors.length;i++){
         if(checkIntersection(player,doors[i])){
-            if(upKey && stage == Math.floor(stage)){
+            if(upKey && stage != Math.floor(stage)){
                 dooropens.play();
-            }else if(downKey && stage != Math.floor(stage)){
+            }else if(downKey && stage == Math.floor(stage)){
                 dooropens.play();
             }
         }
@@ -353,18 +374,15 @@ function Soundplay(){
         huntSound.pause();
         dooropens.pause();
     }
-}
-
-function Questionbar(x,y,width,height){
-    this.draw = function(){
-        this.x = x;
-        this.y = y;
-        this.width = width;
-        this.height = height;
-        ctx.fillStyle = "black";
-        ctx.fillRect(this.x,this.y,this.width,this.height);
+    if(allBlueprint == 3 && soundstep === 0){
+        questsound.play();
+        soundstep++;
+    }else if(allPart == 3 && soundstep === 1){
+        questsound.play();
+        soundstep++;
     }
 }
+
 
 
 

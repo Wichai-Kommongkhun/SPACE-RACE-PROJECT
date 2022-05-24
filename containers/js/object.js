@@ -124,10 +124,10 @@ function Arrow(x,y,width,height,type){
     this.type = type;
     
     this.draw1 = function(){
-        drawSprite(leftbar, 0, 0, this.width, this.height , player.x, 320, 100, 100);
+        drawSprite(leftbar, 0, 0, this.width, this.height , this.x, this.y, 45, 45);
     }
     this.draw2 = function(){
-        drawSprite(rightbar, 0, 0, this.width, this.height ,1200, 3200, 100, 100);
+        drawSprite(rightbar, 0, 0, this.width, this.height ,this.x, this.y, 45, 45);
     }
 }
 
@@ -155,41 +155,48 @@ function Used(){
         rocket2.type = 1;
         rocket3.type = 1;
         countBlueprint = 1;
+    
+
     }
     if(checkIntersection(player,rocket1) && interact && rocket1.type && stage == 2.2){
         pick.play();
         allPart++;
         rocket1.type = 0;
-        plusTask(QuestPart, allPart);
+        plusTask(QuestBP, allPart);
     }else if(checkIntersection(player,rocket2) && interact && rocket2.type && stage == 2.1){
         pick.play();
         allPart++;
         rocket2.type = 0;
-        plusTask(QuestPart, allPart);
+        plusTask(QuestBP, allPart);
     }else if(checkIntersection(player,rocket3) && interact && rocket3.type && stage == 12.1){
         pick.play();
         allPart++;
         rocket3.type = 0;
-        plusTask(QuestPart, allPart);
+        plusTask(QuestBP, allPart);
     }
-    if(checkIntersection(player,med1) && interact && med1.type && stage == 12.2 && player.maxhp < 3){
+    if(checkIntersection(player,med1) && interact && med1.type && stage == 12.2){
         pick.play();
         player.maxhp = 3;
+        player.stamina = 122;
         med1.type = 0;
-    }else if(checkIntersection(player,med2) && interact && med2.type && stage == 1.1 && player.maxhp < 3){
+    }else if(checkIntersection(player,med2) && interact && med2.type && stage == 1.1){
         pick.play();
         player.maxhp = 3;
+        player.stamina = 122;
         med2.type = 0;
-    }else if(checkIntersection(player,med3) && interact && med3.type && stage == 22.1 && player.maxhp < 3){
+    }else if(checkIntersection(player,med3) && interact && med3.type && stage == 22.1){
         pick.play();
         player.maxhp = 3;
+        player.stamina = 122;
         med3.type = 0;
     }
     if(checkIntersection(player,panel) && interact && stage == 0 && fullrocket.type == 0 && allPart >= 3){//  
         fullrocket.type = 1;
         player.active = false;
+        endingsound.play();
     }
     if(fullrocket.y == -500){
+        endingsound.pause();
         window.location.href='./timelinePage.html'
     }
 }
@@ -211,6 +218,8 @@ function MovingItem(){
             med1.y += 1;
             med2.y += 1;
             med3.y += 1;
+            left.x += 1;
+            right.x -= 1;
             count++;
             if(count >= 20){
                 up = false;
@@ -225,11 +234,24 @@ function MovingItem(){
             med1.y -= 1;
             med2.y -= 1;
             med3.y -= 1;
+            left.x -= 1;
+            right.x += 1;
             count--;
             if(count <= 0){
                 up = true;
             }
         }
     }
-        
+    
+function Questionbar(x,y,width,height){
+    this.draw = function(){
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
+        ctx.fillStyle = "black";
+        ctx.fillRect(this.x,this.y,this.width,this.height);
+    }
+}
+    
 
