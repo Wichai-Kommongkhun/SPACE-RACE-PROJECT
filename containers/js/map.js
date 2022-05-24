@@ -75,7 +75,7 @@ function editMap(){
         collisionLeft();
         ChangeRoom();
     }else if(stage === 3){
-        ladders.push(new Ladder(0,370,160,250,1));
+        ladders.push(new Ladder(10,620,150,30,1));
         right.draw2();
         ChangeFloor();
         collisionLeft();
@@ -120,7 +120,7 @@ function editMap(){
         collisionLeft();
         ChangeRoom();
     }else if(stage === 13){
-        ladders.push(new Ladder(0,370,160,250,1));
+        ladders.push(new Ladder(10,620,150,30,1));
         right.draw2();
         ChangeFloor();
         collisionLeft();
@@ -169,7 +169,7 @@ function editMap(){
             item2.draw2();
         }
     }else if(stage === 23){
-        ladders.push(new Ladder(0,370,160,250,1));
+        ladders.push(new Ladder(10,620,150,30,1));
         locker.push(new Locker(600,370,160,250,0));
         right.draw2();
         Hide();
@@ -243,15 +243,18 @@ function collisionLeft(){
 }
 
 function ChangeFloor(){
+    previous_pos = player.x;
     for(let i = 0; i<ladders.length;i++){
         if(checkIntersection(player,ladders[i])){
             if(upKey && stage < 23){
                 dog.x = 0 - distance;
-                player.x = 40;
+                player.x = previous_pos;
+                player.y -= 40;
                 stage += 10;
             }else if(downKey && stage >= 13){
                 dog.x = 0 - distance
-                player.x = 40;
+                player.x = previous_pos;
+                player.y -= 40;
                 stage -= 10;
             }
         }
